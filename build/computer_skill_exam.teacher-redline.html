@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>江苏省普通高校&quot;专转本&quot;选拔考试 计算机专业大类专业技能 试卷</title>
+  <style>
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm 18mm;
+}
+
+:root {
+  --question-blue: #58bff2;
+  --answer-red: #d3362d;
+  --text-color: #111111;
+  --muted-color: #444444;
+  --border-color: #cfd6dc;
+  --code-bg: #f6f8fa;
+  --code-border: #d7dee5;
+  --code-inline-bg: #eef2f6;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SimSun", "Songti SC", serif;
+  color: var(--text-color);
+  font-size: 12pt;
+  line-height: 1.52;
+  background: white;
+}
+
+.paper {
+  width: 100%;
+}
+
+.confidential-label {
+  font-weight: 700;
+  font-size: 12pt;
+  margin-bottom: 22px;
+}
+
+.title-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+  font-size: 20pt;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.title-block .subtitle {
+  margin-top: 12px;
+  font-size: 13pt;
+}
+
+.notice-block {
+  margin: 8px 0 10px;
+}
+
+.notice-block .notice-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.notice-block ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.exam-section {
+  margin-top: 8px;
+  break-inside: avoid;
+}
+
+.notice-block + .exam-section {
+  margin-top: 4px;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 15pt;
+  margin-bottom: 8px;
+}
+
+.section-heading .section-description {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.exam-question {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+.question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--question-blue);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.question-number {
+  flex: 0 0 auto;
+}
+
+.question-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.question-body > :first-child {
+  margin-top: 0;
+}
+
+.question-body > :last-child {
+  margin-bottom: 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 4px;
+  margin: 2px 0 4px 28px;
+}
+
+.options-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.option-item .option-label {
+  flex: 0 0 auto;
+}
+
+.option-item .option-content {
+  flex: 1 1 auto;
+}
+
+.option-item.correct-answer {
+  color: var(--answer-red);
+}
+
+.answer-block,
+.keywords-block,
+.source-block,
+.teacher-note-block,
+.analysis-block {
+  margin-left: 28px;
+  margin-top: 2px;
+}
+
+.answer-block .block-label,
+.keywords-block .block-label,
+.source-block .block-label,
+.teacher-note-block .block-label,
+.analysis-block .block-label {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.teacher-redline .answer-block,
+.teacher-redline .source-block,
+.teacher-redline .teacher-note-block,
+.teacher-redline .analysis-block {
+  color: var(--answer-red);
+}
+
+.fill-blank-line {
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+pre,
+code {
+  font-family: "Consolas", "Cascadia Code", "Courier New", monospace;
+}
+
+code {
+  font-size: 0.93em;
+}
+
+p code,
+li code,
+td code,
+th code,
+blockquote code {
+  background: var(--code-inline-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 3px;
+  padding: 0 0.24em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-left: 3px solid var(--question-blue);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin: 8px 0 10px;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+  tab-size: 4;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+pre code {
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1em;
+  white-space: inherit;
+}
+
+blockquote {
+  margin: 6px 0 6px 18px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+  color: var(--muted-color);
+}
+
+p {
+  margin: 2px 0 6px;
+}
+
+ul,
+ol {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.variant-official .answer-block,
+.variant-official .keywords-block,
+.variant-official .source-block,
+.variant-official .teacher-note-block,
+.variant-official .analysis-block {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="paper variant-teacher-redline teacher-redline">
+    <div class="confidential-label">机密★启用前</div>
+    <div class="title-block">
+      <h1>江苏省普通高校&quot;专转本&quot;选拔考试 计算机专业大类专业技能 试卷</h1>
+<div class="subtitle">科目代码: 204（技能部分）</div>
+    </div>
+<div class="notice-block"><div class="notice-title">注意事项:</div><ol><li>本卷分为试卷和答题卡两部分，考生必须在答题卡上作答，作答在试卷上无效。</li><li>作答前务必将自己的姓名和准考证号准确清晰地填写在试卷和答题卡的指定位置。</li><li>考试结束时，须将试卷和答题卡一并交回。</li><li>编程题和SQL语句题请在答题卡指定区域书写，注意代码缩进和格式。</li></ol></div>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>一、单项选择题</span>
+    <span class="section-description">本大题共 25 小题，每小题 2 分，共 50 分。在每小题列出的选项中只有一项最符合题目要求的。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">1.</div>
+    <div class="question-body"><p>以下关于C语言程序结构的描述中，正确的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>C语言程序中可以没有main函数</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>C语言程序的执行总是从main函数开始</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>C语言程序中只能有一个函数</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>main函数必须放在程序的最前面</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言程序结构</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P15</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">2.</div>
+    <div class="question-body"><p>在C语言中，以下数据类型中占用内存空间最小的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>int</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>float</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>char</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>double</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言数据类型</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P28</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">3.</div>
+    <div class="question-body"><p>以下运算符中，优先级最高的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>()</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><ul>
+<li></li>
+</ul></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><ul>
+<li></li>
+</ul></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>=</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言运算符优先级</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P45</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">4.</div>
+    <div class="question-body"><p>C语言中，用于从键盘读取一个字符的函数是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>printf()</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>scanf()</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>puts()</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>getchar()</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言输入输出</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P55</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">5.</div>
+    <div class="question-body"><p>以下关于if语句的描述中，错误的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>if语句可以嵌套使用</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>else子句必须与if子句配对使用</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>if语句的条件表达式可以是任意合法表达式</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>if-else-if结构可以实现多分支选择</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言选择结构</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P68</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">6.</div>
+    <div class="question-body"><p>以下循环语句中，至少执行一次循环体的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>for语句</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>while语句</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>do-while语句</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>以上都不是</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言循环结构</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P78</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">7.</div>
+    <div class="question-body"><p>定义一维数组”int a[10];“时，数组元素的下标范围是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>0~9</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>1~10</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>0~10</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>1~9</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言数组</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P95</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">8.</div>
+    <div class="question-body"><p>定义二维数组”int a[3][4];“时，该数组共有多少个元素（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>3</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>4</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>7</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>12</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言二维数组</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P102</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">9.</div>
+    <div class="question-body"><p>字符串”Hello”在内存中占用的字节数是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>5</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>6</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>7</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>8</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言字符串</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P108</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">10.</div>
+    <div class="question-body"><p>以下关于C语言函数的描述中，正确的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>C语言函数必须有返回值</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>函数定义必须在函数调用之前</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>函数可以没有参数</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>函数的形参和实参必须同名</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言函数</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P125</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">11.</div>
+    <div class="question-body"><p>C语言中，函数参数传递默认采用的方式是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>值传递</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>地址传递</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>引用传递</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>以上都可以</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言参数传递</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P135</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">12.</div>
+    <div class="question-body"><p>在E-R图中，用于表示实体之间联系的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>矩形</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>椭圆形</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>三角形</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>菱形</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>数据库E-R图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P25</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">13.</div>
+    <div class="question-body"><p>MySQL中，用于存储可变长度字符串的数据类型是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>CHAR</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>VARCHAR</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>TEXT</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>STRING</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL数据类型</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P45</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">14.</div>
+    <div class="question-body"><p>用于保证表中每一行记录都唯一的约束是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>NOT NULL</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>FOREIGN KEY</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>PRIMARY KEY</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>CHECK</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL约束</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P52</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">15.</div>
+    <div class="question-body"><p>SQL语句中，用于删除表中数据的命令是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>DELETE</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>DROP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>REMOVE</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>CLEAR</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL数据操纵</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P68</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">16.</div>
+    <div class="question-body"><p>SQL中用于对查询结果进行排序的子句是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>GROUP BY</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>WHERE</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>HAVING</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>ORDER BY</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL查询</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P75</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">17.</div>
+    <div class="question-body"><p>SQL中用于计算平均值的聚合函数是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>SUM()</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>AVG()</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>COUNT()</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>MAX()</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL聚合函数</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P82</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">18.</div>
+    <div class="question-body"><p>在UML用例图中，用例与参与者之间的关系是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>继承关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>依赖关系</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>关联关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>包含关系</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML用例图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P35</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">19.</div>
+    <div class="question-body"><p>在UML类图中，表示类与类之间整体-部分关系的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>聚合关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>关联关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>依赖关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>泛化关系</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML类图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P52</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">20.</div>
+    <div class="question-body"><p>UML顺序图中，表示对象之间消息传递的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>实线</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>带箭头的实线</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>虚线</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>带箭头的虚线</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML顺序图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P68</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">21.</div>
+    <div class="question-body"><p>在局域网拓扑结构中，所有节点都连接到一个中心设备上的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>总线型</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>环型</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>星型</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>网状型</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>局域网拓扑结构</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P115</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">22.</div>
+    <div class="question-body"><p>无线局域网中用于标识网络名称的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>SSID</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>MAC地址</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>IP地址</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>子网掩码</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>无线局域网</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P145</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">23.</div>
+    <div class="question-body"><p>Windows 10中，用于管理系统用户账户的工具是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>设备管理器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>计算机管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>任务管理器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>控制面板</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows用户管理</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P58</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">24.</div>
+    <div class="question-body"><p>Windows 10中，用于查看和管理硬件设备的工具是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>资源管理器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>任务管理器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>注册表编辑器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>设备管理器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows设备管理</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P75</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">25.</div>
+    <div class="question-body"><p>Windows 10中，查看本机IP地址的命令是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>ping</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>tracert</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>ipconfig</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>netstat</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows网络设置</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P88</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>二、多项选择题</span>
+    <span class="section-description">本大题共 10 小题，每小题 3 分，共 30 分。全部选对得 3 分，选对但不全得 1 分，错选或不选不得分。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">26.</div>
+    <div class="question-body"><p>C语言中的基本语句包括（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>表达式语句</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>空语句</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>复合语句</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>函数定义语句</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言基本语句</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P50</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">27.</div>
+    <div class="question-body"><p>C语言中用于实现选择结构的语句有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>if语句</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>switch语句</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>for语句</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>条件运算符(?:)</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言选择结构</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P70</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">28.</div>
+    <div class="question-body"><p>C语言中用于控制循环流程的语句有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>break</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>continue</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>return</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>goto</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言循环控制</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P80</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">29.</div>
+    <div class="question-body"><p>SQL中数据操纵语言(DML)包含的操作有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>插入数据(INSERT)</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>删除数据(DELETE)</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>修改数据(UPDATE)</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>创建表(CREATE)</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL数据操纵</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P65</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">30.</div>
+    <div class="question-body"><p>SQL中用于连接查询的类型有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>UNION连接</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>内连接(INNER JOIN)</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>左外连接(LEFT JOIN)</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>右外连接(RIGHT JOIN)</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>BCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL查询</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P72</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">31.</div>
+    <div class="question-body"><p>UML中常用的结构图包括（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>类图</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>用例图</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>组件图</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>部署图</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML图类型</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P25</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">32.</div>
+    <div class="question-body"><p>UML类图中，类与类之间的关系包括（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>关联关系</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>依赖关系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>调用关系</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>泛化关系</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML类图关系</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P55</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">33.</div>
+    <div class="question-body"><p>局域网中常用的网络设备有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>交换机</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>路由器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>网卡</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>集线器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>局域网设备</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P120</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">34.</div>
+    <div class="question-body"><p>无线局域网的安全加密类型包括（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>WEP</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>WPA</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>WPA2</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>HTTP</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>无线局域网安全</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P148</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">35.</div>
+    <div class="question-body"><p>Windows 10操作系统中可以进行的管理操作有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>软件安装与卸载</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>用户账户创建与管理</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>硬件设备驱动更新</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>网络连接配置</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows系统管理</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P45</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>三、判断题</span>
+    <span class="section-description">本大题共 15 小题，每小题 1 分，共 15 分。下列每小题表述正确的，在答题卡上填涂 A 选项；表述错误的填涂 B 选项。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">36.</div>
+    <div class="question-body"><p>C语言程序的注释可以嵌套使用。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言注释</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P18</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">37.</div>
+    <div class="question-body"><p>C语言中，变量必须先定义后使用。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言变量</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P32</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">38.</div>
+    <div class="question-body"><p>C语言中，数组名代表数组中所有元素的值。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言数组</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P98</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">39.</div>
+    <div class="question-body"><p>C语言函数可以递归调用，即函数可以直接或间接地调用自身。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言函数递归</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P140</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">40.</div>
+    <div class="question-body"><p>MySQL表中可以有多个主键。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL主键</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P50</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">41.</div>
+    <div class="question-body"><p>MySQL视图是基于查询结果的虚拟表，不存储实际数据。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL视图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P95</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">42.</div>
+    <div class="question-body"><p>UML用例图中，参与者只能是人，不能是其他系统或设备。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML用例图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P38</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">43.</div>
+    <div class="question-body"><p>UML顺序图中，对象的 lifeline 用垂直虚线表示。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML顺序图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P70</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">44.</div>
+    <div class="question-body"><p>星型拓扑结构中，单个节点故障不会影响其他节点之间的通信。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>局域网拓扑</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P118</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">45.</div>
+    <div class="question-body"><p>无线局域网的SSID可以隐藏，不对外广播。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>无线局域网</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P145</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">46.</div>
+    <div class="question-body"><p>Windows 10支持多用户同时使用同一台计算机。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows系统</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P35</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">47.</div>
+    <div class="question-body"><p>Windows防火墙只能阻止外部对内部的访问，不能阻止内部对外部的访问。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>Windows防火墙</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P92</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">48.</div>
+    <div class="question-body"><p>C语言中，字符串以’\0’作为结束标志。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言字符串</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P110</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">49.</div>
+    <div class="question-body"><p>MySQL中，索引越多越好，应该为所有列都创建索引。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL索引</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P102</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">50.</div>
+    <div class="question-body"><p>UML状态图中，状态之间的转换由事件触发。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>正确</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>UML状态图</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P82</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>四、填空题</span>
+    <span class="section-description">本大题共 10 小题，每小题 2 分，共 20 分。下列每小题的答案填在答题卡对应的横线上。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">51.</div>
+    <div class="question-body"><p>C语言程序的执行总是从 <span class="fill-blank-line">____</span>
+函数开始。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>main</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言main函数</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P15</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">52.</div>
+    <div class="question-body"><p>C语言中，逻辑假用 <span class="fill-blank-line">____</span>
+表示。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>0</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言逻辑运算</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P42</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">53.</div>
+    <div class="question-body"><p>在switch语句中，用于跳出switch结构的语句是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>break</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言switch语句</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P72</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">54.</div>
+    <div class="question-body"><p>C语言函数参数默认采用 <span class="fill-blank-line">____</span>
+方式进行传递。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>值传递</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>C语言参数传递</div>
+  <div class="source-block"><span class="block-label">题源:</span>《C程序设计》P132</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">55.</div>
+    <div class="question-body"><p>SQL语句中，用于创建数据表的命令是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>CREATE TABLE</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL创建表</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P48</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">56.</div>
+    <div class="question-body"><p>SQL语句中，用于查询数据的命令是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>SELECT</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MySQL查询</div>
+  <div class="source-block"><span class="block-label">题源:</span>《MySQL数据库》P70</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">57.</div>
+    <div class="question-body"><p>在UML用例图中，与系统交互的人或其他系统称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>参与者</div>
+  <div class="source-block"><span class="block-label">题源:</span>《UML建模》P32</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">58.</div>
+    <div class="question-body"><p>在 <span class="fill-blank-line">____</span>
+拓扑结构的局域网中，所有节点都连接到一个中心设备上。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>星型</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P116</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">59.</div>
+    <div class="question-body"><p>无线局域网中， <span class="fill-blank-line">____</span>
+用于标识无线网络的名称。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>SSID</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机网络》P145</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">60.</div>
+    <div class="question-body"><p>Windows 10中，用于管理和配置硬件设备的工具是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>设备管理器</div>
+  <div class="source-block"><span class="block-label">题源:</span>《Windows操作系统》P75</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>五、编程与SQL操作题</span>
+    <span class="section-description">本大题共 3 小题，共 35 分。根据题目要求作答。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">61.</div>
+    <div class="question-body"><p>阅读以下程序，回答问题。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">,</span> sum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">100</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>i <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span><span class="op">)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            sum <span class="op">+=</span> i<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;sum = </span><span class="sc">%d\n</span><span class="st">&quot;</span><span class="op">,</span> sum<span class="op">);</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="section">61.1</h3>
+<p><span class="citation" data-cites="answer">@answer</span>:
+计算1到100中所有偶数的和 <span class="citation"
+data-cites="score">@score</span>: 3 该程序的功能是什么？（3分）</p>
+<h3 id="section-1">61.2</h3>
+<p><span class="citation" data-cites="answer">@answer</span>: 2550 <span
+class="citation" data-cites="score">@score</span>: 3
+程序运行后，输出的结果是什么？（3分）</p>
+<h3 id="section-2">61.3</h3>
+<p><span class="citation" data-cites="answer">@answer</span>:
+for循环，累加 <span class="citation" data-cites="score">@score</span>: 4
+程序中使用了哪些控制结构？请简述程序的执行流程。（4分）</p></div>
+  </div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">62.</div>
+    <div class="question-body"><p>编写程序题。</p>
+<h3 id="section">62.1</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 10 <span
+class="citation" data-cites="score">@score</span>: 12
+请编写一个C语言函数，实现计算整数数组中的最大值。函数原型为：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> findMax<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> n<span class="op">);</span></span></code></pre></div>
+<p>要求：使用循环结构遍历数组，返回数组中的最大元素值。（12分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+参考代码：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> findMax<span class="op">(</span><span class="dt">int</span> arr<span class="op">[],</span> <span class="dt">int</span> n<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> max <span class="op">=</span> arr<span class="op">[</span><span class="dv">0</span><span class="op">];</span>  <span class="co">// 假设第一个元素最大</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span>i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;</span> n<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span><span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">&gt;</span> max<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            max <span class="op">=</span> arr<span class="op">[</span>i<span class="op">];</span>  <span class="co">// 更新最大值</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> max<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>评分标准：函数定义正确(2分)、初始化最大值(2分)、循环遍历数组(3分)、比较并更新最大值(3分)、返回结果(2分)。</p></div>
+  </div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">63.</div>
+    <div class="question-body"><p>数据库操作题。</p>
+<p>假设有一个学生信息管理系统，包含以下两张表：</p>
+<p>学生表(student)： | 字段名 | 类型 | 说明 | |——–|——|——| | sno |
+VARCHAR(10) | 学号（主键）| | sname | VARCHAR(20) | 姓名 | | sgender |
+CHAR(2) | 性别 | | sage | INT | 年龄 | | sdept | VARCHAR(20) | 所在系
+|</p>
+<p>课程表(course)： | 字段名 | 类型 | 说明 | |——–|——|——| | cno |
+VARCHAR(10) | 课程号（主键）| | cname | VARCHAR(30) | 课程名 | | credit
+| INT | 学分 |</p>
+<p>选课表(sc)： | 字段名 | 类型 | 说明 | |——–|——|——| | sno | VARCHAR(10)
+| 学号（外键）| | cno | VARCHAR(10) | 课程号（外键）| | grade | INT |
+成绩 |</p>
+<h3 id="section">63.1</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 3 <span class="citation"
+data-cites="score">@score</span>: 4
+写出创建学生表(student)的SQL语句。（4分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> student (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    sno <span class="dt">VARCHAR</span>(<span class="dv">10</span>) <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    sname <span class="dt">VARCHAR</span>(<span class="dv">20</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    sgender <span class="dt">CHAR</span>(<span class="dv">2</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    sage <span class="dt">INT</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    sdept <span class="dt">VARCHAR</span>(<span class="dv">20</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div>
+<h3 id="section-1">63.2</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 3 <span class="citation"
+data-cites="score">@score</span>: 4
+写出查询计算机系所有学生信息的SQL语句。（4分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> student <span class="kw">WHERE</span> sdept <span class="op">=</span> <span class="st">&#39;计算机系&#39;</span>;</span></code></pre></div>
+<h3 id="section-2">63.3</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 4 <span class="citation"
+data-cites="score">@score</span>: 5
+写出查询选修了课程号为”C001”且成绩在80分以上的学生学号和姓名的SQL语句。（5分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> student.sno, sname </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> student, sc </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> student.sno <span class="op">=</span> sc.sno </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> cno <span class="op">=</span> <span class="st">&#39;C001&#39;</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> grade <span class="op">&gt;=</span> <span class="dv">80</span>;</span></code></pre></div></div>
+  </div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>六、局域网配置与UML设计题</span>
+    <span class="section-description">本大题共 2 小题，共 25 分。根据题目要求作答。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">64.</div>
+    <div class="question-body"><p>局域网搭建题。</p>
+<p>某办公室需要搭建一个小型局域网，共有10台计算机，需要共享一台打印机和访问互联网。</p>
+<h3 id="section">64.1</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 3 <span class="citation"
+data-cites="score">@score</span>: 4
+请说明应该选择的网络拓扑结构，并简述理由。（4分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+应选择星型拓扑结构。 理由：(1) 易于管理和维护；(2)
+单点故障不影响其他节点；(3) 便于扩展，增加新节点方便。</p>
+<h3 id="section-1">64.2</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 4 <span class="citation"
+data-cites="score">@score</span>: 4
+请列出搭建该局域网所需的网络设备。（4分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+所需设备：(1) 交换机一台（或路由器）；(2) 网卡（每台计算机一块）；(3)
+网线若干；(4) 打印机一台（网络打印机或通过计算机共享）。</p>
+<h3 id="section-2">64.3</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 4 <span class="citation"
+data-cites="score">@score</span>: 4
+简述无线局域网相比有线局域网的主要优缺点。（4分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+优点：(1) 布线灵活，不受物理位置限制；(2) 安装便捷，节省布线成本；(3)
+便于移动办公。 缺点：(1) 传输速率相对较低；(2) 信号稳定性受环境影响；(3)
+安全性相对较低，需要加密保护。</p></div>
+  </div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">65.</div>
+    <div class="question-body"><p>UML建模题。</p>
+<p>某图书管理系统的主要功能包括：读者借书、读者还书、管理员管理图书信息、管理员查询借阅记录。系统的参与者有读者和管理员。</p>
+<h3 id="section">65.1</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 8 <span class="citation"
+data-cites="score">@score</span>: 7
+请绘制该系统的用例图，包括参与者、用例以及它们之间的关系。（7分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+用例图包含： - 参与者：读者、管理员 -
+用例：借书、还书、管理图书信息、查询借阅记录 -
+关系：读者与”借书”、“还书”用例关联；管理员与”管理图书信息”、“查询借阅记录”用例关联；“借书”和”还书”用例可能与”验证读者身份”用例存在包含关系。</p>
+<h3 id="section-1">65.2</h3>
+<p><span class="citation"
+data-cites="answer_lines">@answer_lines</span>: 6 <span class="citation"
+data-cites="score">@score</span>: 6
+请简述UML类图中类的基本组成元素，并说明类与类之间常见的关系类型。（6分）</p>
+<p><span class="citation" data-cites="analysis">@analysis</span>:
+类的基本组成元素：(1) 类名；(2) 属性（成员变量）；(3) 操作（方法）。
+常见关系类型：(1) 关联关系；(2) 依赖关系；(3) 泛化关系（继承）；(4)
+聚合关系；(5) 组合关系。</p></div>
+  </div>
+</article>
+</section>
+  </div>
+</body>
+</html>

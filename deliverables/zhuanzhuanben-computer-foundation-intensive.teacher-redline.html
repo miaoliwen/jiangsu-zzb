@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>江苏省普通高校“专转本”计算机基础综合强化卷</title>
+  <style>
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm 18mm;
+}
+
+:root {
+  --question-blue: #58bff2;
+  --answer-red: #d3362d;
+  --text-color: #111111;
+  --muted-color: #444444;
+  --border-color: #cfd6dc;
+  --code-bg: #f6f8fa;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SimSun", "Songti SC", serif;
+  color: var(--text-color);
+  font-size: 12pt;
+  line-height: 1.52;
+  background: white;
+}
+
+.paper {
+  width: 100%;
+}
+
+.confidential-label {
+  font-weight: 700;
+  font-size: 12pt;
+  margin-bottom: 22px;
+}
+
+.title-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+  font-size: 20pt;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.title-block .subtitle {
+  margin-top: 12px;
+  font-size: 13pt;
+}
+
+.notice-block {
+  margin: 8px 0 10px;
+}
+
+.notice-block .notice-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.notice-block ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.exam-section {
+  margin-top: 8px;
+  break-inside: avoid;
+}
+
+.notice-block + .exam-section {
+  margin-top: 4px;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 15pt;
+  margin-bottom: 8px;
+}
+
+.section-heading .section-description {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.exam-question {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+.question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--question-blue);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.question-number {
+  flex: 0 0 auto;
+}
+
+.question-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.question-body > :first-child {
+  margin-top: 0;
+}
+
+.question-body > :last-child {
+  margin-bottom: 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 4px;
+  margin: 2px 0 4px 28px;
+}
+
+.options-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.option-item .option-label {
+  flex: 0 0 auto;
+}
+
+.option-item .option-content {
+  flex: 1 1 auto;
+}
+
+.option-item.correct-answer {
+  color: var(--answer-red);
+}
+
+.answer-block,
+.keywords-block,
+.source-block,
+.teacher-note-block,
+.analysis-block {
+  margin-left: 28px;
+  margin-top: 2px;
+}
+
+.answer-block .block-label,
+.keywords-block .block-label,
+.source-block .block-label,
+.teacher-note-block .block-label,
+.analysis-block .block-label {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.teacher-redline .answer-block,
+.teacher-redline .source-block,
+.teacher-redline .teacher-note-block,
+.teacher-redline .analysis-block {
+  color: var(--answer-red);
+}
+
+.fill-blank-line {
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+pre,
+code {
+  font-family: "Consolas", "Cascadia Code", "Courier New", monospace;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+blockquote {
+  margin: 6px 0 6px 18px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+  color: var(--muted-color);
+}
+
+p {
+  margin: 2px 0 6px;
+}
+
+ul,
+ol {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.variant-official .answer-block,
+.variant-official .keywords-block,
+.variant-official .source-block,
+.variant-official .teacher-note-block,
+.variant-official .analysis-block {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="paper variant-teacher-redline teacher-redline">
+    <div class="confidential-label">机密★启用前</div>
+    <div class="title-block">
+      <h1>江苏省普通高校“专转本”计算机基础综合强化卷</h1>
+<div class="subtitle">贴近近年题型结构与难度梯度</div>
+    </div>
+<div class="notice-block"><div class="notice-title">注意事项:</div><ol><li>本卷按近年专业综合基础理论题型结构组织，全卷满分 150 分，建议答题时间
+100 分钟。</li><li>本卷分为判断题、单项选择题、多项选择题和填空题四部分，请在指定区域内作答。</li><li>单选题只有一个最符合题意的选项；多选题至少有两个正确选项；填空题请写出最准确答案。</li></ol></div>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>一、判断题</span>
+    <span class="section-description">本大题共 10 小题，每小题 1 分，共 10 分。表述正确的填“A”，错误的填“B”。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">1.</div>
+    <div class="question-body"><p>内存中的数据通常按地址进行存取。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>地址存取、内存</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">2.</div>
+    <div class="question-body"><p>RAM 中的数据在断电后仍能长期保存。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>RAM、断电</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">3.</div>
+    <div class="question-body"><p>操作系统既是计算机资源的管理者，也是用户与硬件之间的重要接口。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>操作系统、资源管理</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">4.</div>
+    <div class="question-body"><p>程序能够通过编译，就说明程序一定不存在逻辑错误。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>编译错误、逻辑错误</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">5.</div>
+    <div class="question-body"><p>栈的插入和删除操作都在同一端进行。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>栈、后进先出</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">6.</div>
+    <div class="question-body"><p>DNS 的主要作用是对传输文件进行压缩。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>DNS</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">7.</div>
+    <div class="question-body"><p>IPv4 地址由 32 位二进制数组成。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>IPv4</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">8.</div>
+    <div class="question-body"><p>防火墙可以根据安全策略对进出网络的数据流进行控制。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>防火墙、安全</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">9.</div>
+    <div class="question-body"><p>图像分辨率决定了图像中可表示颜色的最大数量。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>图像、色彩深度</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">10.</div>
+    <div class="question-body"><p>视频帧率越高，通常越有利于表现更平滑的动态效果。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>视频、帧率</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>二、单项选择题</span>
+    <span class="section-description">本大题共 50 小题，每小题 2 分，共 100 分。在每小题列出的选项中只有一项最符合题目要求。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">11.</div>
+    <div class="question-body"><p>负责取指令、分析指令并执行指令的部件是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>主板</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>外存</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>中央处理器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>显示器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>CPU</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">12.</div>
+    <div class="question-body"><p>下列设备中，属于输出设备的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>键盘</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>绘图仪</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>扫描仪</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>摄像头</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>输出设备</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">13.</div>
+    <div class="question-body"><p>下列设备中，主要用于输入声音信息的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>麦克风</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>音箱</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>投影仪</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>显卡</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>输入设备</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">14.</div>
+    <div class="question-body"><p>现代集成电路中最常见的半导体材料是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>金</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>银</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>铜</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>硅</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>集成电路、半导体</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">15.</div>
+    <div class="question-body"><p>计算机内部直接处理信息时最常使用的数制是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>二进制</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>十进制</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>八进制</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>十二进制</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>二进制</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">16.</div>
+    <div class="question-body"><p>1 个字节等于（ ）位二进制数。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>2</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>4</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>6</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>8</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>字节</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">17.</div>
+    <div class="question-body"><p>ASCII 码中，小写字母 a 的十进制编码是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>48</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>64</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>97</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>128</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>ASCII</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">18.</div>
+    <div class="question-body"><p>计算机中有符号整数最常采用的表示方法是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>原码</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>补码</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>反码</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>BCD 码</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>补码</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">19.</div>
+    <div class="question-body"><p>下列软件中，属于系统软件的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>Photoshop</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>Excel</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>Linux</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>AutoCAD</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>系统软件</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">20.</div>
+    <div class="question-body"><p>下列软件中，最典型的应用软件是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>BIOS</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>WPS Office</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>设备驱动程序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>编译程序</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>应用软件</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">21.</div>
+    <div class="question-body"><p>程序一次执行过程的动态实体称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>进程</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>文件</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>页面</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>指令</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>操作系统、进程</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">22.</div>
+    <div class="question-body"><p>操作系统中，负责组织、存储、检索和保护文件信息的功能是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>设备管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>处理机管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>作业管理</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>文件管理</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>文件管理</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">23.</div>
+    <div class="question-body"><p>将逻辑地址转换为物理地址属于操作系统的（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>设备管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>文件管理</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>存储管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>用户管理</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>存储管理</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">24.</div>
+    <div class="question-body"><p>将高级语言源程序翻译成机器指令序列的软件通常称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>编译程序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>浏览器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>编辑器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>压缩工具</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>语言翻译程序</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">25.</div>
+    <div class="question-body"><p>下列问题中，最可能在编译阶段被直接发现的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>算法复杂度偏高</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>运行结果不符合需求</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>边界情况考虑不全</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>关键字拼写错误</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>语法错误</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">26.</div>
+    <div class="question-body"><p>程序设计中，语句按照书写顺序依次执行，这种控制结构称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>分支结构</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>顺序结构</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>循环结构</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>递归结构</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>顺序结构</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">27.</div>
+    <div class="question-body"><p>最适合用来实现函数调用现场保护的数据结构是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>队列</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>树</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>栈</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>图</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>栈</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">28.</div>
+    <div class="question-body"><p>队列删除元素的一端通常称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>队头</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>队尾</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>表头</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>栈顶</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>队列</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">29.</div>
+    <div class="question-body"><p>与顺序表相比，链表在插入和删除元素时的突出特点是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>一定更节省存储空间</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>通常不需要整体移动大量元素</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>查找任意位置元素一定更快</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>一定支持随机存取</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>链表</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">30.</div>
+    <div class="question-body"><p>在二叉树中，一个结点最多有（ ）个子结点。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>0</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>1</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>3</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>2</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>二叉树</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">31.</div>
+    <div class="question-body"><p>从需求分析、设计、编码、测试到维护的一系列阶段称为软件（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>开发环境</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>质量模型</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>生命周期</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>运行平台</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>软件工程、生命周期</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">32.</div>
+    <div class="question-body"><p>软件开发中，用于回答“系统应该做什么”的阶段是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>需求分析</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>编码实现</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>单元测试</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>运行维护</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>需求分析</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">33.</div>
+    <div class="question-body"><p>软件测试的主要目的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>证明程序绝对无错</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>尽可能发现程序中的错误</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>提高显示器分辨率</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>替代需求分析</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>软件测试</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">34.</div>
+    <div class="question-body"><p>计算机网络最基本的功能是实现（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>图像处理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>程序编译</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>数据通信与资源共享</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>芯片制造</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>计算机网络</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">35.</div>
+    <div class="question-body"><p>不同设备之间能够按照统一规则交换数据，主要依赖于（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>网络协议</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>文件格式</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>程序注释</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>显示分辨率</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络协议</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">36.</div>
+    <div class="question-body"><p>下列场景中，最典型地属于局域网应用的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>跨国卫星通信</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>海底光缆洲际互联</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>全国移动骨干网</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>校园机房内部联网</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>局域网</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">37.</div>
+    <div class="question-body"><p>与局域网相比，广域网的典型特点是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>覆盖范围小</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>覆盖范围大</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>一定只用无线传输</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>一定没有路由设备</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>广域网</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">38.</div>
+    <div class="question-body"><p>在 TCP/IP 体系结构中，实现端到端可靠传输的典型协议是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>IP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>ARP</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>TCP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>ICMP</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>TCP/IP</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">39.</div>
+    <div class="question-body"><p>下列地址中，属于合法 IPv4 地址表示形式的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>192.168.1.10</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>192.168.256.1</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>10.2.3</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>A.B.C.D</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>IP地址</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">40.</div>
+    <div class="question-body"><p>下列选项中，可作为常见 IPv4 子网掩码的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>255.0.255.0</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>255.255.255.1</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>10.0.0.0</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>255.255.255.0</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>子网掩码</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">41.</div>
+    <div class="question-body"><p><code>www.example.com</code>
+中，便于用户记忆、最终需要被解析的标识是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>MAC 地址</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>域名</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>端口号</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>子网掩码</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>域名系统</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">42.</div>
+    <div class="question-body"><p>防止未授权用户获取敏感信息，主要体现信息安全中的（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>可用性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>可维护性</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>机密性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>可扩展性</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>信息安全、机密性</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">43.</div>
+    <div class="question-body"><p>能够自我复制并通过文件或网络传播的恶意程序通常称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>计算机病毒</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>浏览器插件</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>驱动程序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>编译器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>恶意软件</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">44.</div>
+    <div class="question-body"><p>下列口令中，相对更安全的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>123456</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>abcdef</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>password</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>A7#pL29q</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>口令安全</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">45.</div>
+    <div class="question-body"><p>图像清晰度在很大程度上与（ ）有关。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>声道数</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>分辨率</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>采样频率</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>端口号</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>图像、分辨率</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">46.</div>
+    <div class="question-body"><p>决定数字图像中可表示不同颜色最大数量的主要因素是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>帧率</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>传输速率</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>色彩深度</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>刷新频率</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>图像、色彩深度</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">47.</div>
+    <div class="question-body"><p>将模拟音频转换为数字音频时，首先要进行的关键步骤是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>采样</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>渲染</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>解压</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>纠错</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>音频数字化</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">48.</div>
+    <div class="question-body"><p>在其他条件不变时，音频采样频率提高通常意味着（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>声道数减少</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>文件类型消失</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>颜色更多</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>单位时间采集样本数增加</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>采样频率</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">49.</div>
+    <div class="question-body"><p>视频之所以能够呈现连续运动效果，是因为它本质上由（ ）构成。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>单个字符流</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>连续显示的图像序列</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>只含音频样本</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>只含网络报文</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>视频</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">50.</div>
+    <div class="question-body"><p>在存储和传输多媒体数据时，采用压缩技术的主要目的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>改变操作系统类型</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>提高 CPU 主频</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>减少数据量</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>增加显示器尺寸</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>压缩</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">51.</div>
+    <div class="question-body"><p>若某存储器容量为 2 MB，则其大约可以存放（ ）个字节。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><span class="math inline">$2 \\times 10^3$</span></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><span class="math inline">$2 \\times 10^4$</span></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><span class="math inline">$2 \\times 2^{10}$</span></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><span class="math inline">$2 \\times 2^{20}$</span></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>计算机组成、容量</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">52.</div>
+    <div class="question-body"><p>计算机中浮点数一般由符号、阶码和（ ）三部分组成。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>字模</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>尾数</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>字长</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>频率</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>浮点数</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">53.</div>
+    <div class="question-body"><p>更接近自然语言、便于人类编写和阅读的程序设计语言通常属于（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>高级语言</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>机器语言</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>二进制码</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>十六进制码</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>程序语言</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">54.</div>
+    <div class="question-body"><p>在循环结构中，最适合用于“已知执行次数”的场景的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>递归调用</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>条件编译</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>计数循环</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>中断处理</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>循环</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">55.</div>
+    <div class="question-body"><p>下列时间复杂度中，通常增长最快的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><span class="math inline">$O(n \\log n)$</span></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>算法复杂度</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">56.</div>
+    <div class="question-body"><p>在网络分层思想中，每一层主要向其上一层提供（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>电路板</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>服务</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>电源</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>外设</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络分层</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">57.</div>
+    <div class="question-body"><p>局域网中网卡的物理地址通常称为（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>MAC 地址</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>域名</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>邮箱地址</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>页面地址</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>MAC地址</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">58.</div>
+    <div class="question-body"><p>一门在线课程同时包含讲义文字、教学图片、讲解音频和演示视频，这体现了多媒体技术的（
+）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>单一性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>模拟性</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>综合性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>离线性</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>多媒体、综合</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">59.</div>
+    <div class="question-body"><p>两个 8 位二进制补码 <code>11111011</code> 与 <code>00000101</code>
+相加，结果对应的十进制值是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>-10</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>0</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>8</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>256</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>难度、二进制</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">60.</div>
+    <div class="question-body"><p>某主机 IP 地址为 <code>192.168.10.66</code>，子网掩码为
+<code>255.255.255.192</code>，则该主机所在子网每个子网可用主机地址数为（
+）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>16</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>32</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>48</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>62</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>难度、网络</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>三、多项选择题</span>
+    <span class="section-description">本大题共 10 小题，每小题 2 分，共 20 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">61.</div>
+    <div class="question-body"><p>下列属于冯诺依曼型计算机五大功能部件的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>运算器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>控制器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>存储器</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>浏览器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>计算机组成</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">62.</div>
+    <div class="question-body"><p>下列设备中，属于外部设备的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>键盘</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>运算器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>显示器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>鼠标</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>外部设备</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">63.</div>
+    <div class="question-body"><p>下列属于应用软件的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>浏览器</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>图像处理软件</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>操作系统</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>电子表格软件</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>软件分类</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">64.</div>
+    <div class="question-body"><p>操作系统的基本管理功能包括（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>处理机管理</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>存储管理</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>文件管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>晶圆制造</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>操作系统</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">65.</div>
+    <div class="question-body"><p>下列数据结构中，属于线性结构的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>树</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>顺序表</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>链表</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>队列</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>BCD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>线性结构</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">66.</div>
+    <div class="question-body"><p>下列属于软件工程核心活动或目标的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>需求分析</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>提高晶体管纯度</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>测试</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>维护</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>软件工程</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">67.</div>
+    <div class="question-body"><p>下列关于计算机网络的描述中，正确的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>可实现资源共享</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>可实现数据通信</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>需要协议支撑</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>必须只用有线介质</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络基础</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">68.</div>
+    <div class="question-body"><p>下列做法中，有助于提升信息安全性的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>使用复杂口令</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>定期更新系统补丁</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>将口令公开给所有同学</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>开启访问控制</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>信息安全</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">69.</div>
+    <div class="question-body"><p>下列关于多媒体数据的说法中，正确的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>图像通常由像素构成</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>音频数字化涉及采样</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>视频通常由图像序列构成</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>视频一定不包含音频</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>图像音视频</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">70.</div>
+    <div class="question-body"><p>某在线教育平台从课程上传到学生观看的完整链路中，可能涉及的技术与概念有（
+）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>文件存储管理</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>只能使用局域网</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>域名解析</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>视频编码与传输</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>难度、综合</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>四、填空题</span>
+    <span class="section-description">本大题共 10 小题，每小题 2 分，共 20 分。请将答案填写在对应横线上。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">71.</div>
+    <div class="question-body"><p>计算机内部最基本的信息表示形式是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>二进制</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>数制</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">72.</div>
+    <div class="question-body"><p>用于表示英文字符和控制字符的常见编码标准是 <span
+class="fill-blank-line">____</span> 码。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ASCII</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>字符编码</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">73.</div>
+    <div class="question-body"><p>统一管理硬件和软件资源并向用户提供接口的系统软件称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>操作系统</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>系统软件</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">74.</div>
+    <div class="question-body"><p>栈的基本操作规律可概括为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>后进先出</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>栈</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">75.</div>
+    <div class="question-body"><p>从需求到维护的全过程统称软件 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>生命周期</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>软件工程</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">76.</div>
+    <div class="question-body"><p>网络中为通信双方共同遵守的规则集合称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>协议</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">77.</div>
+    <div class="question-body"><p>IPv4 地址长度为 <span class="fill-blank-line">____</span> 位。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>32</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>IPv4</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">78.</div>
+    <div class="question-body"><p>通过 DNS 解析、便于人类记忆的网络标识是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>域名</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>DNS</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">79.</div>
+    <div class="question-body"><p>将连续时间声音信号转化为离散时间样本值的过程称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>采样</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>音频</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">80.</div>
+    <div class="question-body"><p>表示视频每秒显示画面数量的指标称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>帧率</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>视频</div>
+</article>
+</section>
+  </div>
+</body>
+</html>

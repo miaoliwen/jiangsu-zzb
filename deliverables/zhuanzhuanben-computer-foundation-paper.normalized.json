@@ -1,0 +1,1252 @@
+{
+  "exam": {
+    "title": "江苏省普通高校“专转本”计算机基础综合模拟试卷",
+    "subtitle": "依据给定考察内容生成",
+    "confidential_label": "机密★启用前",
+    "duration_minutes": 120,
+    "total_score": 150,
+    "variant": "official"
+  },
+  "instructions": [
+    "本卷分为客观题和主观题两部分，建议考生先完成客观题，再完成主观题。",
+    "请在答题卡或指定答题区域内作答，作答在草稿纸上的内容无效。",
+    "计算题、简答题、编程题和综合题应写出必要步骤、关键结论或核心代码。"
+  ],
+  "render": {
+    "include_answers": false,
+    "include_keywords": false,
+    "include_sources": false,
+    "include_teacher_notes": false,
+    "include_analysis": false,
+    "highlight_answer": false
+  },
+  "sections": [
+    {
+      "title": "单项选择题",
+      "questions": [
+        {
+          "heading": "1",
+          "answer": "C",
+          "keywords": [
+            "冯诺依曼结构",
+            "计算机基本组成"
+          ],
+          "type": "single_choice",
+          "number": 1,
+          "stem": "计算机系统中，负责“取指令、分析指令并执行指令”的核心部件是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "主存储器"
+            },
+            {
+              "label": "B",
+              "content": "输入设备"
+            },
+            {
+              "label": "C",
+              "content": "中央处理器"
+            },
+            {
+              "label": "D",
+              "content": "显示器"
+            }
+          ]
+        },
+        {
+          "heading": "2",
+          "answer": "B",
+          "keywords": [
+            "外部设备",
+            "输出设备"
+          ],
+          "type": "single_choice",
+          "number": 2,
+          "stem": "下列设备中，属于输出设备的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "键盘"
+            },
+            {
+              "label": "B",
+              "content": "打印机"
+            },
+            {
+              "label": "C",
+              "content": "扫描仪"
+            },
+            {
+              "label": "D",
+              "content": "麦克风"
+            }
+          ]
+        },
+        {
+          "heading": "3",
+          "answer": "D",
+          "keywords": [
+            "集成电路",
+            "半导体材料"
+          ],
+          "type": "single_choice",
+          "number": 3,
+          "stem": "现代集成电路中使用最广泛的半导体材料主要是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "铜"
+            },
+            {
+              "label": "B",
+              "content": "铝"
+            },
+            {
+              "label": "C",
+              "content": "锗"
+            },
+            {
+              "label": "D",
+              "content": "硅"
+            }
+          ]
+        },
+        {
+          "heading": "4",
+          "answer": "A",
+          "keywords": [
+            "信息表示",
+            "二进制"
+          ],
+          "type": "single_choice",
+          "number": 4,
+          "stem": "计算机内部直接处理和存储信息时采用的数制通常是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "二进制"
+            },
+            {
+              "label": "B",
+              "content": "八进制"
+            },
+            {
+              "label": "C",
+              "content": "十进制"
+            },
+            {
+              "label": "D",
+              "content": "十六进制"
+            }
+          ]
+        },
+        {
+          "heading": "5",
+          "answer": "C",
+          "keywords": [
+            "ASCII"
+          ],
+          "type": "single_choice",
+          "number": 5,
+          "stem": "ASCII 码中，大写字母 A 对应的十进制编码是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "48"
+            },
+            {
+              "label": "B",
+              "content": "64"
+            },
+            {
+              "label": "C",
+              "content": "65"
+            },
+            {
+              "label": "D",
+              "content": "97"
+            }
+          ]
+        },
+        {
+          "heading": "6",
+          "answer": "B",
+          "keywords": [
+            "软件分类",
+            "系统软件"
+          ],
+          "type": "single_choice",
+          "number": 6,
+          "stem": "下列软件中，属于系统软件的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "Excel"
+            },
+            {
+              "label": "B",
+              "content": "Windows 11"
+            },
+            {
+              "label": "C",
+              "content": "Photoshop"
+            },
+            {
+              "label": "D",
+              "content": "WPS Office"
+            }
+          ]
+        },
+        {
+          "heading": "7",
+          "answer": "A",
+          "keywords": [
+            "操作系统",
+            "进程"
+          ],
+          "type": "single_choice",
+          "number": 7,
+          "stem": "操作系统中，程序一次执行过程的动态实体通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "进程"
+            },
+            {
+              "label": "B",
+              "content": "文件"
+            },
+            {
+              "label": "C",
+              "content": "作业"
+            },
+            {
+              "label": "D",
+              "content": "中断"
+            }
+          ]
+        },
+        {
+          "heading": "8",
+          "answer": "D",
+          "keywords": [
+            "程序设计语言",
+            "语法错误"
+          ],
+          "type": "single_choice",
+          "number": 8,
+          "stem": "下列选项中，最可能在编译阶段被发现的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "结果不符合题意"
+            },
+            {
+              "label": "B",
+              "content": "排序效率偏低"
+            },
+            {
+              "label": "C",
+              "content": "输入数据范围过大"
+            },
+            {
+              "label": "D",
+              "content": "缺少分号导致语法不合法"
+            }
+          ]
+        },
+        {
+          "heading": "9",
+          "answer": "B",
+          "keywords": [
+            "数据结构",
+            "栈"
+          ],
+          "type": "single_choice",
+          "number": 9,
+          "stem": "栈这种数据结构的典型特点是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "先进先出"
+            },
+            {
+              "label": "B",
+              "content": "后进先出"
+            },
+            {
+              "label": "C",
+              "content": "随机存取"
+            },
+            {
+              "label": "D",
+              "content": "按关键字有序"
+            }
+          ]
+        },
+        {
+          "heading": "10",
+          "answer": "C",
+          "keywords": [
+            "数据结构",
+            "队列"
+          ],
+          "type": "single_choice",
+          "number": 10,
+          "stem": "循环队列中，允许进行删除操作的一端通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "栈顶"
+            },
+            {
+              "label": "B",
+              "content": "栈底"
+            },
+            {
+              "label": "C",
+              "content": "队头"
+            },
+            {
+              "label": "D",
+              "content": "队尾"
+            }
+          ]
+        },
+        {
+          "heading": "11",
+          "answer": "A",
+          "keywords": [
+            "软件工程",
+            "生命周期"
+          ],
+          "type": "single_choice",
+          "number": 11,
+          "stem": "软件工程中，从需求分析到维护的一系列阶段统称为软件（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "生命周期"
+            },
+            {
+              "label": "B",
+              "content": "模块化"
+            },
+            {
+              "label": "C",
+              "content": "面向对象"
+            },
+            {
+              "label": "D",
+              "content": "可移植性"
+            }
+          ]
+        },
+        {
+          "heading": "12",
+          "answer": "B",
+          "keywords": [
+            "计算机网络",
+            "协议"
+          ],
+          "type": "single_choice",
+          "number": 12,
+          "stem": "计算机网络中，为了保证不同设备之间能够通信而共同遵守的规则称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "拓扑"
+            },
+            {
+              "label": "B",
+              "content": "协议"
+            },
+            {
+              "label": "C",
+              "content": "路由"
+            },
+            {
+              "label": "D",
+              "content": "介质"
+            }
+          ]
+        },
+        {
+          "heading": "13",
+          "answer": "C",
+          "keywords": [
+            "局域网",
+            "广域网"
+          ],
+          "type": "single_choice",
+          "number": 13,
+          "stem": "与广域网相比，局域网最典型的特点是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "覆盖范围更广"
+            },
+            {
+              "label": "B",
+              "content": "传输时延更大"
+            },
+            {
+              "label": "C",
+              "content": "传输速率较高且覆盖范围较小"
+            },
+            {
+              "label": "D",
+              "content": "必须依赖卫星通信"
+            }
+          ]
+        },
+        {
+          "heading": "14",
+          "answer": "D",
+          "keywords": [
+            "IP地址",
+            "IPv4"
+          ],
+          "type": "single_choice",
+          "number": 14,
+          "stem": "IPv4 地址长度是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "8 位"
+            },
+            {
+              "label": "B",
+              "content": "16 位"
+            },
+            {
+              "label": "C",
+              "content": "24 位"
+            },
+            {
+              "label": "D",
+              "content": "32 位"
+            }
+          ]
+        },
+        {
+          "heading": "15",
+          "answer": "A",
+          "keywords": [
+            "DNS",
+            "域名系统"
+          ],
+          "type": "single_choice",
+          "number": 15,
+          "stem": "DNS 的主要功能是实现（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "域名到 IP 地址的解析"
+            },
+            {
+              "label": "B",
+              "content": "数据加密"
+            },
+            {
+              "label": "C",
+              "content": "文件压缩"
+            },
+            {
+              "label": "D",
+              "content": "进程调度"
+            }
+          ]
+        },
+        {
+          "heading": "16",
+          "answer": "B",
+          "keywords": [
+            "信息安全",
+            "防火墙"
+          ],
+          "type": "single_choice",
+          "number": 16,
+          "stem": "在网络边界根据安全策略控制进出网络数据流的基础设施通常是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "集线器"
+            },
+            {
+              "label": "B",
+              "content": "防火墙"
+            },
+            {
+              "label": "C",
+              "content": "中继器"
+            },
+            {
+              "label": "D",
+              "content": "显卡"
+            }
+          ]
+        },
+        {
+          "heading": "17",
+          "answer": "C",
+          "keywords": [
+            "多媒体",
+            "分辨率"
+          ],
+          "type": "single_choice",
+          "number": 17,
+          "stem": "图像中像素的多少主要由（ ）决定。",
+          "options": [
+            {
+              "label": "A",
+              "content": "色彩深度"
+            },
+            {
+              "label": "B",
+              "content": "采样频率"
+            },
+            {
+              "label": "C",
+              "content": "分辨率"
+            },
+            {
+              "label": "D",
+              "content": "压缩比"
+            }
+          ]
+        },
+        {
+          "heading": "18",
+          "answer": "D",
+          "keywords": [
+            "音频",
+            "采样频率"
+          ],
+          "type": "single_choice",
+          "number": 18,
+          "stem": "在数字音频中，采样频率越高，通常意味着（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "声道数一定越多"
+            },
+            {
+              "label": "B",
+              "content": "文件格式一定改变"
+            },
+            {
+              "label": "C",
+              "content": "音量一定越大"
+            },
+            {
+              "label": "D",
+              "content": "单位时间采集的样本数更多"
+            }
+          ]
+        },
+        {
+          "heading": "19",
+          "answer": "A",
+          "keywords": [
+            "视频",
+            "帧"
+          ],
+          "type": "single_choice",
+          "number": 19,
+          "stem": "视频播放中产生连续运动视觉效果的直接原因是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "连续显示静态画面序列"
+            },
+            {
+              "label": "B",
+              "content": "使用二进制编码"
+            },
+            {
+              "label": "C",
+              "content": "使用十六进制地址"
+            },
+            {
+              "label": "D",
+              "content": "文件扩展名不同"
+            }
+          ]
+        },
+        {
+          "heading": "20",
+          "answer": "B",
+          "keywords": [
+            "图像格式",
+            "无损压缩"
+          ],
+          "type": "single_choice",
+          "number": 20,
+          "stem": "下列常见图像格式中，常用于支持透明背景网页图像的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "BMP"
+            },
+            {
+              "label": "B",
+              "content": "PNG"
+            },
+            {
+              "label": "C",
+              "content": "WAV"
+            },
+            {
+              "label": "D",
+              "content": "AVI"
+            }
+          ]
+        }
+      ],
+      "type": "single_choice",
+      "score_per_question": 2,
+      "description": "本大题共 20 小题，每小题 2 分，共 40 分。在每小题列出的选项中只有一项最符合题目要求。"
+    },
+    {
+      "title": "多项选择题",
+      "questions": [
+        {
+          "heading": "21",
+          "answer": "ABC",
+          "keywords": [
+            "计算机系统组成"
+          ],
+          "type": "multiple_choice",
+          "number": 21,
+          "stem": "下列属于计算机硬件系统基本组成部分的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "运算器"
+            },
+            {
+              "label": "B",
+              "content": "控制器"
+            },
+            {
+              "label": "C",
+              "content": "存储器"
+            },
+            {
+              "label": "D",
+              "content": "编译器"
+            }
+          ]
+        },
+        {
+          "heading": "22",
+          "answer": "ACD",
+          "keywords": [
+            "输入设备"
+          ],
+          "type": "multiple_choice",
+          "number": 22,
+          "stem": "下列设备中，属于输入设备的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "扫描仪"
+            },
+            {
+              "label": "B",
+              "content": "投影仪"
+            },
+            {
+              "label": "C",
+              "content": "鼠标"
+            },
+            {
+              "label": "D",
+              "content": "摄像头"
+            }
+          ]
+        },
+        {
+          "heading": "23",
+          "answer": "ABD",
+          "keywords": [
+            "软件分类"
+          ],
+          "type": "multiple_choice",
+          "number": 23,
+          "stem": "下列软件中，属于应用软件的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "浏览器"
+            },
+            {
+              "label": "B",
+              "content": "文字处理软件"
+            },
+            {
+              "label": "C",
+              "content": "Linux 内核"
+            },
+            {
+              "label": "D",
+              "content": "图像处理软件"
+            }
+          ]
+        },
+        {
+          "heading": "24",
+          "answer": "ABC",
+          "keywords": [
+            "操作系统功能"
+          ],
+          "type": "multiple_choice",
+          "number": 24,
+          "stem": "操作系统的基本功能通常包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "处理机管理"
+            },
+            {
+              "label": "B",
+              "content": "存储管理"
+            },
+            {
+              "label": "C",
+              "content": "文件管理"
+            },
+            {
+              "label": "D",
+              "content": "电路焊接"
+            }
+          ]
+        },
+        {
+          "heading": "25",
+          "answer": "BCD",
+          "keywords": [
+            "数据结构",
+            "线性结构"
+          ],
+          "type": "multiple_choice",
+          "number": 25,
+          "stem": "下列数据结构中，属于线性结构的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "二叉树"
+            },
+            {
+              "label": "B",
+              "content": "数组"
+            },
+            {
+              "label": "C",
+              "content": "链表"
+            },
+            {
+              "label": "D",
+              "content": "队列"
+            }
+          ]
+        },
+        {
+          "heading": "26",
+          "answer": "ACD",
+          "keywords": [
+            "软件工程"
+          ],
+          "type": "multiple_choice",
+          "number": 26,
+          "stem": "下列属于软件工程关注内容的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "需求分析"
+            },
+            {
+              "label": "B",
+              "content": "晶体管掺杂工艺"
+            },
+            {
+              "label": "C",
+              "content": "测试与维护"
+            },
+            {
+              "label": "D",
+              "content": "项目管理"
+            }
+          ]
+        },
+        {
+          "heading": "27",
+          "answer": "ABC",
+          "keywords": [
+            "局域网特点"
+          ],
+          "type": "multiple_choice",
+          "number": 27,
+          "stem": "下列关于局域网的描述中，正确的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "覆盖范围较小"
+            },
+            {
+              "label": "B",
+              "content": "传输速率通常较高"
+            },
+            {
+              "label": "C",
+              "content": "常服务于校园或企业内部"
+            },
+            {
+              "label": "D",
+              "content": "一定使用卫星链路"
+            }
+          ]
+        },
+        {
+          "heading": "28",
+          "answer": "ACD",
+          "keywords": [
+            "IP地址"
+          ],
+          "type": "multiple_choice",
+          "number": 28,
+          "stem": "关于 IPv4 地址的说法，正确的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "通常写成点分十进制形式"
+            },
+            {
+              "label": "B",
+              "content": "由 64 位二进制数组成"
+            },
+            {
+              "label": "C",
+              "content": "一个 IPv4 地址由 4 个字节组成"
+            },
+            {
+              "label": "D",
+              "content": "主机地址分配需要遵循子网规则"
+            }
+          ]
+        },
+        {
+          "heading": "29",
+          "answer": "ABD",
+          "keywords": [
+            "信息安全"
+          ],
+          "type": "multiple_choice",
+          "number": 29,
+          "stem": "下列属于常见信息安全目标或措施的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "机密性"
+            },
+            {
+              "label": "B",
+              "content": "完整性"
+            },
+            {
+              "label": "C",
+              "content": "任意共享口令"
+            },
+            {
+              "label": "D",
+              "content": "身份认证"
+            }
+          ]
+        },
+        {
+          "heading": "30",
+          "answer": "ABC",
+          "keywords": [
+            "多媒体技术"
+          ],
+          "type": "multiple_choice",
+          "number": 30,
+          "stem": "下列关于多媒体信息的说法中，正确的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "文本适合表达结构化语义内容"
+            },
+            {
+              "label": "B",
+              "content": "数字图像由像素构成"
+            },
+            {
+              "label": "C",
+              "content": "数字视频通常由图像序列和音频组成"
+            },
+            {
+              "label": "D",
+              "content": "音频数字化不需要采样"
+            }
+          ]
+        }
+      ],
+      "type": "multiple_choice",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。"
+    },
+    {
+      "title": "判断题",
+      "questions": [
+        {
+          "heading": "31",
+          "answer": "A",
+          "keywords": [
+            "存储器"
+          ],
+          "type": "judgement",
+          "number": 31,
+          "stem": "内存储器的访问速度通常快于外存储器。",
+          "options": []
+        },
+        {
+          "heading": "32",
+          "answer": "B",
+          "keywords": [
+            "机器语言"
+          ],
+          "type": "judgement",
+          "number": 32,
+          "stem": "机器语言是最适合人类直接阅读和编写的高级程序设计语言。",
+          "options": []
+        },
+        {
+          "heading": "33",
+          "answer": "A",
+          "keywords": [
+            "栈"
+          ],
+          "type": "judgement",
+          "number": 33,
+          "stem": "栈的插入和删除操作通常发生在同一端。",
+          "options": []
+        },
+        {
+          "heading": "34",
+          "answer": "B",
+          "keywords": [
+            "软件工程"
+          ],
+          "type": "judgement",
+          "number": 34,
+          "stem": "软件测试的目的只是证明程序绝对没有错误。",
+          "options": []
+        },
+        {
+          "heading": "35",
+          "answer": "A",
+          "keywords": [
+            "网络协议分层"
+          ],
+          "type": "judgement",
+          "number": 35,
+          "stem": "分层思想有利于降低网络系统设计和实现的复杂度。",
+          "options": []
+        },
+        {
+          "heading": "36",
+          "answer": "B",
+          "keywords": [
+            "DNS"
+          ],
+          "type": "judgement",
+          "number": 36,
+          "stem": "DNS 的主要作用是对文件进行压缩传输。",
+          "options": []
+        },
+        {
+          "heading": "37",
+          "answer": "A",
+          "keywords": [
+            "信息安全",
+            "口令"
+          ],
+          "type": "judgement",
+          "number": 37,
+          "stem": "长度足够且包含多类字符的口令通常比简单口令更安全。",
+          "options": []
+        },
+        {
+          "heading": "38",
+          "answer": "A",
+          "keywords": [
+            "图像"
+          ],
+          "type": "judgement",
+          "number": 38,
+          "stem": "同样分辨率下，色彩深度越高，图像可表示的颜色种类通常越多。",
+          "options": []
+        },
+        {
+          "heading": "39",
+          "answer": "B",
+          "keywords": [
+            "音频",
+            "采样"
+          ],
+          "type": "judgement",
+          "number": 39,
+          "stem": "采样频率越低，数字音频保真度一定越高。",
+          "options": []
+        },
+        {
+          "heading": "40",
+          "answer": "A",
+          "keywords": [
+            "视频"
+          ],
+          "type": "judgement",
+          "number": 40,
+          "stem": "帧率越高，视频运动通常会显得更平滑。",
+          "options": []
+        }
+      ],
+      "type": "judgement",
+      "score_per_question": 1,
+      "description": "本大题共 10 小题，每小题 1 分，共 10 分。下列各题表述正确的填“A”，错误的填“B”。"
+    },
+    {
+      "title": "填空题",
+      "questions": [
+        {
+          "heading": "41",
+          "answer": 8,
+          "keywords": [
+            "位",
+            "字节"
+          ],
+          "type": "fill_blank",
+          "number": 41,
+          "stem": "1 个字节等于 ____ 位。",
+          "options": []
+        },
+        {
+          "heading": "42",
+          "answer": "十六进制",
+          "keywords": [
+            "数制转换"
+          ],
+          "type": "fill_blank",
+          "number": 42,
+          "stem": "为了更紧凑地表示二进制信息，计算机中常使用 ____ 与二进制对应表示。",
+          "options": []
+        },
+        {
+          "heading": "43",
+          "answer": "操作系统",
+          "keywords": [
+            "系统软件"
+          ],
+          "type": "fill_blank",
+          "number": 43,
+          "stem": "负责管理计算机硬件与软件资源、并为用户和应用提供接口的系统软件是 ____。",
+          "options": []
+        },
+        {
+          "heading": "44",
+          "answer": "后进先出",
+          "keywords": [
+            "栈"
+          ],
+          "type": "fill_blank",
+          "number": 44,
+          "stem": "栈的基本操作规律可概括为 ____。",
+          "options": []
+        },
+        {
+          "heading": "45",
+          "answer": "先进先出",
+          "keywords": [
+            "队列"
+          ],
+          "type": "fill_blank",
+          "number": 45,
+          "stem": "队列的基本操作规律可概括为 ____。",
+          "options": []
+        },
+        {
+          "heading": "46",
+          "answer": "需求分析",
+          "keywords": [
+            "软件工程"
+          ],
+          "type": "fill_blank",
+          "number": 46,
+          "stem": "软件开发中，用于明确“系统做什么”的阶段通常是 ____。",
+          "options": []
+        },
+        {
+          "heading": "47",
+          "answer": 32,
+          "keywords": [
+            "IPv4"
+          ],
+          "type": "fill_blank",
+          "number": 47,
+          "stem": "IPv4 地址的长度是 ____ 位。",
+          "options": []
+        },
+        {
+          "heading": "48",
+          "answer": "域名",
+          "keywords": [
+            "DNS"
+          ],
+          "type": "fill_blank",
+          "number": 48,
+          "stem": "在 DNS 中，便于人记忆、用于标识网络主机的名称是 ____。",
+          "options": []
+        },
+        {
+          "heading": "49",
+          "answer": "采样",
+          "keywords": [
+            "音频数字化"
+          ],
+          "type": "fill_blank",
+          "number": 49,
+          "stem": "将连续时间信号按一定时间间隔转换成离散样本值的过程称为 ____。",
+          "options": []
+        },
+        {
+          "heading": "50",
+          "answer": "帧率",
+          "keywords": [
+            "视频"
+          ],
+          "type": "fill_blank",
+          "number": 50,
+          "stem": "表示视频每秒显示静态画面数量的指标称为 ____。",
+          "options": []
+        }
+      ],
+      "type": "fill_blank",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。请将答案填写在对应横线上。"
+    },
+    {
+      "title": "简答题",
+      "questions": [
+        {
+          "heading": "51",
+          "answer": "计算机系统由硬件系统和软件系统组成。硬件通常包括运算器、控制器、存储器、输入设备和输出设备；软件通常分为系统软件和应用软件。",
+          "analysis": "作答要点应覆盖“硬件 + 软件”两大部分，并点出硬件五大部件与软件两大分类。",
+          "type": "short_answer",
+          "number": 51,
+          "stem": "简述计算机系统的基本组成，并说明硬件系统与软件系统的关系。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "52",
+          "answer": "操作系统负责统一管理计算机资源并为用户和程序提供接口，核心功能包括处理机管理、存储管理、文件管理和设备管理。",
+          "analysis": "只要说清“资源管理者”和“接口提供者”两种角色，并列出主要功能即可。",
+          "type": "short_answer",
+          "number": 52,
+          "stem": "简述操作系统的主要作用，并列举其四项基本管理功能。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "53",
+          "answer": "局域网覆盖范围小、速率较高、通常服务于局部区域；广域网覆盖范围大、跨地域连接能力强，常借助运营商网络实现远距离通信。",
+          "analysis": "对比时至少写出覆盖范围、传输特征、典型应用场景三个维度。",
+          "type": "short_answer",
+          "number": 53,
+          "stem": "比较局域网和广域网的主要特点。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "54",
+          "answer": "多媒体技术能够综合处理文本、图形图像、音频和视频等多种信息；文本适合表达语义，图像适合表达视觉内容，音频适合表达声音，视频适合表现连续动态过程。",
+          "analysis": "回答时点出“综合处理多媒体信息”以及四类媒体的典型特点即可。",
+          "type": "short_answer",
+          "number": 54,
+          "stem": "简述多媒体技术的基本内涵，并分别说明文本、图像、音频、视频各自适合表达的信息类型。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "short_answer",
+      "score_per_question": 5,
+      "description": "本大题共 4 小题，每小题 5 分，共 20 分。请简明扼要作答。"
+    },
+    {
+      "title": "计算题",
+      "questions": [
+        {
+          "heading": "55",
+          "answer": 540,
+          "analysis": "72 b/s 表示每秒传输 72 bit，1 分钟为 60 s，因此总位数为 $72 \\\\times 60 = 4320$ bit。1 个 ASCII 字符按 8 bit 计，则字符数为 $4320 \\\\div 8 = 540$。",
+          "type": "calculation",
+          "number": 55,
+          "stem": "传输速率为 72 b/s，若每个 ASCII 字符按 8 bit 计算，则 1 分钟最多可传输多少个 ASCII 字符？",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "56",
+          "answer": "约 11.0 MB",
+          "analysis": "数据量 $= 1024 \\\\times 512 \\\\times 24 \\\\times 30 \\\\times 30$ bit。换算为字节需除以 8，再按 $1\\\\,\\\\text{MB}=1024^2\\\\,\\\\text{B}$ 计算，约为 $10.99\\\\,\\\\text{MB}$。",
+          "type": "calculation",
+          "number": 56,
+          "stem": "一段未压缩视频，分辨率为 1024 × 512，色彩深度为 24 位，每秒 30 帧，时长 10 秒。该视频数据量约为多少 MB？（按 $1\\\\,\\\\text{MB}=1024^2\\\\,\\\\text{B}$ 计算，结果保留两位小数）",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "calculation",
+      "score_per_question": 10,
+      "description": "本大题共 2 小题，每小题 10 分，共 20 分。请写出必要步骤。"
+    },
+    {
+      "title": "编程题",
+      "questions": [
+        {
+          "heading": "57",
+          "answer": "使用栈结构，遇到左括号入栈，遇到右括号检查栈顶匹配，最终栈空则合法。",
+          "analysis": "参考代码如下，时间复杂度为 $O(n)$，空间复杂度为 $O(n)$。",
+          "type": "programming",
+          "number": 57,
+          "stem": "```python\ndef is_valid_parentheses(s):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for ch in s:\n        if ch in '([{':\n            stack.append(ch)\n        elif ch in pairs:\n            if not stack or stack.pop() != pairs[ch]:\n                return False\n    return len(stack) == 0\n```\n\n请编写程序或伪代码，判断一个只包含 `()[]{}` 的字符串括号是否匹配，并简要说明算法思路。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "programming",
+      "score_per_question": 10,
+      "description": "本大题共 1 小题，共 10 分。请给出核心代码并说明思路。"
+    },
+    {
+      "title": "综合题",
+      "questions": [
+        {
+          "heading": "58",
+          "answer": "参考要点：1. 终端通过网卡接入交换机形成局域网；2. 通过路由设备接入广域网并使用 TCP/IP 协议通信；3. 通过 DNS 将域名解析为 IP 地址；4. 通过账号口令、HTTPS、权限控制、防火墙等措施保障安全；5. 文本、图像、音频、视频分别在采集、编码、存储、传输、呈现环节处理。",
+          "analysis": "本题可按“系统组成 - 网络通信 - 安全 - 多媒体”四个层次组织答案，条理清晰即可。",
+          "type": "composite",
+          "number": 58,
+          "stem": "某学校计划建设一个在线学习平台，学生可通过校园网或互联网访问课程资料、观看视频、提交作业并参加在线测验。请从以下四个方面进行分析：\n\n1. 说明该平台在计算机系统层面至少涉及哪些硬件和软件组成。\n2. 说明局域网、广域网、IP 地址和 DNS 在该场景中的作用。\n3. 说明平台在账号登录、数据传输和资源访问方面至少应采取哪些基础安全措施。\n4. 说明文本、图像、音频、视频等多媒体信息在该平台中的典型应用。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "composite",
+      "score_per_question": 20,
+      "description": "本大题共 1 小题，共 20 分。请综合运用相关知识作答。"
+    }
+  ]
+}

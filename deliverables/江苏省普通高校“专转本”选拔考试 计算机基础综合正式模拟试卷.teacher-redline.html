@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>江苏省普通高校“专转本”选拔考试 计算机基础综合正式模拟试卷</title>
+  <style>
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm 18mm;
+}
+
+:root {
+  --question-blue: #58bff2;
+  --answer-red: #d3362d;
+  --text-color: #111111;
+  --muted-color: #444444;
+  --border-color: #cfd6dc;
+  --code-bg: #f6f8fa;
+  --code-border: #d7dee5;
+  --code-inline-bg: #eef2f6;
+  --font-serif: "SimSun", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
+  --font-sans: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+  --font-mono: "Cascadia Mono", "Cascadia Code", "Consolas", "Courier New", monospace;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-serif);
+  color: var(--text-color);
+  font-size: 12pt;
+  line-height: 1.52;
+  background: white;
+}
+
+.paper {
+  width: 100%;
+}
+
+.confidential-label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12pt;
+  margin-bottom: 22px;
+}
+
+.title-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 20pt;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.title-block .subtitle {
+  font-family: var(--font-sans);
+  margin-top: 12px;
+  font-size: 13pt;
+}
+
+.notice-block {
+  margin: 8px 0 10px;
+}
+
+.notice-block .notice-title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.notice-block ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.exam-section {
+  margin-top: 8px;
+  break-inside: avoid;
+}
+
+.notice-block + .exam-section {
+  margin-top: 4px;
+}
+
+.section-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 15pt;
+  margin-bottom: 8px;
+}
+
+.section-heading .section-description {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.exam-question {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+.question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--question-blue);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.question-number {
+  flex: 0 0 auto;
+}
+
+.question-body {
+  font-family: var(--font-serif);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.question-body > :first-child {
+  margin-top: 0;
+}
+
+.question-body > :last-child {
+  margin-bottom: 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 4px;
+  margin: 2px 0 4px 28px;
+}
+
+.options-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.option-item .option-label {
+  flex: 0 0 auto;
+}
+
+.option-item .option-content {
+  font-family: var(--font-serif);
+  flex: 1 1 auto;
+}
+
+.option-item.correct-answer {
+  color: var(--answer-red);
+}
+
+.answer-block,
+.keywords-block,
+.source-block,
+.teacher-note-block,
+.analysis-block {
+  margin-left: 28px;
+  margin-top: 2px;
+}
+
+.composite-children {
+  margin-left: 28px;
+  margin-top: 8px;
+}
+
+.composite-child {
+  margin-top: 10px;
+}
+
+.composite-child-heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.composite-child-body {
+  font-family: var(--font-serif);
+}
+
+.composite-child-body > :first-child {
+  margin-top: 0;
+}
+
+.composite-child-body > :last-child {
+  margin-bottom: 0;
+}
+
+.answer-block .block-label,
+.keywords-block .block-label,
+.source-block .block-label,
+.teacher-note-block .block-label,
+.analysis-block .block-label {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.teacher-redline .answer-block,
+.teacher-redline .source-block,
+.teacher-redline .teacher-note-block,
+.teacher-redline .analysis-block {
+  color: var(--answer-red);
+}
+
+.fill-blank-line {
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+code {
+  font-size: 0.93em;
+}
+
+p code,
+li code,
+td code,
+th code,
+blockquote code {
+  background: var(--code-inline-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 3px;
+  padding: 0 0.24em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-left: 3px solid var(--question-blue);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin: 8px 0 10px;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+  tab-size: 4;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+pre code {
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1em;
+  white-space: inherit;
+}
+
+blockquote {
+  margin: 6px 0 6px 18px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+  color: var(--muted-color);
+}
+
+p {
+  margin: 2px 0 6px;
+}
+
+.answer-block,
+.keywords-block,
+.source-block,
+.teacher-note-block,
+.analysis-block,
+table,
+th,
+td,
+blockquote {
+  font-family: var(--font-serif);
+}
+
+ul,
+ol {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.variant-official .answer-block,
+.variant-official .keywords-block,
+.variant-official .source-block,
+.variant-official .teacher-note-block,
+.variant-official .analysis-block {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="paper variant-teacher-redline teacher-redline">
+    <div class="confidential-label">机密★启用前</div>
+    <div class="title-block">
+      <h1>江苏省普通高校“专转本”选拔考试 计算机基础综合正式模拟试卷</h1>
+<div class="subtitle">科目代码: 204（正式考试难度）</div>
+    </div>
+<div class="notice-block"><div class="notice-title">娉ㄦ剰浜嬮」:</div><ol><li>本卷分为客观题和主观题两部分，请按题号顺序在指定答题区域内作答。</li><li>单项选择题只有一个最符合题意的选项；多项选择题至少有两个正确选项，错选不得分。</li><li>简答题、计算题、编程题和综合题须写出必要过程、关键结论或核心代码。</li></ol></div>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>一、单项选择题</span>
+    <span class="section-description">本大题共 20 小题，每小题 2 分，共 40 分。在每小题列出的选项中只有一项最符合题目要求。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">1.</div>
+    <div class="question-body"><p>在采用补码表示的 8 位有符号整数中，十进制数 <code>-18</code>
+的补码是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>11101101</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>11101100</code></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>11101110</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>10010010</code></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">2.</div>
+    <div class="question-body"><p>某 CPU 采用 32 位地址总线，按字节编址，则其理论最大可直接寻址空间为（
+）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>2 GB</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>4 GB</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>8 GB</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>32 GB</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">3.</div>
+    <div class="question-body"><p>下列关于操作系统进程与线程关系的说法中，正确的是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>一个进程中只能包含一个线程</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>线程拥有独立的地址空间</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>进程切换通常比线程切换开销更小</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>同一进程中的线程可共享进程资源</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">4.</div>
+    <div class="question-body"><p>对长度为 <code>n</code>
+的顺序表执行一次折半查找，其前提条件是该顺序表（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>已按关键字有序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>采用链式存储</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>不含重复元素</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>n</code> 必须为偶数</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">5.</div>
+    <div class="question-body"><p>在栈中依次压入元素 <code>a,b,c,d</code>
+后，若连续执行两次出栈，则此后栈顶元素为（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>d</code></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>b</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>a</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>不确定</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">6.</div>
+    <div class="question-body"><p>下列排序算法中，平均时间复杂度为
+<code>O(n log n)</code>，且最坏情况下也为 <code>O(n log n)</code> 的是（
+）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>直接插入排序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>冒泡排序</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>归并排序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>简单选择排序</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">7.</div>
+    <div class="question-body"><p>在关系数据库中，若一个非主属性完全函数依赖于码，且不存在传递依赖，则该关系模式至少属于（
+）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>第三范式</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>第一范式</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>BCNF</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>第四范式</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">8.</div>
+    <div class="question-body"><p>在 SQL 中，若希望查询选修课程数大于 3
+门的学生学号，最合适使用的子句是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>ORDER BY</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>DISTINCT</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>WHERE</code></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>HAVING</code></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">9.</div>
+    <div class="question-body"><p>下列关于编译程序与解释程序的说法中，正确的是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>解释程序一定先生成目标代码再执行</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>编译程序不需要进行词法分析</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>编译方式通常更有利于重复执行同一程序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>解释方式生成的可执行文件通常独立于解释器</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">10.</div>
+    <div class="question-body"><p>若某算法的递归关系式为
+<code>T(n)=2T(n/2)+n</code>，则其时间复杂度为（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>O(log n)</code></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>O(n log n)</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>O(n^2)</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>O(2^n)</code></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">11.</div>
+    <div class="question-body"><p>在 IP 分层模型中，负责将主机标识与物理地址映射起来的常用协议是（
+）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>ARP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>ICMP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>HTTP</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>SMTP</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">12.</div>
+    <div class="question-body"><p>一个子网掩码为 <code>255.255.255.192</code> 的 IPv4
+子网，其每个子网最多可容纳的主机数为（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>30</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>32</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>62</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>64</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">13.</div>
+    <div class="question-body"><p>关于 TCP 与 UDP 的比较，下列说法正确的是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>UDP 提供可靠的有序字节流服务</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>TCP 建立连接后可进行可靠传输</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>TCP 首部一定比 UDP 首部短</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>UDP 只能用于局域网</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">14.</div>
+    <div class="question-body"><p>当页面访问序列为 <code>1,2,3,4,1,2,5,1,2,3,4,5</code>，分配 3
+个物理块，采用 FIFO 页面置换算法时，缺页次数为（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>7</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>8</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>9</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>10</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">15.</div>
+    <div class="question-body"><p>在软件工程中，需求规格说明书的主要作用是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>作为后续设计、实现与测试的重要依据</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>直接替代详细设计文档</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>只用于项目验收阶段</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>仅描述界面样式而不描述功能</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">16.</div>
+    <div class="question-body"><p>若某文件采用顺序存储方式保存记录，并且经常需要按关键字随机定位其中一条记录，则最适合采用的附加结构是（
+）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>队列</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>栈</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>索引</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>哈希冲突链</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">17.</div>
+    <div class="question-body"><p>下列关于信息安全目标的说法中，不属于经典 CIA 三元组的是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>机密性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>完整性</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>可用性</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>可移植性</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">18.</div>
+    <div class="question-body"><p>关于数字图像分辨率和颜色深度的关系，下列说法正确的是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>分辨率决定单个像素可表示的颜色数</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>颜色深度决定单个像素可表示的信息量</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>颜色深度越高，图像像素数一定越多</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>分辨率与存储容量无关</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">19.</div>
+    <div class="question-body"><p>已知某二叉树的先序遍历序列为 <code>A B D E C F</code>，中序遍历序列为
+<code>D B E A C F</code>，则该二叉树的根结点是（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>B</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>D</code></p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>A</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>C</code></p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">20.</div>
+    <div class="question-body"><p>阅读下列 Python 代码后，程序输出结果为（ ）。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x, y<span class="op">=</span>[]):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    y.append(x)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(f(<span class="dv">1</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(f(<span class="dv">2</span>))</span></code></pre></div></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>[1]</code> 和 <code>[1, 2]</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>[1]</code> 和 <code>[2]</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>[1, 2]</code> 和 <code>[1, 2]</code></p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>抛出类型错误</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>二、多项选择题</span>
+    <span class="section-description">本大题共 10 小题，每小题 2 分，共 20 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">21.</div>
+    <div class="question-body"><p>下列属于冯·诺依曼体系结构核心思想的有（ ）。</p></div>
+  </div>
+  <div class="options-grid single-column">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>存储程序</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>数据只能以十进制存储</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>指令和数据统一存放在存储器中</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>计算机由运算器、控制器、存储器、输入和输出设备等组成</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">22.</div>
+    <div class="question-body"><p>关于进程调度与死锁的说法，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>抢占式调度可提升系统响应能力</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>死锁产生通常与互斥、请求并保持等条件有关</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>只要有资源竞争就一定发生死锁</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>银行家算法是一种避免死锁的思路</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">23.</div>
+    <div class="question-body"><p>下列数据结构中，逻辑上属于线性结构的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>二叉树</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>栈</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>队列</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>串</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>BCD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">24.</div>
+    <div class="question-body"><p>关于关系数据库主键与外键的说法，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>主键用于唯一标识元组</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>一个关系可以包含外键</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>外键用于建立关系之间的联系</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>一个关系模式只能有一个候选键</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">25.</div>
+    <div class="question-body"><p>下列关于 SQL 查询的说法中，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p><code>GROUP BY</code> 常与聚合函数联合使用</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p><code>WHERE</code> 可以直接筛选聚合后的分组结果</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p><code>ORDER BY</code> 用于指定结果排序方式</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p><code>COUNT(*)</code> 可统计结果集行数</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">26.</div>
+    <div class="question-body"><p>下列关于编译原理基础概念的说法，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>词法分析的任务之一是识别单词符号</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>语法分析在词法分析之后进行</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>符号表常用于记录标识符相关信息</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>语义分析与中间代码生成互斥，只能二选一</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">27.</div>
+    <div class="question-body"><p>关于 TCP 协议的特性，下列说法正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>面向连接</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>提供流量控制</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>不进行差错检测</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>能通过确认与重传实现可靠传输</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">28.</div>
+    <div class="question-body"><p>下列关于常见安全措施的说法，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>强口令策略有助于降低账户被暴力破解风险</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>最小权限原则可减少误操作或越权访问影响</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>数据备份有助于应对勒索软件等破坏事件</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>关闭日志记录通常能提高系统安全性</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">29.</div>
+    <div class="question-body"><p>下列关于面向对象程序设计的说法中，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>封装会消除对象之间的一切依赖</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>继承有助于代码复用</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>多态有利于统一接口下的不同实现</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>类是对象的抽象</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>BCD</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">30.</div>
+    <div class="question-body"><p>下列关于数字媒体压缩的说法中，正确的有（ ）。</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>有损压缩通常能获得更高压缩比</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>PNG 是典型的有损图像压缩格式</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>视频压缩常同时利用时间冗余与空间冗余</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>音频压缩可结合人耳听觉特性</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ACD</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>三、判断题</span>
+    <span class="section-description">本大题共 10 小题，每小题 1 分，共 10 分。下列各题表述正确的填“A”，错误的填“B”。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">31.</div>
+    <div class="question-body"><p>中断技术能够提高 CPU 与外设并行工作的效率。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">32.</div>
+    <div class="question-body"><p>采用链式存储的线性表一定不能进行按序号访问。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">33.</div>
+    <div class="question-body"><p>只要一个算法能够输出正确结果，它的时间复杂度就不再重要。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">34.</div>
+    <div class="question-body"><p>数据库中的实体完整性通常要求主属性不能取空值。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">35.</div>
+    <div class="question-body"><p><code>SELECT * FROM A, B</code>
+与带连接条件的等值连接在结果规模上总是相同。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">36.</div>
+    <div class="question-body"><p>高级语言程序通过编译或解释后才能被计算机执行。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">37.</div>
+    <div class="question-body"><p>IPv4
+地址冲突只可能发生在不同局域网之间，不可能发生在同一局域网内。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">38.</div>
+    <div class="question-body"><p>防火墙可以依据预设规则控制网络数据流的进出，但不能替代所有安全措施。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">39.</div>
+    <div class="question-body"><p>颜色深度越高，图像文件尺寸一定越小。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>B</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">40.</div>
+    <div class="question-body"><p>递归算法若缺少正确的终止条件，可能导致程序栈空间耗尽。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>A</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>四、填空题</span>
+    <span class="section-description">本大题共 10 小题，每小题 2 分，共 20 分。请将答案填写在对应横线上。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">41.</div>
+    <div class="question-body"><p>为缓解 CPU 与主存之间速度差异而设置的高速缓冲存储器通常称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>Cache</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">42.</div>
+    <div class="question-body"><p>队列这种数据结构的典型操作特征可概括为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>先进先出</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">43.</div>
+    <div class="question-body"><p>对长度为 <code>n</code> 的冒泡排序，在最坏情况下的时间复杂度为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>O(n^2)</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">44.</div>
+    <div class="question-body"><p>关系数据库中，主键最核心的约束属性是能够 <span
+class="fill-blank-line">____</span> 标识每一条记录。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>唯一</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">45.</div>
+    <div class="question-body"><p>TCP 建立连接的经典过程通常称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>三次握手</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">46.</div>
+    <div class="question-body"><p>IPv4 中，前 24 位表示网络号的常见 C 类子网掩码写作 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>255.255.255.0</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">47.</div>
+    <div class="question-body"><p>信息只能被授权主体访问，这一安全目标称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>机密性</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">48.</div>
+    <div class="question-body"><p>面向对象方法中，从具体对象中提取共同特征形成类的过程称为 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>抽象</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">49.</div>
+    <div class="question-body"><p>在程序设计的三种基本控制结构中，重复执行某段语句所使用的是 <span
+class="fill-blank-line">____</span> 结构。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>循环</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">50.</div>
+    <div class="question-body"><p>数字音频中，单位时间内采集样本次数的多少由 <span
+class="fill-blank-line">____</span> 决定。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>采样频率</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>五、简答题</span>
+    <span class="section-description">本大题共 4 小题，每小题 5 分，共 20 分。请简明扼要作答。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">51.</div>
+    <div class="question-body"><p>简述分页式虚拟存储管理的基本思想，并说明发生缺页时系统通常要做什么。</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>虚拟存储、分页</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>应说明分页式虚拟存储通过页表把逻辑地址映射为物理地址，并指出缺页时需要进行页面置换。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">52.</div>
+    <div class="question-body"><p>为什么关系数据库设计中要进行规范化？请结合至少一种异常现象说明。</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>数据库范式、冗余</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>应围绕减少冗余、避免更新异常、提高一致性展开，可举出插入、删除或修改异常。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">53.</div>
+    <div class="question-body"><p>简述面向对象程序设计中封装、继承、多态三者各自的作用。</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>面向对象、封装、继承、多态</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>应分别说明三者的含义及其对复用、维护和接口设计的作用。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">54.</div>
+    <div class="question-body"><p>在校园信息系统中，为什么“身份认证”和“访问控制”必须同时存在，而不能只保留其中之一？</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络安全、身份认证、访问控制</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>可从身份可信、权限最小化、行为可审计等角度回答。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>六、计算题</span>
+    <span class="section-description">本大题共 2 小题，每小题 10 分，共 20 分。请写出必要步骤。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">55.</div>
+    <div class="question-body"><p>将二进制数 <code>(101101.101)_2</code>
+分别转换为十进制、八进制和十六进制。</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>进制转换</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p><code>(101101.101)_2 = 45.625_10 = (55.5)_8 = (2D.A)_{16}</code>，应写出整数部分与小数部分转换过程。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">56.</div>
+    <div class="question-body"><p>阅读下列伪代码，求其时间复杂度，并写出主要推导过程。</p>
+<pre class="text"><code>s = 0
+for i = 1 to n:
+    for j = 1 to i:
+        s = s + 1</code></pre></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>时间复杂度、循环分析</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>外层循环执行 <code>n</code> 次，内层分别执行
+<code>1+2+...+(n-1)</code> 次，总复杂度为 <code>O(n^2)</code>。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>七、编程题</span>
+    <span class="section-description">本大题共 1 小题，共 10 分。请给出核心代码并说明思路。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">57.</div>
+    <div class="question-body"><p>编写程序：输入一行仅由字母和数字组成的字符串，统计其中每个字符出现的次数，并按字符第一次出现的顺序输出“字符:次数”。请写出核心代码，并说明算法思路与时间复杂度。</p></div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>字符串、哈希、计数</div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>可使用哈希表统计字符频次，再按出现顺序或字典序输出；重点是正确统计与边界处理。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>八、综合题</span>
+    <span class="section-description">本大题共 1 小题，共 20 分。请综合运用相关知识作答。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">58.</div>
+    <div class="question-body"><p>某高校拟开发“实验室预约管理系统”。系统需要支持学生登录、查看空闲实验室、提交预约申请、教师审批、系统记录预约日志，并在实验室设备冲突时拒绝重复预约。</p></div>
+  </div>
+  <div class="composite-children">
+    <div class="composite-child">
+      <div class="composite-child-heading">58.1</div>
+      <div class="composite-child-body"><p>从数据库设计角度，至少给出该系统应包含的 3
+个核心数据表，并说明它们各自记录的关键内容。</p></div>
+      <div class="analysis-block"><span class="block-label">解析:</span><p>至少应提到用户表、实验室表、预约表、审批/日志相关表中的三类，并说明主键或关联关系。</p></div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+    </div>
+    <div class="composite-child">
+      <div class="composite-child-heading">58.2</div>
+      <div class="composite-child-body"><p>从系统安全与正确性角度，写出该系统在实现时必须考虑的 3
+项关键措施，并说明原因。</p></div>
+      <div class="analysis-block"><span class="block-label">解析:</span><p>可从身份认证、权限控制、日志审计、输入校验、并发控制等方面作答。</p></div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+    </div>
+    <div class="composite-child">
+      <div class="composite-child-heading">58.3</div>
+      <div class="composite-child-body"><p>请用伪代码、流程描述或结构化步骤说明“学生提交预约申请”这一功能的主要处理流程。</p></div>
+      <div class="analysis-block"><span class="block-label">解析:</span><p>应体现“查询可用资源 -&gt; 校验时间冲突 -&gt; 写入申请 -&gt;
+记录日志/等待审批”的流程，若考虑事务控制更佳。</p></div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+      <div class="source-block">________________________________________</div>
+    </div>
+  </div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>网络、数据库、程序设计、系统分析</div>
+</article>
+</section>
+  </div>
+</body>
+</html>

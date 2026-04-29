@@ -1,0 +1,187 @@
+{
+  "exam": {
+    "title": "江苏省2024年普通高校“专转本”选拔考试 计算机专业大类专业综合基础理论 试卷",
+    "subtitle": "科目代码: 204",
+    "confidential_label": "机密★启用前",
+    "duration_minutes": 120,
+    "total_score": 150,
+    "variant": "teacher-redline"
+  },
+  "instructions": [
+    "本卷分为试卷和答题卡两部分，考生必须在答题卡上作答，作答在试卷上无效。",
+    "作答前务必将自己的姓名和准考证号准确清晰地填写在试卷和答题卡的指定位置。",
+    "考试结束时，须将试卷和答题卡一并交回。"
+  ],
+  "render": {
+    "include_answers": true,
+    "include_keywords": true,
+    "include_sources": true,
+    "include_teacher_notes": true,
+    "include_analysis": true,
+    "highlight_answer": true
+  },
+  "sections": [
+    {
+      "title": "单项选择题",
+      "questions": [
+        {
+          "heading": "1",
+          "answer": "C",
+          "keywords": [
+            "内存储器"
+          ],
+          "source": "《计算机应用基础强化习题集》P11",
+          "teacher_note": "【典型习题·单选】根据存储器芯片的功能及物理特性，目前用作PC机主存储器的是（ ）",
+          "type": "single_choice",
+          "number": 1,
+          "stem": "以下属于内存储器的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "移动硬盘"
+            },
+            {
+              "label": "B",
+              "content": "U 盘"
+            },
+            {
+              "label": "C",
+              "content": "SRAM"
+            },
+            {
+              "label": "D",
+              "content": "SD 卡"
+            }
+          ]
+        },
+        {
+          "heading": "2",
+          "answer": "D",
+          "keywords": [
+            "CPU",
+            "正确"
+          ],
+          "source": "《计算机应用基础强化习题集》P7",
+          "type": "single_choice",
+          "number": 2,
+          "stem": "以下关于 CPU 的描述中，正确的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "CPU 可直接访问内存"
+            },
+            {
+              "label": "B",
+              "content": "CPU 的字长是指 CPU 总线的工作频率"
+            },
+            {
+              "label": "C",
+              "content": "同一家公司、同一个系列 CPU 的指令系统互不兼容"
+            },
+            {
+              "label": "D",
+              "content": "Intel 与 AMD 公司设计的 PC 使用的 CPU 指令系统基本一致"
+            }
+          ]
+        }
+      ],
+      "type": "single_choice",
+      "score_per_question": 2,
+      "description": "本大题共 2 小题，每小题 2 分，共 4 分。在每小题列出的选项中只有一项最符合题目要求的。"
+    },
+    {
+      "title": "多项选择题",
+      "questions": [
+        {
+          "heading": "3",
+          "answer": "ABC",
+          "keywords": [
+            "人工智能典型应用"
+          ],
+          "source": "《计算机应用基础强化习题集》P84",
+          "type": "multiple_choice",
+          "number": 3,
+          "stem": "下列属于人工智能典型应用的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "文本模型 ChatGPT"
+            },
+            {
+              "label": "B",
+              "content": "文生视频模型 Sora"
+            },
+            {
+              "label": "C",
+              "content": "围棋博弈 AlphaGo"
+            },
+            {
+              "label": "D",
+              "content": "关系数据库系统 Oracle"
+            }
+          ]
+        }
+      ],
+      "type": "multiple_choice",
+      "score_per_question": 2,
+      "description": "本大题共 1 小题，每小题 2 分，共 2 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。"
+    },
+    {
+      "title": "判断题",
+      "questions": [
+        {
+          "heading": "4",
+          "answer": "错误",
+          "keywords": [
+            "高级程序设计语言的基本组成成分"
+          ],
+          "type": "judgement",
+          "number": 4,
+          "stem": "高级程序设计语言的基本组成成分有数据、运算、控制和执行。",
+          "options": []
+        }
+      ],
+      "type": "judgement",
+      "score_per_question": 1,
+      "description": "本大题共 1 小题，每小题 1 分，共 1 分。下列每小题表述正确的，在答题卡上填涂 A 选项；表述错误的填涂 B 选项。"
+    },
+    {
+      "title": "填空题",
+      "questions": [
+        {
+          "heading": "5",
+          "answer": 4,
+          "keywords": [
+            "IPv4",
+            "地址"
+          ],
+          "type": "fill_blank",
+          "number": 5,
+          "stem": "计算机网络中，组成 IPv4 地址的字节数是 ____。",
+          "options": []
+        }
+      ],
+      "type": "fill_blank",
+      "score_per_question": 2,
+      "description": "本大题共 1 小题，每小题 2 分，共 2 分。下列每小题的答案填在答题卡对应的横线上。"
+    },
+    {
+      "title": "编程题",
+      "questions": [
+        {
+          "heading": "6",
+          "answer_lines": 8,
+          "analysis": "需要同时验证代码缩进和公式渲染。时间复杂度写成 $O(n \\\\log n)$。",
+          "type": "programming",
+          "number": 6,
+          "stem": "写出一个 Python 函数，接收整数数组并返回升序排序结果。\n\n```python\ndef sort_numbers(nums):\n    return sorted(nums)\n```",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "programming",
+      "score_per_question": 10,
+      "description": "本大题共 1 小题，共 10 分。请写出程序并说明核心思路。"
+    }
+  ]
+}

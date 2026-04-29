@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>江苏省2024年普通高校“专转本”选拔考试 计算机专业大类专业综合基础理论 试卷</title>
+  <style>
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm 18mm;
+}
+
+:root {
+  --question-blue: #58bff2;
+  --answer-red: #d3362d;
+  --text-color: #111111;
+  --muted-color: #444444;
+  --border-color: #cfd6dc;
+  --code-bg: #f6f8fa;
+  --code-border: #d7dee5;
+  --code-inline-bg: #eef2f6;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "SimSun", "Songti SC", serif;
+  color: var(--text-color);
+  font-size: 12pt;
+  line-height: 1.52;
+  background: white;
+}
+
+.paper {
+  width: 100%;
+}
+
+.confidential-label {
+  font-weight: 700;
+  font-size: 12pt;
+  margin-bottom: 22px;
+}
+
+.title-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-block h1 {
+  margin: 0;
+  font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+  font-size: 20pt;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.title-block .subtitle {
+  margin-top: 12px;
+  font-size: 13pt;
+}
+
+.notice-block {
+  margin: 8px 0 10px;
+}
+
+.notice-block .notice-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.notice-block ol {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.exam-section {
+  margin-top: 8px;
+  break-inside: avoid;
+}
+
+.notice-block + .exam-section {
+  margin-top: 4px;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 15pt;
+  margin-bottom: 8px;
+}
+
+.section-heading .section-description {
+  font-size: 12pt;
+  font-weight: 700;
+}
+
+.exam-question {
+  margin-bottom: 14px;
+  break-inside: avoid;
+}
+
+.question-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--question-blue);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.question-number {
+  flex: 0 0 auto;
+}
+
+.question-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.question-body > :first-child {
+  margin-top: 0;
+}
+
+.question-body > :last-child {
+  margin-bottom: 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 4px;
+  margin: 2px 0 4px 28px;
+}
+
+.options-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.option-item .option-label {
+  flex: 0 0 auto;
+}
+
+.option-item .option-content {
+  flex: 1 1 auto;
+}
+
+.option-item.correct-answer {
+  color: var(--answer-red);
+}
+
+.answer-block,
+.keywords-block,
+.source-block,
+.teacher-note-block,
+.analysis-block {
+  margin-left: 28px;
+  margin-top: 2px;
+}
+
+.answer-block .block-label,
+.keywords-block .block-label,
+.source-block .block-label,
+.teacher-note-block .block-label,
+.analysis-block .block-label {
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.teacher-redline .answer-block,
+.teacher-redline .source-block,
+.teacher-redline .teacher-note-block,
+.teacher-redline .analysis-block {
+  color: var(--answer-red);
+}
+
+.fill-blank-line {
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+pre,
+code {
+  font-family: "Consolas", "Cascadia Code", "Courier New", monospace;
+}
+
+code {
+  font-size: 0.93em;
+}
+
+p code,
+li code,
+td code,
+th code,
+blockquote code {
+  background: var(--code-inline-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 3px;
+  padding: 0 0.24em;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-left: 3px solid var(--question-blue);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin: 8px 0 10px;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+  tab-size: 4;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+pre code {
+  display: block;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1em;
+  white-space: inherit;
+}
+
+blockquote {
+  margin: 6px 0 6px 18px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+  color: var(--muted-color);
+}
+
+p {
+  margin: 2px 0 6px;
+}
+
+ul,
+ol {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+.variant-official .answer-block,
+.variant-official .keywords-block,
+.variant-official .source-block,
+.variant-official .teacher-note-block,
+.variant-official .analysis-block {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="paper variant-teacher-redline teacher-redline">
+    <div class="confidential-label">机密★启用前</div>
+    <div class="title-block">
+      <h1>江苏省2024年普通高校“专转本”选拔考试 计算机专业大类专业综合基础理论 试卷</h1>
+<div class="subtitle">科目代码: 204</div>
+    </div>
+<div class="notice-block"><div class="notice-title">注意事项:</div><ol><li>本卷分为试卷和答题卡两部分，考生必须在答题卡上作答，作答在试卷上无效。</li><li>作答前务必将自己的姓名和准考证号准确清晰地填写在试卷和答题卡的指定位置。</li><li>考试结束时，须将试卷和答题卡一并交回。</li></ol></div>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>一、单项选择题</span>
+    <span class="section-description">本大题共 2 小题，每小题 2 分，共 4 分。在每小题列出的选项中只有一项最符合题目要求的。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">1.</div>
+    <div class="question-body"><p>以下属于内存储器的是（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>移动硬盘</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>U 盘</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>SRAM</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>SD 卡</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>C</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>内存储器</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机应用基础强化习题集》P11</div>
+  <div class="teacher-note-block"><span class="block-label">教师备注:</span><p>【典型习题·单选】根据存储器芯片的功能及物理特性，目前用作PC机主存储器的是（
+）</p></div>
+</article>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">2.</div>
+    <div class="question-body"><p>以下关于 CPU 的描述中，正确的是（ ）</p></div>
+  </div>
+  <div class="options-grid single-column">
+    <div class="option-item">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>CPU 可直接访问内存</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>CPU 的字长是指 CPU 总线的工作频率</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>同一家公司、同一个系列 CPU 的指令系统互不兼容</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>Intel 与 AMD 公司设计的 PC 使用的 CPU 指令系统基本一致</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>D</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>CPU、正确</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机应用基础强化习题集》P7</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>二、多项选择题</span>
+    <span class="section-description">本大题共 1 小题，每小题 2 分，共 2 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">3.</div>
+    <div class="question-body"><p>下列属于人工智能典型应用的有（ ）</p></div>
+  </div>
+  <div class="options-grid">
+    <div class="option-item correct-answer">
+      <div class="option-label">A.</div>
+      <div class="option-content"><p>文本模型 ChatGPT</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">B.</div>
+      <div class="option-content"><p>文生视频模型 Sora</p></div>
+    </div>
+    <div class="option-item correct-answer">
+      <div class="option-label">C.</div>
+      <div class="option-content"><p>围棋博弈 AlphaGo</p></div>
+    </div>
+    <div class="option-item">
+      <div class="option-label">D.</div>
+      <div class="option-content"><p>关系数据库系统 Oracle</p></div>
+    </div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>ABC</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>人工智能典型应用</div>
+  <div class="source-block"><span class="block-label">题源:</span>《计算机应用基础强化习题集》P84</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>三、判断题</span>
+    <span class="section-description">本大题共 1 小题，每小题 1 分，共 1 分。下列每小题表述正确的，在答题卡上填涂 A 选项；表述错误的填涂 B 选项。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">4.</div>
+    <div class="question-body"><p>高级程序设计语言的基本组成成分有数据、运算、控制和执行。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>错误</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>高级程序设计语言的基本组成成分</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>四、填空题</span>
+    <span class="section-description">本大题共 1 小题，每小题 2 分，共 2 分。下列每小题的答案填在答题卡对应的横线上。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">5.</div>
+    <div class="question-body"><p>计算机网络中，组成 IPv4 地址的字节数是 <span
+class="fill-blank-line">____</span>。</p></div>
+  </div>
+  <div class="answer-block"><span class="block-label">答案:</span>4</div>
+  <div class="keywords-block"><span class="block-label">解题关键词:</span>IPv4、地址</div>
+</article>
+</section>
+<section class="exam-section">
+  <div class="section-heading">
+    <span>五、编程题</span>
+    <span class="section-description">本大题共 1 小题，共 10 分。请写出程序并说明核心思路。</span>
+  </div>
+<article class="exam-question">
+  <div class="question-head">
+    <div class="question-number">6.</div>
+    <div class="question-body"><p>写出一个 Python 函数，接收整数数组并返回升序排序结果。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sort_numbers(nums):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sorted</span>(nums)</span></code></pre></div></div>
+  </div>
+  <div class="analysis-block"><span class="block-label">解析:</span><p>需要同时验证代码缩进和公式渲染。时间复杂度写成 <span
+class="math inline">$O(n \\log n)$</span>。</p></div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+  <div class="source-block">________________________________________</div>
+</article>
+</section>
+  </div>
+</body>
+</html>

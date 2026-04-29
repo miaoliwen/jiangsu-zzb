@@ -1,0 +1,1976 @@
+{
+  "exam": {
+    "title": "江苏省普通高校“专转本”计算机基础综合强化卷",
+    "subtitle": "贴近近年题型结构与难度梯度",
+    "confidential_label": "机密★启用前",
+    "duration_minutes": 100,
+    "total_score": 150,
+    "variant": "teacher-redline"
+  },
+  "instructions": [
+    "本卷按近年专业综合基础理论题型结构组织，全卷满分 150 分，建议答题时间 100 分钟。",
+    "本卷分为判断题、单项选择题、多项选择题和填空题四部分，请在指定区域内作答。",
+    "单选题只有一个最符合题意的选项；多选题至少有两个正确选项；填空题请写出最准确答案。"
+  ],
+  "render": {
+    "include_answers": true,
+    "include_keywords": true,
+    "include_sources": true,
+    "include_teacher_notes": true,
+    "include_analysis": true,
+    "highlight_answer": true
+  },
+  "sections": [
+    {
+      "title": "判断题",
+      "questions": [
+        {
+          "heading": "1",
+          "answer": "A",
+          "keywords": [
+            "地址存取",
+            "内存"
+          ],
+          "type": "judgement",
+          "number": 1,
+          "stem": "内存中的数据通常按地址进行存取。",
+          "options": []
+        },
+        {
+          "heading": "2",
+          "answer": "B",
+          "keywords": [
+            "RAM",
+            "断电"
+          ],
+          "type": "judgement",
+          "number": 2,
+          "stem": "RAM 中的数据在断电后仍能长期保存。",
+          "options": []
+        },
+        {
+          "heading": "3",
+          "answer": "A",
+          "keywords": [
+            "操作系统",
+            "资源管理"
+          ],
+          "type": "judgement",
+          "number": 3,
+          "stem": "操作系统既是计算机资源的管理者，也是用户与硬件之间的重要接口。",
+          "options": []
+        },
+        {
+          "heading": "4",
+          "answer": "B",
+          "keywords": [
+            "编译错误",
+            "逻辑错误"
+          ],
+          "type": "judgement",
+          "number": 4,
+          "stem": "程序能够通过编译，就说明程序一定不存在逻辑错误。",
+          "options": []
+        },
+        {
+          "heading": "5",
+          "answer": "A",
+          "keywords": [
+            "栈",
+            "后进先出"
+          ],
+          "type": "judgement",
+          "number": 5,
+          "stem": "栈的插入和删除操作都在同一端进行。",
+          "options": []
+        },
+        {
+          "heading": "6",
+          "answer": "B",
+          "keywords": [
+            "DNS"
+          ],
+          "type": "judgement",
+          "number": 6,
+          "stem": "DNS 的主要作用是对传输文件进行压缩。",
+          "options": []
+        },
+        {
+          "heading": "7",
+          "answer": "A",
+          "keywords": [
+            "IPv4"
+          ],
+          "type": "judgement",
+          "number": 7,
+          "stem": "IPv4 地址由 32 位二进制数组成。",
+          "options": []
+        },
+        {
+          "heading": "8",
+          "answer": "A",
+          "keywords": [
+            "防火墙",
+            "安全"
+          ],
+          "type": "judgement",
+          "number": 8,
+          "stem": "防火墙可以根据安全策略对进出网络的数据流进行控制。",
+          "options": []
+        },
+        {
+          "heading": "9",
+          "answer": "B",
+          "keywords": [
+            "图像",
+            "色彩深度"
+          ],
+          "type": "judgement",
+          "number": 9,
+          "stem": "图像分辨率决定了图像中可表示颜色的最大数量。",
+          "options": []
+        },
+        {
+          "heading": "10",
+          "answer": "A",
+          "keywords": [
+            "视频",
+            "帧率"
+          ],
+          "type": "judgement",
+          "number": 10,
+          "stem": "视频帧率越高，通常越有利于表现更平滑的动态效果。",
+          "options": []
+        }
+      ],
+      "type": "judgement",
+      "score_per_question": 1,
+      "description": "本大题共 10 小题，每小题 1 分，共 10 分。表述正确的填“A”，错误的填“B”。"
+    },
+    {
+      "title": "单项选择题",
+      "questions": [
+        {
+          "heading": "11",
+          "answer": "C",
+          "keywords": [
+            "CPU"
+          ],
+          "type": "single_choice",
+          "number": 11,
+          "stem": "负责取指令、分析指令并执行指令的部件是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "主板"
+            },
+            {
+              "label": "B",
+              "content": "外存"
+            },
+            {
+              "label": "C",
+              "content": "中央处理器"
+            },
+            {
+              "label": "D",
+              "content": "显示器"
+            }
+          ]
+        },
+        {
+          "heading": "12",
+          "answer": "B",
+          "keywords": [
+            "输出设备"
+          ],
+          "type": "single_choice",
+          "number": 12,
+          "stem": "下列设备中，属于输出设备的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "键盘"
+            },
+            {
+              "label": "B",
+              "content": "绘图仪"
+            },
+            {
+              "label": "C",
+              "content": "扫描仪"
+            },
+            {
+              "label": "D",
+              "content": "摄像头"
+            }
+          ]
+        },
+        {
+          "heading": "13",
+          "answer": "A",
+          "keywords": [
+            "输入设备"
+          ],
+          "type": "single_choice",
+          "number": 13,
+          "stem": "下列设备中，主要用于输入声音信息的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "麦克风"
+            },
+            {
+              "label": "B",
+              "content": "音箱"
+            },
+            {
+              "label": "C",
+              "content": "投影仪"
+            },
+            {
+              "label": "D",
+              "content": "显卡"
+            }
+          ]
+        },
+        {
+          "heading": "14",
+          "answer": "D",
+          "keywords": [
+            "集成电路",
+            "半导体"
+          ],
+          "type": "single_choice",
+          "number": 14,
+          "stem": "现代集成电路中最常见的半导体材料是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "金"
+            },
+            {
+              "label": "B",
+              "content": "银"
+            },
+            {
+              "label": "C",
+              "content": "铜"
+            },
+            {
+              "label": "D",
+              "content": "硅"
+            }
+          ]
+        },
+        {
+          "heading": "15",
+          "answer": "A",
+          "keywords": [
+            "二进制"
+          ],
+          "type": "single_choice",
+          "number": 15,
+          "stem": "计算机内部直接处理信息时最常使用的数制是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "二进制"
+            },
+            {
+              "label": "B",
+              "content": "十进制"
+            },
+            {
+              "label": "C",
+              "content": "八进制"
+            },
+            {
+              "label": "D",
+              "content": "十二进制"
+            }
+          ]
+        },
+        {
+          "heading": "16",
+          "answer": "D",
+          "keywords": [
+            "字节"
+          ],
+          "type": "single_choice",
+          "number": 16,
+          "stem": "1 个字节等于（ ）位二进制数。",
+          "options": [
+            {
+              "label": "A",
+              "content": "2"
+            },
+            {
+              "label": "B",
+              "content": "4"
+            },
+            {
+              "label": "C",
+              "content": "6"
+            },
+            {
+              "label": "D",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "heading": "17",
+          "answer": "C",
+          "keywords": [
+            "ASCII"
+          ],
+          "type": "single_choice",
+          "number": 17,
+          "stem": "ASCII 码中，小写字母 a 的十进制编码是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "48"
+            },
+            {
+              "label": "B",
+              "content": "64"
+            },
+            {
+              "label": "C",
+              "content": "97"
+            },
+            {
+              "label": "D",
+              "content": "128"
+            }
+          ]
+        },
+        {
+          "heading": "18",
+          "answer": "B",
+          "keywords": [
+            "补码"
+          ],
+          "type": "single_choice",
+          "number": 18,
+          "stem": "计算机中有符号整数最常采用的表示方法是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "原码"
+            },
+            {
+              "label": "B",
+              "content": "补码"
+            },
+            {
+              "label": "C",
+              "content": "反码"
+            },
+            {
+              "label": "D",
+              "content": "BCD 码"
+            }
+          ]
+        },
+        {
+          "heading": "19",
+          "answer": "C",
+          "keywords": [
+            "系统软件"
+          ],
+          "type": "single_choice",
+          "number": 19,
+          "stem": "下列软件中，属于系统软件的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "Photoshop"
+            },
+            {
+              "label": "B",
+              "content": "Excel"
+            },
+            {
+              "label": "C",
+              "content": "Linux"
+            },
+            {
+              "label": "D",
+              "content": "AutoCAD"
+            }
+          ]
+        },
+        {
+          "heading": "20",
+          "answer": "B",
+          "keywords": [
+            "应用软件"
+          ],
+          "type": "single_choice",
+          "number": 20,
+          "stem": "下列软件中，最典型的应用软件是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "BIOS"
+            },
+            {
+              "label": "B",
+              "content": "WPS Office"
+            },
+            {
+              "label": "C",
+              "content": "设备驱动程序"
+            },
+            {
+              "label": "D",
+              "content": "编译程序"
+            }
+          ]
+        },
+        {
+          "heading": "21",
+          "answer": "A",
+          "keywords": [
+            "操作系统",
+            "进程"
+          ],
+          "type": "single_choice",
+          "number": 21,
+          "stem": "程序一次执行过程的动态实体称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "进程"
+            },
+            {
+              "label": "B",
+              "content": "文件"
+            },
+            {
+              "label": "C",
+              "content": "页面"
+            },
+            {
+              "label": "D",
+              "content": "指令"
+            }
+          ]
+        },
+        {
+          "heading": "22",
+          "answer": "D",
+          "keywords": [
+            "文件管理"
+          ],
+          "type": "single_choice",
+          "number": 22,
+          "stem": "操作系统中，负责组织、存储、检索和保护文件信息的功能是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "设备管理"
+            },
+            {
+              "label": "B",
+              "content": "处理机管理"
+            },
+            {
+              "label": "C",
+              "content": "作业管理"
+            },
+            {
+              "label": "D",
+              "content": "文件管理"
+            }
+          ]
+        },
+        {
+          "heading": "23",
+          "answer": "C",
+          "keywords": [
+            "存储管理"
+          ],
+          "type": "single_choice",
+          "number": 23,
+          "stem": "将逻辑地址转换为物理地址属于操作系统的（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "设备管理"
+            },
+            {
+              "label": "B",
+              "content": "文件管理"
+            },
+            {
+              "label": "C",
+              "content": "存储管理"
+            },
+            {
+              "label": "D",
+              "content": "用户管理"
+            }
+          ]
+        },
+        {
+          "heading": "24",
+          "answer": "A",
+          "keywords": [
+            "语言翻译程序"
+          ],
+          "type": "single_choice",
+          "number": 24,
+          "stem": "将高级语言源程序翻译成机器指令序列的软件通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "编译程序"
+            },
+            {
+              "label": "B",
+              "content": "浏览器"
+            },
+            {
+              "label": "C",
+              "content": "编辑器"
+            },
+            {
+              "label": "D",
+              "content": "压缩工具"
+            }
+          ]
+        },
+        {
+          "heading": "25",
+          "answer": "D",
+          "keywords": [
+            "语法错误"
+          ],
+          "type": "single_choice",
+          "number": 25,
+          "stem": "下列问题中，最可能在编译阶段被直接发现的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "算法复杂度偏高"
+            },
+            {
+              "label": "B",
+              "content": "运行结果不符合需求"
+            },
+            {
+              "label": "C",
+              "content": "边界情况考虑不全"
+            },
+            {
+              "label": "D",
+              "content": "关键字拼写错误"
+            }
+          ]
+        },
+        {
+          "heading": "26",
+          "answer": "B",
+          "keywords": [
+            "顺序结构"
+          ],
+          "type": "single_choice",
+          "number": 26,
+          "stem": "程序设计中，语句按照书写顺序依次执行，这种控制结构称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "分支结构"
+            },
+            {
+              "label": "B",
+              "content": "顺序结构"
+            },
+            {
+              "label": "C",
+              "content": "循环结构"
+            },
+            {
+              "label": "D",
+              "content": "递归结构"
+            }
+          ]
+        },
+        {
+          "heading": "27",
+          "answer": "C",
+          "keywords": [
+            "栈"
+          ],
+          "type": "single_choice",
+          "number": 27,
+          "stem": "最适合用来实现函数调用现场保护的数据结构是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "队列"
+            },
+            {
+              "label": "B",
+              "content": "树"
+            },
+            {
+              "label": "C",
+              "content": "栈"
+            },
+            {
+              "label": "D",
+              "content": "图"
+            }
+          ]
+        },
+        {
+          "heading": "28",
+          "answer": "A",
+          "keywords": [
+            "队列"
+          ],
+          "type": "single_choice",
+          "number": 28,
+          "stem": "队列删除元素的一端通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "队头"
+            },
+            {
+              "label": "B",
+              "content": "队尾"
+            },
+            {
+              "label": "C",
+              "content": "表头"
+            },
+            {
+              "label": "D",
+              "content": "栈顶"
+            }
+          ]
+        },
+        {
+          "heading": "29",
+          "answer": "B",
+          "keywords": [
+            "链表"
+          ],
+          "type": "single_choice",
+          "number": 29,
+          "stem": "与顺序表相比，链表在插入和删除元素时的突出特点是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "一定更节省存储空间"
+            },
+            {
+              "label": "B",
+              "content": "通常不需要整体移动大量元素"
+            },
+            {
+              "label": "C",
+              "content": "查找任意位置元素一定更快"
+            },
+            {
+              "label": "D",
+              "content": "一定支持随机存取"
+            }
+          ]
+        },
+        {
+          "heading": "30",
+          "answer": "D",
+          "keywords": [
+            "二叉树"
+          ],
+          "type": "single_choice",
+          "number": 30,
+          "stem": "在二叉树中，一个结点最多有（ ）个子结点。",
+          "options": [
+            {
+              "label": "A",
+              "content": "0"
+            },
+            {
+              "label": "B",
+              "content": "1"
+            },
+            {
+              "label": "C",
+              "content": "3"
+            },
+            {
+              "label": "D",
+              "content": "2"
+            }
+          ]
+        },
+        {
+          "heading": "31",
+          "answer": "C",
+          "keywords": [
+            "软件工程",
+            "生命周期"
+          ],
+          "type": "single_choice",
+          "number": 31,
+          "stem": "从需求分析、设计、编码、测试到维护的一系列阶段称为软件（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "开发环境"
+            },
+            {
+              "label": "B",
+              "content": "质量模型"
+            },
+            {
+              "label": "C",
+              "content": "生命周期"
+            },
+            {
+              "label": "D",
+              "content": "运行平台"
+            }
+          ]
+        },
+        {
+          "heading": "32",
+          "answer": "A",
+          "keywords": [
+            "需求分析"
+          ],
+          "type": "single_choice",
+          "number": 32,
+          "stem": "软件开发中，用于回答“系统应该做什么”的阶段是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "需求分析"
+            },
+            {
+              "label": "B",
+              "content": "编码实现"
+            },
+            {
+              "label": "C",
+              "content": "单元测试"
+            },
+            {
+              "label": "D",
+              "content": "运行维护"
+            }
+          ]
+        },
+        {
+          "heading": "33",
+          "answer": "B",
+          "keywords": [
+            "软件测试"
+          ],
+          "type": "single_choice",
+          "number": 33,
+          "stem": "软件测试的主要目的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "证明程序绝对无错"
+            },
+            {
+              "label": "B",
+              "content": "尽可能发现程序中的错误"
+            },
+            {
+              "label": "C",
+              "content": "提高显示器分辨率"
+            },
+            {
+              "label": "D",
+              "content": "替代需求分析"
+            }
+          ]
+        },
+        {
+          "heading": "34",
+          "answer": "C",
+          "keywords": [
+            "计算机网络"
+          ],
+          "type": "single_choice",
+          "number": 34,
+          "stem": "计算机网络最基本的功能是实现（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "图像处理"
+            },
+            {
+              "label": "B",
+              "content": "程序编译"
+            },
+            {
+              "label": "C",
+              "content": "数据通信与资源共享"
+            },
+            {
+              "label": "D",
+              "content": "芯片制造"
+            }
+          ]
+        },
+        {
+          "heading": "35",
+          "answer": "A",
+          "keywords": [
+            "网络协议"
+          ],
+          "type": "single_choice",
+          "number": 35,
+          "stem": "不同设备之间能够按照统一规则交换数据，主要依赖于（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "网络协议"
+            },
+            {
+              "label": "B",
+              "content": "文件格式"
+            },
+            {
+              "label": "C",
+              "content": "程序注释"
+            },
+            {
+              "label": "D",
+              "content": "显示分辨率"
+            }
+          ]
+        },
+        {
+          "heading": "36",
+          "answer": "D",
+          "keywords": [
+            "局域网"
+          ],
+          "type": "single_choice",
+          "number": 36,
+          "stem": "下列场景中，最典型地属于局域网应用的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "跨国卫星通信"
+            },
+            {
+              "label": "B",
+              "content": "海底光缆洲际互联"
+            },
+            {
+              "label": "C",
+              "content": "全国移动骨干网"
+            },
+            {
+              "label": "D",
+              "content": "校园机房内部联网"
+            }
+          ]
+        },
+        {
+          "heading": "37",
+          "answer": "B",
+          "keywords": [
+            "广域网"
+          ],
+          "type": "single_choice",
+          "number": 37,
+          "stem": "与局域网相比，广域网的典型特点是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "覆盖范围小"
+            },
+            {
+              "label": "B",
+              "content": "覆盖范围大"
+            },
+            {
+              "label": "C",
+              "content": "一定只用无线传输"
+            },
+            {
+              "label": "D",
+              "content": "一定没有路由设备"
+            }
+          ]
+        },
+        {
+          "heading": "38",
+          "answer": "C",
+          "keywords": [
+            "TCP/IP"
+          ],
+          "type": "single_choice",
+          "number": 38,
+          "stem": "在 TCP/IP 体系结构中，实现端到端可靠传输的典型协议是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "IP"
+            },
+            {
+              "label": "B",
+              "content": "ARP"
+            },
+            {
+              "label": "C",
+              "content": "TCP"
+            },
+            {
+              "label": "D",
+              "content": "ICMP"
+            }
+          ]
+        },
+        {
+          "heading": "39",
+          "answer": "A",
+          "keywords": [
+            "IP地址"
+          ],
+          "type": "single_choice",
+          "number": 39,
+          "stem": "下列地址中，属于合法 IPv4 地址表示形式的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "192.168.1.10"
+            },
+            {
+              "label": "B",
+              "content": "192.168.256.1"
+            },
+            {
+              "label": "C",
+              "content": "10.2.3"
+            },
+            {
+              "label": "D",
+              "content": "A.B.C.D"
+            }
+          ]
+        },
+        {
+          "heading": "40",
+          "answer": "D",
+          "keywords": [
+            "子网掩码"
+          ],
+          "type": "single_choice",
+          "number": 40,
+          "stem": "下列选项中，可作为常见 IPv4 子网掩码的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "255.0.255.0"
+            },
+            {
+              "label": "B",
+              "content": "255.255.255.1"
+            },
+            {
+              "label": "C",
+              "content": "10.0.0.0"
+            },
+            {
+              "label": "D",
+              "content": "255.255.255.0"
+            }
+          ]
+        },
+        {
+          "heading": "41",
+          "answer": "B",
+          "keywords": [
+            "域名系统"
+          ],
+          "type": "single_choice",
+          "number": 41,
+          "stem": "`www.example.com` 中，便于用户记忆、最终需要被解析的标识是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "MAC 地址"
+            },
+            {
+              "label": "B",
+              "content": "域名"
+            },
+            {
+              "label": "C",
+              "content": "端口号"
+            },
+            {
+              "label": "D",
+              "content": "子网掩码"
+            }
+          ]
+        },
+        {
+          "heading": "42",
+          "answer": "C",
+          "keywords": [
+            "信息安全",
+            "机密性"
+          ],
+          "type": "single_choice",
+          "number": 42,
+          "stem": "防止未授权用户获取敏感信息，主要体现信息安全中的（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "可用性"
+            },
+            {
+              "label": "B",
+              "content": "可维护性"
+            },
+            {
+              "label": "C",
+              "content": "机密性"
+            },
+            {
+              "label": "D",
+              "content": "可扩展性"
+            }
+          ]
+        },
+        {
+          "heading": "43",
+          "answer": "A",
+          "keywords": [
+            "恶意软件"
+          ],
+          "type": "single_choice",
+          "number": 43,
+          "stem": "能够自我复制并通过文件或网络传播的恶意程序通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "计算机病毒"
+            },
+            {
+              "label": "B",
+              "content": "浏览器插件"
+            },
+            {
+              "label": "C",
+              "content": "驱动程序"
+            },
+            {
+              "label": "D",
+              "content": "编译器"
+            }
+          ]
+        },
+        {
+          "heading": "44",
+          "answer": "D",
+          "keywords": [
+            "口令安全"
+          ],
+          "type": "single_choice",
+          "number": 44,
+          "stem": "下列口令中，相对更安全的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "123456"
+            },
+            {
+              "label": "B",
+              "content": "abcdef"
+            },
+            {
+              "label": "C",
+              "content": "password"
+            },
+            {
+              "label": "D",
+              "content": "A7#pL29q"
+            }
+          ]
+        },
+        {
+          "heading": "45",
+          "answer": "B",
+          "keywords": [
+            "图像",
+            "分辨率"
+          ],
+          "type": "single_choice",
+          "number": 45,
+          "stem": "图像清晰度在很大程度上与（ ）有关。",
+          "options": [
+            {
+              "label": "A",
+              "content": "声道数"
+            },
+            {
+              "label": "B",
+              "content": "分辨率"
+            },
+            {
+              "label": "C",
+              "content": "采样频率"
+            },
+            {
+              "label": "D",
+              "content": "端口号"
+            }
+          ]
+        },
+        {
+          "heading": "46",
+          "answer": "C",
+          "keywords": [
+            "图像",
+            "色彩深度"
+          ],
+          "type": "single_choice",
+          "number": 46,
+          "stem": "决定数字图像中可表示不同颜色最大数量的主要因素是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "帧率"
+            },
+            {
+              "label": "B",
+              "content": "传输速率"
+            },
+            {
+              "label": "C",
+              "content": "色彩深度"
+            },
+            {
+              "label": "D",
+              "content": "刷新频率"
+            }
+          ]
+        },
+        {
+          "heading": "47",
+          "answer": "A",
+          "keywords": [
+            "音频数字化"
+          ],
+          "type": "single_choice",
+          "number": 47,
+          "stem": "将模拟音频转换为数字音频时，首先要进行的关键步骤是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "采样"
+            },
+            {
+              "label": "B",
+              "content": "渲染"
+            },
+            {
+              "label": "C",
+              "content": "解压"
+            },
+            {
+              "label": "D",
+              "content": "纠错"
+            }
+          ]
+        },
+        {
+          "heading": "48",
+          "answer": "D",
+          "keywords": [
+            "采样频率"
+          ],
+          "type": "single_choice",
+          "number": 48,
+          "stem": "在其他条件不变时，音频采样频率提高通常意味着（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "声道数减少"
+            },
+            {
+              "label": "B",
+              "content": "文件类型消失"
+            },
+            {
+              "label": "C",
+              "content": "颜色更多"
+            },
+            {
+              "label": "D",
+              "content": "单位时间采集样本数增加"
+            }
+          ]
+        },
+        {
+          "heading": "49",
+          "answer": "B",
+          "keywords": [
+            "视频"
+          ],
+          "type": "single_choice",
+          "number": 49,
+          "stem": "视频之所以能够呈现连续运动效果，是因为它本质上由（ ）构成。",
+          "options": [
+            {
+              "label": "A",
+              "content": "单个字符流"
+            },
+            {
+              "label": "B",
+              "content": "连续显示的图像序列"
+            },
+            {
+              "label": "C",
+              "content": "只含音频样本"
+            },
+            {
+              "label": "D",
+              "content": "只含网络报文"
+            }
+          ]
+        },
+        {
+          "heading": "50",
+          "answer": "C",
+          "keywords": [
+            "压缩"
+          ],
+          "type": "single_choice",
+          "number": 50,
+          "stem": "在存储和传输多媒体数据时，采用压缩技术的主要目的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "改变操作系统类型"
+            },
+            {
+              "label": "B",
+              "content": "提高 CPU 主频"
+            },
+            {
+              "label": "C",
+              "content": "减少数据量"
+            },
+            {
+              "label": "D",
+              "content": "增加显示器尺寸"
+            }
+          ]
+        },
+        {
+          "heading": "51",
+          "answer": "D",
+          "keywords": [
+            "计算机组成",
+            "容量"
+          ],
+          "type": "single_choice",
+          "number": 51,
+          "stem": "若某存储器容量为 2 MB，则其大约可以存放（ ）个字节。",
+          "options": [
+            {
+              "label": "A",
+              "content": "$2 \\\\times 10^3$"
+            },
+            {
+              "label": "B",
+              "content": "$2 \\\\times 10^4$"
+            },
+            {
+              "label": "C",
+              "content": "$2 \\\\times 2^{10}$"
+            },
+            {
+              "label": "D",
+              "content": "$2 \\\\times 2^{20}$"
+            }
+          ]
+        },
+        {
+          "heading": "52",
+          "answer": "B",
+          "keywords": [
+            "浮点数"
+          ],
+          "type": "single_choice",
+          "number": 52,
+          "stem": "计算机中浮点数一般由符号、阶码和（ ）三部分组成。",
+          "options": [
+            {
+              "label": "A",
+              "content": "字模"
+            },
+            {
+              "label": "B",
+              "content": "尾数"
+            },
+            {
+              "label": "C",
+              "content": "字长"
+            },
+            {
+              "label": "D",
+              "content": "频率"
+            }
+          ]
+        },
+        {
+          "heading": "53",
+          "answer": "A",
+          "keywords": [
+            "程序语言"
+          ],
+          "type": "single_choice",
+          "number": 53,
+          "stem": "更接近自然语言、便于人类编写和阅读的程序设计语言通常属于（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "高级语言"
+            },
+            {
+              "label": "B",
+              "content": "机器语言"
+            },
+            {
+              "label": "C",
+              "content": "二进制码"
+            },
+            {
+              "label": "D",
+              "content": "十六进制码"
+            }
+          ]
+        },
+        {
+          "heading": "54",
+          "answer": "C",
+          "keywords": [
+            "循环"
+          ],
+          "type": "single_choice",
+          "number": 54,
+          "stem": "在循环结构中，最适合用于“已知执行次数”的场景的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "递归调用"
+            },
+            {
+              "label": "B",
+              "content": "条件编译"
+            },
+            {
+              "label": "C",
+              "content": "计数循环"
+            },
+            {
+              "label": "D",
+              "content": "中断处理"
+            }
+          ]
+        },
+        {
+          "heading": "55",
+          "answer": "D",
+          "keywords": [
+            "算法复杂度"
+          ],
+          "type": "single_choice",
+          "number": 55,
+          "stem": "下列时间复杂度中，通常增长最快的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "$O(1)$"
+            },
+            {
+              "label": "B",
+              "content": "$O(n)$"
+            },
+            {
+              "label": "C",
+              "content": "$O(n \\\\log n)$"
+            },
+            {
+              "label": "D",
+              "content": "$O(n^2)$"
+            }
+          ]
+        },
+        {
+          "heading": "56",
+          "answer": "B",
+          "keywords": [
+            "网络分层"
+          ],
+          "type": "single_choice",
+          "number": 56,
+          "stem": "在网络分层思想中，每一层主要向其上一层提供（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "电路板"
+            },
+            {
+              "label": "B",
+              "content": "服务"
+            },
+            {
+              "label": "C",
+              "content": "电源"
+            },
+            {
+              "label": "D",
+              "content": "外设"
+            }
+          ]
+        },
+        {
+          "heading": "57",
+          "answer": "A",
+          "keywords": [
+            "MAC地址"
+          ],
+          "type": "single_choice",
+          "number": 57,
+          "stem": "局域网中网卡的物理地址通常称为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "MAC 地址"
+            },
+            {
+              "label": "B",
+              "content": "域名"
+            },
+            {
+              "label": "C",
+              "content": "邮箱地址"
+            },
+            {
+              "label": "D",
+              "content": "页面地址"
+            }
+          ]
+        },
+        {
+          "heading": "58",
+          "answer": "C",
+          "keywords": [
+            "多媒体",
+            "综合"
+          ],
+          "type": "single_choice",
+          "number": 58,
+          "stem": "一门在线课程同时包含讲义文字、教学图片、讲解音频和演示视频，这体现了多媒体技术的（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "单一性"
+            },
+            {
+              "label": "B",
+              "content": "模拟性"
+            },
+            {
+              "label": "C",
+              "content": "综合性"
+            },
+            {
+              "label": "D",
+              "content": "离线性"
+            }
+          ]
+        },
+        {
+          "heading": "59",
+          "answer": "B",
+          "keywords": [
+            "难度",
+            "二进制"
+          ],
+          "type": "single_choice",
+          "number": 59,
+          "stem": "两个 8 位二进制补码 `11111011` 与 `00000101` 相加，结果对应的十进制值是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "-10"
+            },
+            {
+              "label": "B",
+              "content": "0"
+            },
+            {
+              "label": "C",
+              "content": "8"
+            },
+            {
+              "label": "D",
+              "content": "256"
+            }
+          ]
+        },
+        {
+          "heading": "60",
+          "answer": "D",
+          "keywords": [
+            "难度",
+            "网络"
+          ],
+          "type": "single_choice",
+          "number": 60,
+          "stem": "某主机 IP 地址为 `192.168.10.66`，子网掩码为 `255.255.255.192`，则该主机所在子网每个子网可用主机地址数为（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "16"
+            },
+            {
+              "label": "B",
+              "content": "32"
+            },
+            {
+              "label": "C",
+              "content": "48"
+            },
+            {
+              "label": "D",
+              "content": "62"
+            }
+          ]
+        }
+      ],
+      "type": "single_choice",
+      "score_per_question": 2,
+      "description": "本大题共 50 小题，每小题 2 分，共 100 分。在每小题列出的选项中只有一项最符合题目要求。"
+    },
+    {
+      "title": "多项选择题",
+      "questions": [
+        {
+          "heading": "61",
+          "answer": "ABC",
+          "keywords": [
+            "计算机组成"
+          ],
+          "type": "multiple_choice",
+          "number": 61,
+          "stem": "下列属于冯诺依曼型计算机五大功能部件的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "运算器"
+            },
+            {
+              "label": "B",
+              "content": "控制器"
+            },
+            {
+              "label": "C",
+              "content": "存储器"
+            },
+            {
+              "label": "D",
+              "content": "浏览器"
+            }
+          ]
+        },
+        {
+          "heading": "62",
+          "answer": "ACD",
+          "keywords": [
+            "外部设备"
+          ],
+          "type": "multiple_choice",
+          "number": 62,
+          "stem": "下列设备中，属于外部设备的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "键盘"
+            },
+            {
+              "label": "B",
+              "content": "运算器"
+            },
+            {
+              "label": "C",
+              "content": "显示器"
+            },
+            {
+              "label": "D",
+              "content": "鼠标"
+            }
+          ]
+        },
+        {
+          "heading": "63",
+          "answer": "ABD",
+          "keywords": [
+            "软件分类"
+          ],
+          "type": "multiple_choice",
+          "number": 63,
+          "stem": "下列属于应用软件的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "浏览器"
+            },
+            {
+              "label": "B",
+              "content": "图像处理软件"
+            },
+            {
+              "label": "C",
+              "content": "操作系统"
+            },
+            {
+              "label": "D",
+              "content": "电子表格软件"
+            }
+          ]
+        },
+        {
+          "heading": "64",
+          "answer": "ABC",
+          "keywords": [
+            "操作系统"
+          ],
+          "type": "multiple_choice",
+          "number": 64,
+          "stem": "操作系统的基本管理功能包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "处理机管理"
+            },
+            {
+              "label": "B",
+              "content": "存储管理"
+            },
+            {
+              "label": "C",
+              "content": "文件管理"
+            },
+            {
+              "label": "D",
+              "content": "晶圆制造"
+            }
+          ]
+        },
+        {
+          "heading": "65",
+          "answer": "BCD",
+          "keywords": [
+            "线性结构"
+          ],
+          "type": "multiple_choice",
+          "number": 65,
+          "stem": "下列数据结构中，属于线性结构的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "树"
+            },
+            {
+              "label": "B",
+              "content": "顺序表"
+            },
+            {
+              "label": "C",
+              "content": "链表"
+            },
+            {
+              "label": "D",
+              "content": "队列"
+            }
+          ]
+        },
+        {
+          "heading": "66",
+          "answer": "ACD",
+          "keywords": [
+            "软件工程"
+          ],
+          "type": "multiple_choice",
+          "number": 66,
+          "stem": "下列属于软件工程核心活动或目标的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "需求分析"
+            },
+            {
+              "label": "B",
+              "content": "提高晶体管纯度"
+            },
+            {
+              "label": "C",
+              "content": "测试"
+            },
+            {
+              "label": "D",
+              "content": "维护"
+            }
+          ]
+        },
+        {
+          "heading": "67",
+          "answer": "ABC",
+          "keywords": [
+            "网络基础"
+          ],
+          "type": "multiple_choice",
+          "number": 67,
+          "stem": "下列关于计算机网络的描述中，正确的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "可实现资源共享"
+            },
+            {
+              "label": "B",
+              "content": "可实现数据通信"
+            },
+            {
+              "label": "C",
+              "content": "需要协议支撑"
+            },
+            {
+              "label": "D",
+              "content": "必须只用有线介质"
+            }
+          ]
+        },
+        {
+          "heading": "68",
+          "answer": "ABD",
+          "keywords": [
+            "信息安全"
+          ],
+          "type": "multiple_choice",
+          "number": 68,
+          "stem": "下列做法中，有助于提升信息安全性的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "使用复杂口令"
+            },
+            {
+              "label": "B",
+              "content": "定期更新系统补丁"
+            },
+            {
+              "label": "C",
+              "content": "将口令公开给所有同学"
+            },
+            {
+              "label": "D",
+              "content": "开启访问控制"
+            }
+          ]
+        },
+        {
+          "heading": "69",
+          "answer": "ABC",
+          "keywords": [
+            "图像音视频"
+          ],
+          "type": "multiple_choice",
+          "number": 69,
+          "stem": "下列关于多媒体数据的说法中，正确的有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "图像通常由像素构成"
+            },
+            {
+              "label": "B",
+              "content": "音频数字化涉及采样"
+            },
+            {
+              "label": "C",
+              "content": "视频通常由图像序列构成"
+            },
+            {
+              "label": "D",
+              "content": "视频一定不包含音频"
+            }
+          ]
+        },
+        {
+          "heading": "70",
+          "answer": "ACD",
+          "keywords": [
+            "难度",
+            "综合"
+          ],
+          "type": "multiple_choice",
+          "number": 70,
+          "stem": "某在线教育平台从课程上传到学生观看的完整链路中，可能涉及的技术与概念有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "文件存储管理"
+            },
+            {
+              "label": "B",
+              "content": "只能使用局域网"
+            },
+            {
+              "label": "C",
+              "content": "域名解析"
+            },
+            {
+              "label": "D",
+              "content": "视频编码与传输"
+            }
+          ]
+        }
+      ],
+      "type": "multiple_choice",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。"
+    },
+    {
+      "title": "填空题",
+      "questions": [
+        {
+          "heading": "71",
+          "answer": "二进制",
+          "keywords": [
+            "数制"
+          ],
+          "type": "fill_blank",
+          "number": 71,
+          "stem": "计算机内部最基本的信息表示形式是 ____。",
+          "options": []
+        },
+        {
+          "heading": "72",
+          "answer": "ASCII",
+          "keywords": [
+            "字符编码"
+          ],
+          "type": "fill_blank",
+          "number": 72,
+          "stem": "用于表示英文字符和控制字符的常见编码标准是 ____ 码。",
+          "options": []
+        },
+        {
+          "heading": "73",
+          "answer": "操作系统",
+          "keywords": [
+            "系统软件"
+          ],
+          "type": "fill_blank",
+          "number": 73,
+          "stem": "统一管理硬件和软件资源并向用户提供接口的系统软件称为 ____。",
+          "options": []
+        },
+        {
+          "heading": "74",
+          "answer": "后进先出",
+          "keywords": [
+            "栈"
+          ],
+          "type": "fill_blank",
+          "number": 74,
+          "stem": "栈的基本操作规律可概括为 ____。",
+          "options": []
+        },
+        {
+          "heading": "75",
+          "answer": "生命周期",
+          "keywords": [
+            "软件工程"
+          ],
+          "type": "fill_blank",
+          "number": 75,
+          "stem": "从需求到维护的全过程统称软件 ____。",
+          "options": []
+        },
+        {
+          "heading": "76",
+          "answer": "协议",
+          "keywords": [
+            "网络"
+          ],
+          "type": "fill_blank",
+          "number": 76,
+          "stem": "网络中为通信双方共同遵守的规则集合称为 ____。",
+          "options": []
+        },
+        {
+          "heading": "77",
+          "answer": 32,
+          "keywords": [
+            "IPv4"
+          ],
+          "type": "fill_blank",
+          "number": 77,
+          "stem": "IPv4 地址长度为 ____ 位。",
+          "options": []
+        },
+        {
+          "heading": "78",
+          "answer": "域名",
+          "keywords": [
+            "DNS"
+          ],
+          "type": "fill_blank",
+          "number": 78,
+          "stem": "通过 DNS 解析、便于人类记忆的网络标识是 ____。",
+          "options": []
+        },
+        {
+          "heading": "79",
+          "answer": "采样",
+          "keywords": [
+            "音频"
+          ],
+          "type": "fill_blank",
+          "number": 79,
+          "stem": "将连续时间声音信号转化为离散时间样本值的过程称为 ____。",
+          "options": []
+        },
+        {
+          "heading": "80",
+          "answer": "帧率",
+          "keywords": [
+            "视频"
+          ],
+          "type": "fill_blank",
+          "number": 80,
+          "stem": "表示视频每秒显示画面数量的指标称为 ____。",
+          "options": []
+        }
+      ],
+      "type": "fill_blank",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。请将答案填写在对应横线上。"
+    }
+  ]
+}

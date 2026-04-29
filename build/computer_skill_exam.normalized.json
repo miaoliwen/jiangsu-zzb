@@ -1,0 +1,1426 @@
+{
+  "exam": {
+    "title": "江苏省普通高校\"专转本\"选拔考试 计算机专业大类专业技能 试卷",
+    "subtitle": "科目代码: 204（技能部分）",
+    "confidential_label": "机密★启用前",
+    "duration_minutes": 120,
+    "total_score": 150,
+    "variant": "teacher-redline"
+  },
+  "instructions": [
+    "本卷分为试卷和答题卡两部分，考生必须在答题卡上作答，作答在试卷上无效。",
+    "作答前务必将自己的姓名和准考证号准确清晰地填写在试卷和答题卡的指定位置。",
+    "考试结束时，须将试卷和答题卡一并交回。",
+    "编程题和SQL语句题请在答题卡指定区域书写，注意代码缩进和格式。"
+  ],
+  "render": {
+    "include_answers": true,
+    "include_keywords": true,
+    "include_sources": true,
+    "include_teacher_notes": true,
+    "include_analysis": true,
+    "highlight_answer": true
+  },
+  "sections": [
+    {
+      "title": "单项选择题",
+      "questions": [
+        {
+          "heading": "1",
+          "answer": "B",
+          "keywords": [
+            "C语言程序结构"
+          ],
+          "source": "《C程序设计》P15",
+          "type": "single_choice",
+          "number": 1,
+          "stem": "以下关于C语言程序结构的描述中，正确的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "C语言程序中可以没有main函数"
+            },
+            {
+              "label": "B",
+              "content": "C语言程序的执行总是从main函数开始"
+            },
+            {
+              "label": "C",
+              "content": "C语言程序中只能有一个函数"
+            },
+            {
+              "label": "D",
+              "content": "main函数必须放在程序的最前面"
+            }
+          ]
+        },
+        {
+          "heading": "2",
+          "answer": "C",
+          "keywords": [
+            "C语言数据类型"
+          ],
+          "source": "《C程序设计》P28",
+          "type": "single_choice",
+          "number": 2,
+          "stem": "在C语言中，以下数据类型中占用内存空间最小的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "int"
+            },
+            {
+              "label": "B",
+              "content": "float"
+            },
+            {
+              "label": "C",
+              "content": "char"
+            },
+            {
+              "label": "D",
+              "content": "double"
+            }
+          ]
+        },
+        {
+          "heading": "3",
+          "answer": "A",
+          "keywords": [
+            "C语言运算符优先级"
+          ],
+          "source": "《C程序设计》P45",
+          "type": "single_choice",
+          "number": 3,
+          "stem": "以下运算符中，优先级最高的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "()"
+            },
+            {
+              "label": "B",
+              "content": "+"
+            },
+            {
+              "label": "C",
+              "content": "*"
+            },
+            {
+              "label": "D",
+              "content": "="
+            }
+          ]
+        },
+        {
+          "heading": "4",
+          "answer": "D",
+          "keywords": [
+            "C语言输入输出"
+          ],
+          "source": "《C程序设计》P55",
+          "type": "single_choice",
+          "number": 4,
+          "stem": "C语言中，用于从键盘读取一个字符的函数是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "printf()"
+            },
+            {
+              "label": "B",
+              "content": "scanf()"
+            },
+            {
+              "label": "C",
+              "content": "puts()"
+            },
+            {
+              "label": "D",
+              "content": "getchar()"
+            }
+          ]
+        },
+        {
+          "heading": "5",
+          "answer": "B",
+          "keywords": [
+            "C语言选择结构"
+          ],
+          "source": "《C程序设计》P68",
+          "type": "single_choice",
+          "number": 5,
+          "stem": "以下关于if语句的描述中，错误的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "if语句可以嵌套使用"
+            },
+            {
+              "label": "B",
+              "content": "else子句必须与if子句配对使用"
+            },
+            {
+              "label": "C",
+              "content": "if语句的条件表达式可以是任意合法表达式"
+            },
+            {
+              "label": "D",
+              "content": "if-else-if结构可以实现多分支选择"
+            }
+          ]
+        },
+        {
+          "heading": "6",
+          "answer": "C",
+          "keywords": [
+            "C语言循环结构"
+          ],
+          "source": "《C程序设计》P78",
+          "type": "single_choice",
+          "number": 6,
+          "stem": "以下循环语句中，至少执行一次循环体的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "for语句"
+            },
+            {
+              "label": "B",
+              "content": "while语句"
+            },
+            {
+              "label": "C",
+              "content": "do-while语句"
+            },
+            {
+              "label": "D",
+              "content": "以上都不是"
+            }
+          ]
+        },
+        {
+          "heading": "7",
+          "answer": "A",
+          "keywords": [
+            "C语言数组"
+          ],
+          "source": "《C程序设计》P95",
+          "type": "single_choice",
+          "number": 7,
+          "stem": "定义一维数组\"int a[10];\"时，数组元素的下标范围是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "0~9"
+            },
+            {
+              "label": "B",
+              "content": "1~10"
+            },
+            {
+              "label": "C",
+              "content": "0~10"
+            },
+            {
+              "label": "D",
+              "content": "1~9"
+            }
+          ]
+        },
+        {
+          "heading": "8",
+          "answer": "D",
+          "keywords": [
+            "C语言二维数组"
+          ],
+          "source": "《C程序设计》P102",
+          "type": "single_choice",
+          "number": 8,
+          "stem": "定义二维数组\"int a[3][4];\"时，该数组共有多少个元素（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "3"
+            },
+            {
+              "label": "B",
+              "content": "4"
+            },
+            {
+              "label": "C",
+              "content": "7"
+            },
+            {
+              "label": "D",
+              "content": "12"
+            }
+          ]
+        },
+        {
+          "heading": "9",
+          "answer": "B",
+          "keywords": [
+            "C语言字符串"
+          ],
+          "source": "《C程序设计》P108",
+          "type": "single_choice",
+          "number": 9,
+          "stem": "字符串\"Hello\"在内存中占用的字节数是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "5"
+            },
+            {
+              "label": "B",
+              "content": "6"
+            },
+            {
+              "label": "C",
+              "content": "7"
+            },
+            {
+              "label": "D",
+              "content": "8"
+            }
+          ]
+        },
+        {
+          "heading": "10",
+          "answer": "C",
+          "keywords": [
+            "C语言函数"
+          ],
+          "source": "《C程序设计》P125",
+          "type": "single_choice",
+          "number": 10,
+          "stem": "以下关于C语言函数的描述中，正确的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "C语言函数必须有返回值"
+            },
+            {
+              "label": "B",
+              "content": "函数定义必须在函数调用之前"
+            },
+            {
+              "label": "C",
+              "content": "函数可以没有参数"
+            },
+            {
+              "label": "D",
+              "content": "函数的形参和实参必须同名"
+            }
+          ]
+        },
+        {
+          "heading": "11",
+          "answer": "A",
+          "keywords": [
+            "C语言参数传递"
+          ],
+          "source": "《C程序设计》P135",
+          "type": "single_choice",
+          "number": 11,
+          "stem": "C语言中，函数参数传递默认采用的方式是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "值传递"
+            },
+            {
+              "label": "B",
+              "content": "地址传递"
+            },
+            {
+              "label": "C",
+              "content": "引用传递"
+            },
+            {
+              "label": "D",
+              "content": "以上都可以"
+            }
+          ]
+        },
+        {
+          "heading": "12",
+          "answer": "D",
+          "keywords": [
+            "数据库E-R图"
+          ],
+          "source": "《MySQL数据库》P25",
+          "type": "single_choice",
+          "number": 12,
+          "stem": "在E-R图中，用于表示实体之间联系的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "矩形"
+            },
+            {
+              "label": "B",
+              "content": "椭圆形"
+            },
+            {
+              "label": "C",
+              "content": "三角形"
+            },
+            {
+              "label": "D",
+              "content": "菱形"
+            }
+          ]
+        },
+        {
+          "heading": "13",
+          "answer": "B",
+          "keywords": [
+            "MySQL数据类型"
+          ],
+          "source": "《MySQL数据库》P45",
+          "type": "single_choice",
+          "number": 13,
+          "stem": "MySQL中，用于存储可变长度字符串的数据类型是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "CHAR"
+            },
+            {
+              "label": "B",
+              "content": "VARCHAR"
+            },
+            {
+              "label": "C",
+              "content": "TEXT"
+            },
+            {
+              "label": "D",
+              "content": "STRING"
+            }
+          ]
+        },
+        {
+          "heading": "14",
+          "answer": "C",
+          "keywords": [
+            "MySQL约束"
+          ],
+          "source": "《MySQL数据库》P52",
+          "type": "single_choice",
+          "number": 14,
+          "stem": "用于保证表中每一行记录都唯一的约束是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "NOT NULL"
+            },
+            {
+              "label": "B",
+              "content": "FOREIGN KEY"
+            },
+            {
+              "label": "C",
+              "content": "PRIMARY KEY"
+            },
+            {
+              "label": "D",
+              "content": "CHECK"
+            }
+          ]
+        },
+        {
+          "heading": "15",
+          "answer": "A",
+          "keywords": [
+            "MySQL数据操纵"
+          ],
+          "source": "《MySQL数据库》P68",
+          "type": "single_choice",
+          "number": 15,
+          "stem": "SQL语句中，用于删除表中数据的命令是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "DELETE"
+            },
+            {
+              "label": "B",
+              "content": "DROP"
+            },
+            {
+              "label": "C",
+              "content": "REMOVE"
+            },
+            {
+              "label": "D",
+              "content": "CLEAR"
+            }
+          ]
+        },
+        {
+          "heading": "16",
+          "answer": "D",
+          "keywords": [
+            "MySQL查询"
+          ],
+          "source": "《MySQL数据库》P75",
+          "type": "single_choice",
+          "number": 16,
+          "stem": "SQL中用于对查询结果进行排序的子句是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "GROUP BY"
+            },
+            {
+              "label": "B",
+              "content": "WHERE"
+            },
+            {
+              "label": "C",
+              "content": "HAVING"
+            },
+            {
+              "label": "D",
+              "content": "ORDER BY"
+            }
+          ]
+        },
+        {
+          "heading": "17",
+          "answer": "B",
+          "keywords": [
+            "MySQL聚合函数"
+          ],
+          "source": "《MySQL数据库》P82",
+          "type": "single_choice",
+          "number": 17,
+          "stem": "SQL中用于计算平均值的聚合函数是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "SUM()"
+            },
+            {
+              "label": "B",
+              "content": "AVG()"
+            },
+            {
+              "label": "C",
+              "content": "COUNT()"
+            },
+            {
+              "label": "D",
+              "content": "MAX()"
+            }
+          ]
+        },
+        {
+          "heading": "18",
+          "answer": "C",
+          "keywords": [
+            "UML用例图"
+          ],
+          "source": "《UML建模》P35",
+          "type": "single_choice",
+          "number": 18,
+          "stem": "在UML用例图中，用例与参与者之间的关系是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "继承关系"
+            },
+            {
+              "label": "B",
+              "content": "依赖关系"
+            },
+            {
+              "label": "C",
+              "content": "关联关系"
+            },
+            {
+              "label": "D",
+              "content": "包含关系"
+            }
+          ]
+        },
+        {
+          "heading": "19",
+          "answer": "A",
+          "keywords": [
+            "UML类图"
+          ],
+          "source": "《UML建模》P52",
+          "type": "single_choice",
+          "number": 19,
+          "stem": "在UML类图中，表示类与类之间整体-部分关系的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "聚合关系"
+            },
+            {
+              "label": "B",
+              "content": "关联关系"
+            },
+            {
+              "label": "C",
+              "content": "依赖关系"
+            },
+            {
+              "label": "D",
+              "content": "泛化关系"
+            }
+          ]
+        },
+        {
+          "heading": "20",
+          "answer": "B",
+          "keywords": [
+            "UML顺序图"
+          ],
+          "source": "《UML建模》P68",
+          "type": "single_choice",
+          "number": 20,
+          "stem": "UML顺序图中，表示对象之间消息传递的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "实线"
+            },
+            {
+              "label": "B",
+              "content": "带箭头的实线"
+            },
+            {
+              "label": "C",
+              "content": "虚线"
+            },
+            {
+              "label": "D",
+              "content": "带箭头的虚线"
+            }
+          ]
+        },
+        {
+          "heading": "21",
+          "answer": "C",
+          "keywords": [
+            "局域网拓扑结构"
+          ],
+          "source": "《计算机网络》P115",
+          "type": "single_choice",
+          "number": 21,
+          "stem": "在局域网拓扑结构中，所有节点都连接到一个中心设备上的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "总线型"
+            },
+            {
+              "label": "B",
+              "content": "环型"
+            },
+            {
+              "label": "C",
+              "content": "星型"
+            },
+            {
+              "label": "D",
+              "content": "网状型"
+            }
+          ]
+        },
+        {
+          "heading": "22",
+          "answer": "A",
+          "keywords": [
+            "无线局域网"
+          ],
+          "source": "《计算机网络》P145",
+          "type": "single_choice",
+          "number": 22,
+          "stem": "无线局域网中用于标识网络名称的是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "SSID"
+            },
+            {
+              "label": "B",
+              "content": "MAC地址"
+            },
+            {
+              "label": "C",
+              "content": "IP地址"
+            },
+            {
+              "label": "D",
+              "content": "子网掩码"
+            }
+          ]
+        },
+        {
+          "heading": "23",
+          "answer": "B",
+          "keywords": [
+            "Windows用户管理"
+          ],
+          "source": "《Windows操作系统》P58",
+          "type": "single_choice",
+          "number": 23,
+          "stem": "Windows 10中，用于管理系统用户账户的工具是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "设备管理器"
+            },
+            {
+              "label": "B",
+              "content": "计算机管理"
+            },
+            {
+              "label": "C",
+              "content": "任务管理器"
+            },
+            {
+              "label": "D",
+              "content": "控制面板"
+            }
+          ]
+        },
+        {
+          "heading": "24",
+          "answer": "D",
+          "keywords": [
+            "Windows设备管理"
+          ],
+          "source": "《Windows操作系统》P75",
+          "type": "single_choice",
+          "number": 24,
+          "stem": "Windows 10中，用于查看和管理硬件设备的工具是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "资源管理器"
+            },
+            {
+              "label": "B",
+              "content": "任务管理器"
+            },
+            {
+              "label": "C",
+              "content": "注册表编辑器"
+            },
+            {
+              "label": "D",
+              "content": "设备管理器"
+            }
+          ]
+        },
+        {
+          "heading": "25",
+          "answer": "C",
+          "keywords": [
+            "Windows网络设置"
+          ],
+          "source": "《Windows操作系统》P88",
+          "type": "single_choice",
+          "number": 25,
+          "stem": "Windows 10中，查看本机IP地址的命令是（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "ping"
+            },
+            {
+              "label": "B",
+              "content": "tracert"
+            },
+            {
+              "label": "C",
+              "content": "ipconfig"
+            },
+            {
+              "label": "D",
+              "content": "netstat"
+            }
+          ]
+        }
+      ],
+      "type": "single_choice",
+      "score_per_question": 2,
+      "description": "本大题共 25 小题，每小题 2 分，共 50 分。在每小题列出的选项中只有一项最符合题目要求的。"
+    },
+    {
+      "title": "多项选择题",
+      "questions": [
+        {
+          "heading": "26",
+          "answer": "ABC",
+          "keywords": [
+            "C语言基本语句"
+          ],
+          "source": "《C程序设计》P50",
+          "type": "multiple_choice",
+          "number": 26,
+          "stem": "C语言中的基本语句包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "表达式语句"
+            },
+            {
+              "label": "B",
+              "content": "空语句"
+            },
+            {
+              "label": "C",
+              "content": "复合语句"
+            },
+            {
+              "label": "D",
+              "content": "函数定义语句"
+            }
+          ]
+        },
+        {
+          "heading": "27",
+          "answer": "ABD",
+          "keywords": [
+            "C语言选择结构"
+          ],
+          "source": "《C程序设计》P70",
+          "type": "multiple_choice",
+          "number": 27,
+          "stem": "C语言中用于实现选择结构的语句有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "if语句"
+            },
+            {
+              "label": "B",
+              "content": "switch语句"
+            },
+            {
+              "label": "C",
+              "content": "for语句"
+            },
+            {
+              "label": "D",
+              "content": "条件运算符(?:)"
+            }
+          ]
+        },
+        {
+          "heading": "28",
+          "answer": "ABCD",
+          "keywords": [
+            "C语言循环控制"
+          ],
+          "source": "《C程序设计》P80",
+          "type": "multiple_choice",
+          "number": 28,
+          "stem": "C语言中用于控制循环流程的语句有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "break"
+            },
+            {
+              "label": "B",
+              "content": "continue"
+            },
+            {
+              "label": "C",
+              "content": "return"
+            },
+            {
+              "label": "D",
+              "content": "goto"
+            }
+          ]
+        },
+        {
+          "heading": "29",
+          "answer": "ABC",
+          "keywords": [
+            "MySQL数据操纵"
+          ],
+          "source": "《MySQL数据库》P65",
+          "type": "multiple_choice",
+          "number": 29,
+          "stem": "SQL中数据操纵语言(DML)包含的操作有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "插入数据(INSERT)"
+            },
+            {
+              "label": "B",
+              "content": "删除数据(DELETE)"
+            },
+            {
+              "label": "C",
+              "content": "修改数据(UPDATE)"
+            },
+            {
+              "label": "D",
+              "content": "创建表(CREATE)"
+            }
+          ]
+        },
+        {
+          "heading": "30",
+          "answer": "BCD",
+          "keywords": [
+            "MySQL查询"
+          ],
+          "source": "《MySQL数据库》P72",
+          "type": "multiple_choice",
+          "number": 30,
+          "stem": "SQL中用于连接查询的类型有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "UNION连接"
+            },
+            {
+              "label": "B",
+              "content": "内连接(INNER JOIN)"
+            },
+            {
+              "label": "C",
+              "content": "左外连接(LEFT JOIN)"
+            },
+            {
+              "label": "D",
+              "content": "右外连接(RIGHT JOIN)"
+            }
+          ]
+        },
+        {
+          "heading": "31",
+          "answer": "ABCD",
+          "keywords": [
+            "UML图类型"
+          ],
+          "source": "《UML建模》P25",
+          "type": "multiple_choice",
+          "number": 31,
+          "stem": "UML中常用的结构图包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "类图"
+            },
+            {
+              "label": "B",
+              "content": "用例图"
+            },
+            {
+              "label": "C",
+              "content": "组件图"
+            },
+            {
+              "label": "D",
+              "content": "部署图"
+            }
+          ]
+        },
+        {
+          "heading": "32",
+          "answer": "ABD",
+          "keywords": [
+            "UML类图关系"
+          ],
+          "source": "《UML建模》P55",
+          "type": "multiple_choice",
+          "number": 32,
+          "stem": "UML类图中，类与类之间的关系包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "关联关系"
+            },
+            {
+              "label": "B",
+              "content": "依赖关系"
+            },
+            {
+              "label": "C",
+              "content": "调用关系"
+            },
+            {
+              "label": "D",
+              "content": "泛化关系"
+            }
+          ]
+        },
+        {
+          "heading": "33",
+          "answer": "ABCD",
+          "keywords": [
+            "局域网设备"
+          ],
+          "source": "《计算机网络》P120",
+          "type": "multiple_choice",
+          "number": 33,
+          "stem": "局域网中常用的网络设备有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "交换机"
+            },
+            {
+              "label": "B",
+              "content": "路由器"
+            },
+            {
+              "label": "C",
+              "content": "网卡"
+            },
+            {
+              "label": "D",
+              "content": "集线器"
+            }
+          ]
+        },
+        {
+          "heading": "34",
+          "answer": "ABC",
+          "keywords": [
+            "无线局域网安全"
+          ],
+          "source": "《计算机网络》P148",
+          "type": "multiple_choice",
+          "number": 34,
+          "stem": "无线局域网的安全加密类型包括（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "WEP"
+            },
+            {
+              "label": "B",
+              "content": "WPA"
+            },
+            {
+              "label": "C",
+              "content": "WPA2"
+            },
+            {
+              "label": "D",
+              "content": "HTTP"
+            }
+          ]
+        },
+        {
+          "heading": "35",
+          "answer": "ABCD",
+          "keywords": [
+            "Windows系统管理"
+          ],
+          "source": "《Windows操作系统》P45",
+          "type": "multiple_choice",
+          "number": 35,
+          "stem": "Windows 10操作系统中可以进行的管理操作有（ ）",
+          "options": [
+            {
+              "label": "A",
+              "content": "软件安装与卸载"
+            },
+            {
+              "label": "B",
+              "content": "用户账户创建与管理"
+            },
+            {
+              "label": "C",
+              "content": "硬件设备驱动更新"
+            },
+            {
+              "label": "D",
+              "content": "网络连接配置"
+            }
+          ]
+        }
+      ],
+      "type": "multiple_choice",
+      "score_per_question": 3,
+      "description": "本大题共 10 小题，每小题 3 分，共 30 分。全部选对得 3 分，选对但不全得 1 分，错选或不选不得分。"
+    },
+    {
+      "title": "判断题",
+      "questions": [
+        {
+          "heading": "36",
+          "answer": "错误",
+          "keywords": [
+            "C语言注释"
+          ],
+          "source": "《C程序设计》P18",
+          "type": "judgement",
+          "number": 36,
+          "stem": "C语言程序的注释可以嵌套使用。",
+          "options": []
+        },
+        {
+          "heading": "37",
+          "answer": "正确",
+          "keywords": [
+            "C语言变量"
+          ],
+          "source": "《C程序设计》P32",
+          "type": "judgement",
+          "number": 37,
+          "stem": "C语言中，变量必须先定义后使用。",
+          "options": []
+        },
+        {
+          "heading": "38",
+          "answer": "错误",
+          "keywords": [
+            "C语言数组"
+          ],
+          "source": "《C程序设计》P98",
+          "type": "judgement",
+          "number": 38,
+          "stem": "C语言中，数组名代表数组中所有元素的值。",
+          "options": []
+        },
+        {
+          "heading": "39",
+          "answer": "正确",
+          "keywords": [
+            "C语言函数递归"
+          ],
+          "source": "《C程序设计》P140",
+          "type": "judgement",
+          "number": 39,
+          "stem": "C语言函数可以递归调用，即函数可以直接或间接地调用自身。",
+          "options": []
+        },
+        {
+          "heading": "40",
+          "answer": "错误",
+          "keywords": [
+            "MySQL主键"
+          ],
+          "source": "《MySQL数据库》P50",
+          "type": "judgement",
+          "number": 40,
+          "stem": "MySQL表中可以有多个主键。",
+          "options": []
+        },
+        {
+          "heading": "41",
+          "answer": "正确",
+          "keywords": [
+            "MySQL视图"
+          ],
+          "source": "《MySQL数据库》P95",
+          "type": "judgement",
+          "number": 41,
+          "stem": "MySQL视图是基于查询结果的虚拟表，不存储实际数据。",
+          "options": []
+        },
+        {
+          "heading": "42",
+          "answer": "错误",
+          "keywords": [
+            "UML用例图"
+          ],
+          "source": "《UML建模》P38",
+          "type": "judgement",
+          "number": 42,
+          "stem": "UML用例图中，参与者只能是人，不能是其他系统或设备。",
+          "options": []
+        },
+        {
+          "heading": "43",
+          "answer": "正确",
+          "keywords": [
+            "UML顺序图"
+          ],
+          "source": "《UML建模》P70",
+          "type": "judgement",
+          "number": 43,
+          "stem": "UML顺序图中，对象的 lifeline 用垂直虚线表示。",
+          "options": []
+        },
+        {
+          "heading": "44",
+          "answer": "正确",
+          "keywords": [
+            "局域网拓扑"
+          ],
+          "source": "《计算机网络》P118",
+          "type": "judgement",
+          "number": 44,
+          "stem": "星型拓扑结构中，单个节点故障不会影响其他节点之间的通信。",
+          "options": []
+        },
+        {
+          "heading": "45",
+          "answer": "错误",
+          "keywords": [
+            "无线局域网"
+          ],
+          "source": "《计算机网络》P145",
+          "type": "judgement",
+          "number": 45,
+          "stem": "无线局域网的SSID可以隐藏，不对外广播。",
+          "options": []
+        },
+        {
+          "heading": "46",
+          "answer": "正确",
+          "keywords": [
+            "Windows系统"
+          ],
+          "source": "《Windows操作系统》P35",
+          "type": "judgement",
+          "number": 46,
+          "stem": "Windows 10支持多用户同时使用同一台计算机。",
+          "options": []
+        },
+        {
+          "heading": "47",
+          "answer": "错误",
+          "keywords": [
+            "Windows防火墙"
+          ],
+          "source": "《Windows操作系统》P92",
+          "type": "judgement",
+          "number": 47,
+          "stem": "Windows防火墙只能阻止外部对内部的访问，不能阻止内部对外部的访问。",
+          "options": []
+        },
+        {
+          "heading": "48",
+          "answer": "正确",
+          "keywords": [
+            "C语言字符串"
+          ],
+          "source": "《C程序设计》P110",
+          "type": "judgement",
+          "number": 48,
+          "stem": "C语言中，字符串以'\\0'作为结束标志。",
+          "options": []
+        },
+        {
+          "heading": "49",
+          "answer": "错误",
+          "keywords": [
+            "MySQL索引"
+          ],
+          "source": "《MySQL数据库》P102",
+          "type": "judgement",
+          "number": 49,
+          "stem": "MySQL中，索引越多越好，应该为所有列都创建索引。",
+          "options": []
+        },
+        {
+          "heading": "50",
+          "answer": "正确",
+          "keywords": [
+            "UML状态图"
+          ],
+          "source": "《UML建模》P82",
+          "type": "judgement",
+          "number": 50,
+          "stem": "UML状态图中，状态之间的转换由事件触发。",
+          "options": []
+        }
+      ],
+      "type": "judgement",
+      "score_per_question": 1,
+      "description": "本大题共 15 小题，每小题 1 分，共 15 分。下列每小题表述正确的，在答题卡上填涂 A 选项；表述错误的填涂 B 选项。"
+    },
+    {
+      "title": "填空题",
+      "questions": [
+        {
+          "heading": "51",
+          "answer": "main",
+          "keywords": [
+            "C语言main函数"
+          ],
+          "source": "《C程序设计》P15",
+          "type": "fill_blank",
+          "number": 51,
+          "stem": "C语言程序的执行总是从 ____ 函数开始。",
+          "options": []
+        },
+        {
+          "heading": "52",
+          "answer": 0,
+          "keywords": [
+            "C语言逻辑运算"
+          ],
+          "source": "《C程序设计》P42",
+          "type": "fill_blank",
+          "number": 52,
+          "stem": "C语言中，逻辑假用 ____ 表示。",
+          "options": []
+        },
+        {
+          "heading": "53",
+          "answer": "break",
+          "keywords": [
+            "C语言switch语句"
+          ],
+          "source": "《C程序设计》P72",
+          "type": "fill_blank",
+          "number": 53,
+          "stem": "在switch语句中，用于跳出switch结构的语句是 ____。",
+          "options": []
+        },
+        {
+          "heading": "54",
+          "answer": "值传递",
+          "keywords": [
+            "C语言参数传递"
+          ],
+          "source": "《C程序设计》P132",
+          "type": "fill_blank",
+          "number": 54,
+          "stem": "C语言函数参数默认采用 ____ 方式进行传递。",
+          "options": []
+        },
+        {
+          "heading": "55",
+          "answer": "CREATE TABLE",
+          "keywords": [
+            "MySQL创建表"
+          ],
+          "source": "《MySQL数据库》P48",
+          "type": "fill_blank",
+          "number": 55,
+          "stem": "SQL语句中，用于创建数据表的命令是 ____。",
+          "options": []
+        },
+        {
+          "heading": "56",
+          "answer": "SELECT",
+          "keywords": [
+            "MySQL查询"
+          ],
+          "source": "《MySQL数据库》P70",
+          "type": "fill_blank",
+          "number": 56,
+          "stem": "SQL语句中，用于查询数据的命令是 ____。",
+          "options": []
+        },
+        {
+          "heading": "57",
+          "answer": "参与者",
+          "source": "《UML建模》P32",
+          "type": "fill_blank",
+          "number": 57,
+          "stem": "在UML用例图中，与系统交互的人或其他系统称为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "58",
+          "answer": "星型",
+          "source": "《计算机网络》P116",
+          "type": "fill_blank",
+          "number": 58,
+          "stem": "在 ____ 拓扑结构的局域网中，所有节点都连接到一个中心设备上。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "59",
+          "answer": "SSID",
+          "source": "《计算机网络》P145",
+          "type": "fill_blank",
+          "number": 59,
+          "stem": "无线局域网中， ____ 用于标识无线网络的名称。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "60",
+          "answer": "设备管理器",
+          "source": "《Windows操作系统》P75",
+          "type": "fill_blank",
+          "number": 60,
+          "stem": "Windows 10中，用于管理和配置硬件设备的工具是 ____。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "fill_blank",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。下列每小题的答案填在答题卡对应的横线上。"
+    },
+    {
+      "title": "编程与SQL操作题",
+      "questions": [
+        {
+          "heading": "61",
+          "score": 10,
+          "type": "composite",
+          "number": 61,
+          "stem": "阅读以下程序，回答问题。\n\n```c\n#include <stdio.h>\n\nint main() {\n    int i, sum = 0;\n    for(i = 1; i <= 100; i++) {\n        if(i % 2 == 0)\n            sum += i;\n    }\n    printf(\"sum = %d\\n\", sum);\n    return 0;\n}\n```\n\n### 61.1\n@answer: 计算1到100中所有偶数的和\n@score: 3\n该程序的功能是什么？（3分）\n\n### 61.2\n@answer: 2550\n@score: 3\n程序运行后，输出的结果是什么？（3分）\n\n### 61.3\n@answer: for循环，累加\n@score: 4\n程序中使用了哪些控制结构？请简述程序的执行流程。（4分）",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "62",
+          "score": 12,
+          "type": "composite",
+          "number": 62,
+          "stem": "编写程序题。\n\n### 62.1\n@answer_lines: 10\n@score: 12\n请编写一个C语言函数，实现计算整数数组中的最大值。函数原型为：\n```c\nint findMax(int arr[], int n);\n```\n要求：使用循环结构遍历数组，返回数组中的最大元素值。（12分）\n\n@analysis: \n参考代码：\n```c\nint findMax(int arr[], int n) {\n    int max = arr[0];  // 假设第一个元素最大\n    int i;\n    for(i = 1; i < n; i++) {\n        if(arr[i] > max) {\n            max = arr[i];  // 更新最大值\n        }\n    }\n    return max;\n}\n```\n评分标准：函数定义正确(2分)、初始化最大值(2分)、循环遍历数组(3分)、比较并更新最大值(3分)、返回结果(2分)。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "63",
+          "score": 13,
+          "type": "composite",
+          "number": 63,
+          "stem": "数据库操作题。\n\n假设有一个学生信息管理系统，包含以下两张表：\n\n学生表(student)：\n| 字段名 | 类型 | 说明 |\n|--------|------|------|\n| sno | VARCHAR(10) | 学号（主键）|\n| sname | VARCHAR(20) | 姓名 |\n| sgender | CHAR(2) | 性别 |\n| sage | INT | 年龄 |\n| sdept | VARCHAR(20) | 所在系 |\n\n课程表(course)：\n| 字段名 | 类型 | 说明 |\n|--------|------|------|\n| cno | VARCHAR(10) | 课程号（主键）|\n| cname | VARCHAR(30) | 课程名 |\n| credit | INT | 学分 |\n\n选课表(sc)：\n| 字段名 | 类型 | 说明 |\n|--------|------|------|\n| sno | VARCHAR(10) | 学号（外键）|\n| cno | VARCHAR(10) | 课程号（外键）|\n| grade | INT | 成绩 |\n\n### 63.1\n@answer_lines: 3\n@score: 4\n写出创建学生表(student)的SQL语句。（4分）\n\n@analysis: \n```sql\nCREATE TABLE student (\n    sno VARCHAR(10) PRIMARY KEY,\n    sname VARCHAR(20) NOT NULL,\n    sgender CHAR(2),\n    sage INT,\n    sdept VARCHAR(20)\n);\n```\n\n### 63.2\n@answer_lines: 3\n@score: 4\n写出查询计算机系所有学生信息的SQL语句。（4分）\n\n@analysis: \n```sql\nSELECT * FROM student WHERE sdept = '计算机系';\n```\n\n### 63.3\n@answer_lines: 4\n@score: 5\n写出查询选修了课程号为\"C001\"且成绩在80分以上的学生学号和姓名的SQL语句。（5分）\n\n@analysis: \n```sql\nSELECT student.sno, sname \nFROM student, sc \nWHERE student.sno = sc.sno \n  AND cno = 'C001' \n  AND grade >= 80;\n```",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "composite",
+      "score_per_question": 0,
+      "description": "本大题共 3 小题，共 35 分。根据题目要求作答。"
+    },
+    {
+      "title": "局域网配置与UML设计题",
+      "questions": [
+        {
+          "heading": "64",
+          "score": 12,
+          "type": "composite",
+          "number": 64,
+          "stem": "局域网搭建题。\n\n某办公室需要搭建一个小型局域网，共有10台计算机，需要共享一台打印机和访问互联网。\n\n### 64.1\n@answer_lines: 3\n@score: 4\n请说明应该选择的网络拓扑结构，并简述理由。（4分）\n\n@analysis: \n应选择星型拓扑结构。\n理由：(1) 易于管理和维护；(2) 单点故障不影响其他节点；(3) 便于扩展，增加新节点方便。\n\n### 64.2\n@answer_lines: 4\n@score: 4\n请列出搭建该局域网所需的网络设备。（4分）\n\n@analysis: \n所需设备：(1) 交换机一台（或路由器）；(2) 网卡（每台计算机一块）；(3) 网线若干；(4) 打印机一台（网络打印机或通过计算机共享）。\n\n### 64.3\n@answer_lines: 4\n@score: 4\n简述无线局域网相比有线局域网的主要优缺点。（4分）\n\n@analysis: \n优点：(1) 布线灵活，不受物理位置限制；(2) 安装便捷，节省布线成本；(3) 便于移动办公。\n缺点：(1) 传输速率相对较低；(2) 信号稳定性受环境影响；(3) 安全性相对较低，需要加密保护。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "65",
+          "score": 13,
+          "type": "composite",
+          "number": 65,
+          "stem": "UML建模题。\n\n某图书管理系统的主要功能包括：读者借书、读者还书、管理员管理图书信息、管理员查询借阅记录。系统的参与者有读者和管理员。\n\n### 65.1\n@answer_lines: 8\n@score: 7\n请绘制该系统的用例图，包括参与者、用例以及它们之间的关系。（7分）\n\n@analysis: \n用例图包含：\n- 参与者：读者、管理员\n- 用例：借书、还书、管理图书信息、查询借阅记录\n- 关系：读者与\"借书\"、\"还书\"用例关联；管理员与\"管理图书信息\"、\"查询借阅记录\"用例关联；\"借书\"和\"还书\"用例可能与\"验证读者身份\"用例存在包含关系。\n\n### 65.2\n@answer_lines: 6\n@score: 6\n请简述UML类图中类的基本组成元素，并说明类与类之间常见的关系类型。（6分）\n\n@analysis: \n类的基本组成元素：(1) 类名；(2) 属性（成员变量）；(3) 操作（方法）。\n常见关系类型：(1) 关联关系；(2) 依赖关系；(3) 泛化关系（继承）；(4) 聚合关系；(5) 组合关系。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "composite",
+      "score_per_question": 0,
+      "description": "本大题共 2 小题，共 25 分。根据题目要求作答。"
+    }
+  ]
+}

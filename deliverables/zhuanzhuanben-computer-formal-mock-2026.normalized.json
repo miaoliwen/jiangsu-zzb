@@ -1,0 +1,1156 @@
+{
+  "exam": {
+    "title": "江苏省普通高校“专转本”选拔考试 计算机基础综合正式模拟试卷",
+    "subtitle": "科目代码: 204（正式考试难度）",
+    "confidential_label": "机密★启用前",
+    "duration_minutes": 120,
+    "total_score": 150,
+    "variant": "teacher-redline"
+  },
+  "instructions": [
+    "本卷分为客观题和主观题两部分，请按题号顺序在指定答题区域内作答。",
+    "单项选择题只有一个最符合题意的选项；多项选择题至少有两个正确选项，错选不得分。",
+    "简答题、计算题、编程题和综合题须写出必要过程、关键结论或核心代码。"
+  ],
+  "render": {
+    "include_answers": true,
+    "include_keywords": true,
+    "include_sources": true,
+    "include_teacher_notes": true,
+    "include_analysis": true,
+    "highlight_answer": true
+  },
+  "sections": [
+    {
+      "title": "单项选择题",
+      "questions": [
+        {
+          "heading": "1",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 1,
+          "stem": "在采用补码表示的 8 位有符号整数中，十进制数 `-18` 的补码是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`11101101`"
+            },
+            {
+              "label": "B",
+              "content": "`11101100`"
+            },
+            {
+              "label": "C",
+              "content": "`11101110`"
+            },
+            {
+              "label": "D",
+              "content": "`10010010`"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "2",
+          "answer": "B",
+          "type": "single_choice",
+          "number": 2,
+          "stem": "某 CPU 采用 32 位地址总线，按字节编址，则其理论最大可直接寻址空间为（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "2 GB"
+            },
+            {
+              "label": "B",
+              "content": "4 GB"
+            },
+            {
+              "label": "C",
+              "content": "8 GB"
+            },
+            {
+              "label": "D",
+              "content": "32 GB"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "3",
+          "answer": "D",
+          "type": "single_choice",
+          "number": 3,
+          "stem": "下列关于操作系统进程与线程关系的说法中，正确的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "一个进程中只能包含一个线程"
+            },
+            {
+              "label": "B",
+              "content": "线程拥有独立的地址空间"
+            },
+            {
+              "label": "C",
+              "content": "进程切换通常比线程切换开销更小"
+            },
+            {
+              "label": "D",
+              "content": "同一进程中的线程可共享进程资源"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "4",
+          "answer": "A",
+          "type": "single_choice",
+          "number": 4,
+          "stem": "对长度为 `n` 的顺序表执行一次折半查找，其前提条件是该顺序表（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "已按关键字有序"
+            },
+            {
+              "label": "B",
+              "content": "采用链式存储"
+            },
+            {
+              "label": "C",
+              "content": "不含重复元素"
+            },
+            {
+              "label": "D",
+              "content": "`n` 必须为偶数"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "5",
+          "answer": "B",
+          "type": "single_choice",
+          "number": 5,
+          "stem": "在栈中依次压入元素 `a,b,c,d` 后，若连续执行两次出栈，则此后栈顶元素为（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`d`"
+            },
+            {
+              "label": "B",
+              "content": "`b`"
+            },
+            {
+              "label": "C",
+              "content": "`a`"
+            },
+            {
+              "label": "D",
+              "content": "不确定"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "6",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 6,
+          "stem": "下列排序算法中，平均时间复杂度为 `O(n log n)`，且最坏情况下也为 `O(n log n)` 的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "直接插入排序"
+            },
+            {
+              "label": "B",
+              "content": "冒泡排序"
+            },
+            {
+              "label": "C",
+              "content": "归并排序"
+            },
+            {
+              "label": "D",
+              "content": "简单选择排序"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "7",
+          "answer": "A",
+          "type": "single_choice",
+          "number": 7,
+          "stem": "在关系数据库中，若一个非主属性完全函数依赖于码，且不存在传递依赖，则该关系模式至少属于（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "第三范式"
+            },
+            {
+              "label": "B",
+              "content": "第一范式"
+            },
+            {
+              "label": "C",
+              "content": "BCNF"
+            },
+            {
+              "label": "D",
+              "content": "第四范式"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "8",
+          "answer": "D",
+          "type": "single_choice",
+          "number": 8,
+          "stem": "在 SQL 中，若希望查询选修课程数大于 3 门的学生学号，最合适使用的子句是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`ORDER BY`"
+            },
+            {
+              "label": "B",
+              "content": "`DISTINCT`"
+            },
+            {
+              "label": "C",
+              "content": "`WHERE`"
+            },
+            {
+              "label": "D",
+              "content": "`HAVING`"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "9",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 9,
+          "stem": "下列关于编译程序与解释程序的说法中，正确的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "解释程序一定先生成目标代码再执行"
+            },
+            {
+              "label": "B",
+              "content": "编译程序不需要进行词法分析"
+            },
+            {
+              "label": "C",
+              "content": "编译方式通常更有利于重复执行同一程序"
+            },
+            {
+              "label": "D",
+              "content": "解释方式生成的可执行文件通常独立于解释器"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "10",
+          "answer": "B",
+          "type": "single_choice",
+          "number": 10,
+          "stem": "若某算法的递归关系式为 `T(n)=2T(n/2)+n`，则其时间复杂度为（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`O(log n)`"
+            },
+            {
+              "label": "B",
+              "content": "`O(n log n)`"
+            },
+            {
+              "label": "C",
+              "content": "`O(n^2)`"
+            },
+            {
+              "label": "D",
+              "content": "`O(2^n)`"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "11",
+          "answer": "A",
+          "type": "single_choice",
+          "number": 11,
+          "stem": "在 IP 分层模型中，负责将主机标识与物理地址映射起来的常用协议是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "ARP"
+            },
+            {
+              "label": "B",
+              "content": "ICMP"
+            },
+            {
+              "label": "C",
+              "content": "HTTP"
+            },
+            {
+              "label": "D",
+              "content": "SMTP"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "12",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 12,
+          "stem": "一个子网掩码为 `255.255.255.192` 的 IPv4 子网，其每个子网最多可容纳的主机数为（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "30"
+            },
+            {
+              "label": "B",
+              "content": "32"
+            },
+            {
+              "label": "C",
+              "content": "62"
+            },
+            {
+              "label": "D",
+              "content": "64"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "13",
+          "answer": "B",
+          "type": "single_choice",
+          "number": 13,
+          "stem": "关于 TCP 与 UDP 的比较，下列说法正确的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "UDP 提供可靠的有序字节流服务"
+            },
+            {
+              "label": "B",
+              "content": "TCP 建立连接后可进行可靠传输"
+            },
+            {
+              "label": "C",
+              "content": "TCP 首部一定比 UDP 首部短"
+            },
+            {
+              "label": "D",
+              "content": "UDP 只能用于局域网"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "14",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 14,
+          "stem": "当页面访问序列为 `1,2,3,4,1,2,5,1,2,3,4,5`，分配 3 个物理块，采用 FIFO 页面置换算法时，缺页次数为（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "7"
+            },
+            {
+              "label": "B",
+              "content": "8"
+            },
+            {
+              "label": "C",
+              "content": "9"
+            },
+            {
+              "label": "D",
+              "content": "10"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "15",
+          "answer": "A",
+          "type": "single_choice",
+          "number": 15,
+          "stem": "在软件工程中，需求规格说明书的主要作用是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "作为后续设计、实现与测试的重要依据"
+            },
+            {
+              "label": "B",
+              "content": "直接替代详细设计文档"
+            },
+            {
+              "label": "C",
+              "content": "只用于项目验收阶段"
+            },
+            {
+              "label": "D",
+              "content": "仅描述界面样式而不描述功能"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "16",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 16,
+          "stem": "若某文件采用顺序存储方式保存记录，并且经常需要按关键字随机定位其中一条记录，则最适合采用的附加结构是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "队列"
+            },
+            {
+              "label": "B",
+              "content": "栈"
+            },
+            {
+              "label": "C",
+              "content": "索引"
+            },
+            {
+              "label": "D",
+              "content": "哈希冲突链"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "17",
+          "answer": "D",
+          "type": "single_choice",
+          "number": 17,
+          "stem": "下列关于信息安全目标的说法中，不属于经典 CIA 三元组的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "机密性"
+            },
+            {
+              "label": "B",
+              "content": "完整性"
+            },
+            {
+              "label": "C",
+              "content": "可用性"
+            },
+            {
+              "label": "D",
+              "content": "可移植性"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "18",
+          "answer": "B",
+          "type": "single_choice",
+          "number": 18,
+          "stem": "关于数字图像分辨率和颜色深度的关系，下列说法正确的是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "分辨率决定单个像素可表示的颜色数"
+            },
+            {
+              "label": "B",
+              "content": "颜色深度决定单个像素可表示的信息量"
+            },
+            {
+              "label": "C",
+              "content": "颜色深度越高，图像像素数一定越多"
+            },
+            {
+              "label": "D",
+              "content": "分辨率与存储容量无关"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "19",
+          "answer": "C",
+          "type": "single_choice",
+          "number": 19,
+          "stem": "已知某二叉树的先序遍历序列为 `A B D E C F`，中序遍历序列为 `D B E A C F`，则该二叉树的根结点是（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`B`"
+            },
+            {
+              "label": "B",
+              "content": "`D`"
+            },
+            {
+              "label": "C",
+              "content": "`A`"
+            },
+            {
+              "label": "D",
+              "content": "`C`"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "20",
+          "answer": "A",
+          "type": "single_choice",
+          "number": 20,
+          "stem": "阅读下列 Python 代码后，程序输出结果为（ ）。\n\n```python\ndef f(x, y=[]):\n    y.append(x)\n    return y\n\nprint(f(1))\nprint(f(2))\n```",
+          "options": [
+            {
+              "label": "A",
+              "content": "`[1]` 和 `[1, 2]`"
+            },
+            {
+              "label": "B",
+              "content": "`[1]` 和 `[2]`"
+            },
+            {
+              "label": "C",
+              "content": "`[1, 2]` 和 `[1, 2]`"
+            },
+            {
+              "label": "D",
+              "content": "抛出类型错误"
+            }
+          ],
+          "keywords": []
+        }
+      ],
+      "type": "single_choice",
+      "score_per_question": 2,
+      "description": "本大题共 20 小题，每小题 2 分，共 40 分。在每小题列出的选项中只有一项最符合题目要求。"
+    },
+    {
+      "title": "多项选择题",
+      "questions": [
+        {
+          "heading": "21",
+          "answer": "ACD",
+          "type": "multiple_choice",
+          "number": 21,
+          "stem": "下列属于冯·诺依曼体系结构核心思想的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "存储程序"
+            },
+            {
+              "label": "B",
+              "content": "数据只能以十进制存储"
+            },
+            {
+              "label": "C",
+              "content": "指令和数据统一存放在存储器中"
+            },
+            {
+              "label": "D",
+              "content": "计算机由运算器、控制器、存储器、输入和输出设备等组成"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "22",
+          "answer": "ABD",
+          "type": "multiple_choice",
+          "number": 22,
+          "stem": "关于进程调度与死锁的说法，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "抢占式调度可提升系统响应能力"
+            },
+            {
+              "label": "B",
+              "content": "死锁产生通常与互斥、请求并保持等条件有关"
+            },
+            {
+              "label": "C",
+              "content": "只要有资源竞争就一定发生死锁"
+            },
+            {
+              "label": "D",
+              "content": "银行家算法是一种避免死锁的思路"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "23",
+          "answer": "BCD",
+          "type": "multiple_choice",
+          "number": 23,
+          "stem": "下列数据结构中，逻辑上属于线性结构的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "二叉树"
+            },
+            {
+              "label": "B",
+              "content": "栈"
+            },
+            {
+              "label": "C",
+              "content": "队列"
+            },
+            {
+              "label": "D",
+              "content": "串"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "24",
+          "answer": "ABC",
+          "type": "multiple_choice",
+          "number": 24,
+          "stem": "关于关系数据库主键与外键的说法，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "主键用于唯一标识元组"
+            },
+            {
+              "label": "B",
+              "content": "一个关系可以包含外键"
+            },
+            {
+              "label": "C",
+              "content": "外键用于建立关系之间的联系"
+            },
+            {
+              "label": "D",
+              "content": "一个关系模式只能有一个候选键"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "25",
+          "answer": "ACD",
+          "type": "multiple_choice",
+          "number": 25,
+          "stem": "下列关于 SQL 查询的说法中，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "`GROUP BY` 常与聚合函数联合使用"
+            },
+            {
+              "label": "B",
+              "content": "`WHERE` 可以直接筛选聚合后的分组结果"
+            },
+            {
+              "label": "C",
+              "content": "`ORDER BY` 用于指定结果排序方式"
+            },
+            {
+              "label": "D",
+              "content": "`COUNT(*)` 可统计结果集行数"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "26",
+          "answer": "ABC",
+          "type": "multiple_choice",
+          "number": 26,
+          "stem": "下列关于编译原理基础概念的说法，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "词法分析的任务之一是识别单词符号"
+            },
+            {
+              "label": "B",
+              "content": "语法分析在词法分析之后进行"
+            },
+            {
+              "label": "C",
+              "content": "符号表常用于记录标识符相关信息"
+            },
+            {
+              "label": "D",
+              "content": "语义分析与中间代码生成互斥，只能二选一"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "27",
+          "answer": "ABD",
+          "type": "multiple_choice",
+          "number": 27,
+          "stem": "关于 TCP 协议的特性，下列说法正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "面向连接"
+            },
+            {
+              "label": "B",
+              "content": "提供流量控制"
+            },
+            {
+              "label": "C",
+              "content": "不进行差错检测"
+            },
+            {
+              "label": "D",
+              "content": "能通过确认与重传实现可靠传输"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "28",
+          "answer": "ABC",
+          "type": "multiple_choice",
+          "number": 28,
+          "stem": "下列关于常见安全措施的说法，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "强口令策略有助于降低账户被暴力破解风险"
+            },
+            {
+              "label": "B",
+              "content": "最小权限原则可减少误操作或越权访问影响"
+            },
+            {
+              "label": "C",
+              "content": "数据备份有助于应对勒索软件等破坏事件"
+            },
+            {
+              "label": "D",
+              "content": "关闭日志记录通常能提高系统安全性"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "29",
+          "answer": "BCD",
+          "type": "multiple_choice",
+          "number": 29,
+          "stem": "下列关于面向对象程序设计的说法中，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "封装会消除对象之间的一切依赖"
+            },
+            {
+              "label": "B",
+              "content": "继承有助于代码复用"
+            },
+            {
+              "label": "C",
+              "content": "多态有利于统一接口下的不同实现"
+            },
+            {
+              "label": "D",
+              "content": "类是对象的抽象"
+            }
+          ],
+          "keywords": []
+        },
+        {
+          "heading": "30",
+          "answer": "ACD",
+          "type": "multiple_choice",
+          "number": 30,
+          "stem": "下列关于数字媒体压缩的说法中，正确的有（ ）。",
+          "options": [
+            {
+              "label": "A",
+              "content": "有损压缩通常能获得更高压缩比"
+            },
+            {
+              "label": "B",
+              "content": "PNG 是典型的有损图像压缩格式"
+            },
+            {
+              "label": "C",
+              "content": "视频压缩常同时利用时间冗余与空间冗余"
+            },
+            {
+              "label": "D",
+              "content": "音频压缩可结合人耳听觉特性"
+            }
+          ],
+          "keywords": []
+        }
+      ],
+      "type": "multiple_choice",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。全部选对得 2 分，选对但不全得 1 分，错选或不选不得分。"
+    },
+    {
+      "title": "判断题",
+      "questions": [
+        {
+          "heading": "31",
+          "answer": "A",
+          "type": "judgement",
+          "number": 31,
+          "stem": "中断技术能够提高 CPU 与外设并行工作的效率。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "32",
+          "answer": "B",
+          "type": "judgement",
+          "number": 32,
+          "stem": "采用链式存储的线性表一定不能进行按序号访问。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "33",
+          "answer": "B",
+          "type": "judgement",
+          "number": 33,
+          "stem": "只要一个算法能够输出正确结果，它的时间复杂度就不再重要。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "34",
+          "answer": "A",
+          "type": "judgement",
+          "number": 34,
+          "stem": "数据库中的实体完整性通常要求主属性不能取空值。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "35",
+          "answer": "B",
+          "type": "judgement",
+          "number": 35,
+          "stem": "`SELECT * FROM A, B` 与带连接条件的等值连接在结果规模上总是相同。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "36",
+          "answer": "A",
+          "type": "judgement",
+          "number": 36,
+          "stem": "高级语言程序通过编译或解释后才能被计算机执行。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "37",
+          "answer": "B",
+          "type": "judgement",
+          "number": 37,
+          "stem": "IPv4 地址冲突只可能发生在不同局域网之间，不可能发生在同一局域网内。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "38",
+          "answer": "A",
+          "type": "judgement",
+          "number": 38,
+          "stem": "防火墙可以依据预设规则控制网络数据流的进出，但不能替代所有安全措施。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "39",
+          "answer": "B",
+          "type": "judgement",
+          "number": 39,
+          "stem": "颜色深度越高，图像文件尺寸一定越小。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "40",
+          "answer": "A",
+          "type": "judgement",
+          "number": 40,
+          "stem": "递归算法若缺少正确的终止条件，可能导致程序栈空间耗尽。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "judgement",
+      "score_per_question": 1,
+      "description": "本大题共 10 小题，每小题 1 分，共 10 分。下列各题表述正确的填“A”，错误的填“B”。"
+    },
+    {
+      "title": "填空题",
+      "questions": [
+        {
+          "heading": "41",
+          "answer": "Cache",
+          "type": "fill_blank",
+          "number": 41,
+          "stem": "为缓解 CPU 与主存之间速度差异而设置的高速缓冲存储器通常称为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "42",
+          "answer": "先进先出",
+          "type": "fill_blank",
+          "number": 42,
+          "stem": "队列这种数据结构的典型操作特征可概括为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "43",
+          "answer": "O(n^2)",
+          "type": "fill_blank",
+          "number": 43,
+          "stem": "对长度为 `n` 的冒泡排序，在最坏情况下的时间复杂度为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "44",
+          "answer": "唯一",
+          "type": "fill_blank",
+          "number": 44,
+          "stem": "关系数据库中，主键最核心的约束属性是能够 ____ 标识每一条记录。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "45",
+          "answer": "三次握手",
+          "type": "fill_blank",
+          "number": 45,
+          "stem": "TCP 建立连接的经典过程通常称为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "46",
+          "answer": "255.255.255.0",
+          "type": "fill_blank",
+          "number": 46,
+          "stem": "IPv4 中，前 24 位表示网络号的常见 C 类子网掩码写作 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "47",
+          "answer": "机密性",
+          "type": "fill_blank",
+          "number": 47,
+          "stem": "信息只能被授权主体访问，这一安全目标称为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "48",
+          "answer": "抽象",
+          "type": "fill_blank",
+          "number": 48,
+          "stem": "面向对象方法中，从具体对象中提取共同特征形成类的过程称为 ____。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "49",
+          "answer": "循环",
+          "type": "fill_blank",
+          "number": 49,
+          "stem": "在程序设计的三种基本控制结构中，重复执行某段语句所使用的是 ____ 结构。",
+          "options": [],
+          "keywords": []
+        },
+        {
+          "heading": "50",
+          "answer": "采样频率",
+          "type": "fill_blank",
+          "number": 50,
+          "stem": "数字音频中，单位时间内采集样本次数的多少由 ____ 决定。",
+          "options": [],
+          "keywords": []
+        }
+      ],
+      "type": "fill_blank",
+      "score_per_question": 2,
+      "description": "本大题共 10 小题，每小题 2 分，共 20 分。请将答案填写在对应横线上。"
+    },
+    {
+      "title": "简答题",
+      "questions": [
+        {
+          "heading": "51",
+          "answer_lines": 5,
+          "keywords": [
+            "虚拟存储",
+            "分页"
+          ],
+          "analysis": "应说明分页式虚拟存储通过页表把逻辑地址映射为物理地址，并指出缺页时需要进行页面置换。",
+          "type": "short_answer",
+          "number": 51,
+          "stem": "简述分页式虚拟存储管理的基本思想，并说明发生缺页时系统通常要做什么。",
+          "options": []
+        },
+        {
+          "heading": "52",
+          "answer_lines": 5,
+          "keywords": [
+            "数据库范式",
+            "冗余"
+          ],
+          "analysis": "应围绕减少冗余、避免更新异常、提高一致性展开，可举出插入、删除或修改异常。",
+          "type": "short_answer",
+          "number": 52,
+          "stem": "为什么关系数据库设计中要进行规范化？请结合至少一种异常现象说明。",
+          "options": []
+        },
+        {
+          "heading": "53",
+          "answer_lines": 5,
+          "keywords": [
+            "面向对象",
+            "封装",
+            "继承",
+            "多态"
+          ],
+          "analysis": "应分别说明三者的含义及其对复用、维护和接口设计的作用。",
+          "type": "short_answer",
+          "number": 53,
+          "stem": "简述面向对象程序设计中封装、继承、多态三者各自的作用。",
+          "options": []
+        },
+        {
+          "heading": "54",
+          "answer_lines": 5,
+          "keywords": [
+            "网络安全",
+            "身份认证",
+            "访问控制"
+          ],
+          "analysis": "可从身份可信、权限最小化、行为可审计等角度回答。",
+          "type": "short_answer",
+          "number": 54,
+          "stem": "在校园信息系统中，为什么“身份认证”和“访问控制”必须同时存在，而不能只保留其中之一？",
+          "options": []
+        }
+      ],
+      "type": "short_answer",
+      "score_per_question": 5,
+      "description": "本大题共 4 小题，每小题 5 分，共 20 分。请简明扼要作答。"
+    },
+    {
+      "title": "计算题",
+      "questions": [
+        {
+          "heading": "55",
+          "answer_lines": 8,
+          "keywords": [
+            "进制转换"
+          ],
+          "analysis": "`(101101.101)_2 = 45.625_10 = (55.5)_8 = (2D.A)_{16}`，应写出整数部分与小数部分转换过程。",
+          "type": "calculation",
+          "number": 55,
+          "stem": "将二进制数 `(101101.101)_2` 分别转换为十进制、八进制和十六进制。",
+          "options": []
+        },
+        {
+          "heading": "56",
+          "answer_lines": 8,
+          "keywords": [
+            "时间复杂度",
+            "循环分析"
+          ],
+          "analysis": "外层循环执行 `n` 次，内层分别执行 `1+2+...+(n-1)` 次，总复杂度为 `O(n^2)`。",
+          "type": "calculation",
+          "number": 56,
+          "stem": "阅读下列伪代码，求其时间复杂度，并写出主要推导过程。\n\n```text\ns = 0\nfor i = 1 to n:\n    for j = 1 to i:\n        s = s + 1\n```",
+          "options": []
+        }
+      ],
+      "type": "calculation",
+      "score_per_question": 10,
+      "description": "本大题共 2 小题，每小题 10 分，共 20 分。请写出必要步骤。"
+    },
+    {
+      "title": "编程题",
+      "questions": [
+        {
+          "heading": "57",
+          "answer_lines": 10,
+          "keywords": [
+            "字符串",
+            "哈希",
+            "计数"
+          ],
+          "analysis": "可使用哈希表统计字符频次，再按出现顺序或字典序输出；重点是正确统计与边界处理。",
+          "type": "programming",
+          "number": 57,
+          "stem": "编写程序：输入一行仅由字母和数字组成的字符串，统计其中每个字符出现的次数，并按字符第一次出现的顺序输出“字符:次数”。请写出核心代码，并说明算法思路与时间复杂度。",
+          "options": []
+        }
+      ],
+      "type": "programming",
+      "score_per_question": 10,
+      "description": "本大题共 1 小题，共 10 分。请给出核心代码并说明思路。"
+    },
+    {
+      "title": "综合题",
+      "questions": [
+        {
+          "heading": "58",
+          "keywords": [
+            "网络",
+            "数据库",
+            "程序设计",
+            "系统分析"
+          ],
+          "type": "composite",
+          "number": 58,
+          "stem": "某高校拟开发“实验室预约管理系统”。系统需要支持学生登录、查看空闲实验室、提交预约申请、教师审批、系统记录预约日志，并在实验室设备冲突时拒绝重复预约。\n\n### 58.1\n@score: 6\n@answer_lines: 4\n@analysis: 至少应提到用户表、实验室表、预约表、审批/日志相关表中的三类，并说明主键或关联关系。\n从数据库设计角度，至少给出该系统应包含的 3 个核心数据表，并说明它们各自记录的关键内容。\n\n### 58.2\n@score: 6\n@answer_lines: 4\n@analysis: 可从身份认证、权限控制、日志审计、输入校验、并发控制等方面作答。\n从系统安全与正确性角度，写出该系统在实现时必须考虑的 3 项关键措施，并说明原因。\n\n### 58.3\n@score: 8\n@answer_lines: 6\n@analysis: 应体现“查询可用资源 -> 校验时间冲突 -> 写入申请 -> 记录日志/等待审批”的流程，若考虑事务控制更佳。\n请用伪代码、流程描述或结构化步骤说明“学生提交预约申请”这一功能的主要处理流程。",
+          "options": []
+        }
+      ],
+      "type": "composite",
+      "score_per_question": 0,
+      "description": "本大题共 1 小题，共 20 分。请综合运用相关知识作答。"
+    }
+  ]
+}

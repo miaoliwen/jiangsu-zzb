@@ -141,6 +141,30 @@ jiangsu-exam-paper-pdf-generator/
 - 如果需要正确渲染公式，推荐优先使用 **Chrome / Edge** 的 headless 打印能力
 - `wkhtmltopdf` 可作为兜底方案，但公式可能显示为原始 TeX
 
+### 安装方式（Windows）
+
+1. 安装 Python
+  - 推荐使用 [python.org](https://www.python.org/downloads/) 的官方安装包
+  - 也可以用 `winget install Python.Python.3.11` 或 `scoop install python`
+  - 安装后确认 `python --version` 可正常运行
+
+2. 安装 Pandoc
+  - 推荐直接使用项目自带的 `tools/pandoc.zip`
+  - 解压后把 `pandoc.exe` 放到 `tools/pandoc/pandoc-<version>/pandoc.exe`，脚本会自动从 `tools/pandoc` 下查找它
+  - 也可以使用官方安装包：https://pandoc.org/installing.html
+  - 还可以用包管理器，例如 `winget install JohnMacFarlane.Pandoc`、`choco install pandoc` 或 `scoop install pandoc`
+
+3. 安装 PDF 导出引擎
+  - 推荐安装 Google Chrome 或 Microsoft Edge
+  - 可用 `winget install Google.Chrome`、`winget install Microsoft.Edge`、`scoop install googlechrome` 或 `choco install googlechrome`
+  - 如果你更倾向备用方案，也可以安装 `wkhtmltopdf`，例如 `winget install wkhtmltopdf.wkhtmltopdf` 或 `choco install wkhtmltopdf`
+
+4. 验证可用性
+  - `python --version`
+  - `pandoc --version`
+  - `chrome --version` 或 `msedge --version`
+  - 如果使用备用 PDF 引擎，再检查 `wkhtmltopdf --version`
+
 ## 快速开始
 
 ### 方式一：使用 PowerShell 包装脚本

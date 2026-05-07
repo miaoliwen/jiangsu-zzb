@@ -2,11 +2,14 @@
 
 import argparse
 import copy
+import concurrent.futures
 import html
+import hashlib
 import json
 import re
 import shutil
 import subprocess
+import time
 from pathlib import Path
 from urllib.parse import quote
 
@@ -100,12 +103,39 @@ def parse_args():
         "--variant",
         choices=["official", "teacher", "teacher-redline", "review"],
     )
+    parser.add_argument("--variants")
+    parser.add_argument("--jobs", type=int, default=1)
     parser.add_argument("--pandoc-path")
     parser.add_argument("--chrome-path")
     parser.add_argument("--wkhtmltopdf-path")
     parser.add_argument("--html-only", action="store_true")
     parser.add_argument("--json-only", action="store_true")
+    parser.add_argument("--fast", action="store_true")
+    parser.add_argument("--no-cache", action="store_true")
+    parser.add_argument("--perf-report", action="store_true")
     return parser.parse_args()
+
+
+def parse_variants_arg(variants_text: str):
+    if not variants_text:
+        return []
+    variants = [item.strip() for item in variants_text.split(",") if item.strip()]
+    invalid = [item for item in variants if item not in DEFAULT_RENDER_BY_VARIANT]
+    if invalid:
+        raise ValueError(f"Invalid variants: {', '.join(invalid)}")
+    seen = set()
+    ordered = []
+    for item in variants:
+        if item not in seen:
+            ordered.append(item)
+            seen.add(item)
+    return ordered
+
+
+def resolve_jobs(value: int) -> int:
+    if value is None:
+        return 1
+    return max(1, int(value))
 
 
 def skill_root() -> Path:
@@ -691,10 +721,25 @@ def wkhtmltopdf_path(explicit=None):
     )
 
 
+def fallback_markdown_to_html(source: str, inline: bool = False):
+    text = source.strip()
+    if not text:
+        return ""
+    escaped = html.escape(text)
+    escaped = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", escaped)
+    escaped = re.sub(r"\*(.+?)\*", r"<em>\1</em>", escaped)
+    escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
+    if inline:
+        return escaped.replace("\n", "<br />")
+    return "".join(f"<p>{line}</p>" for line in escaped.splitlines() if line.strip())
+
+
 def render_fragment(markdown_text: str, pandoc_exe: Path, inline=False):
     source = markdown_text.strip()
     if not source:
         return ""
+    if not pandoc_exe:
+        return fallback_markdown_to_html(source, inline=inline)
     command = [
         str(pandoc_exe),
         "--from=markdown+tex_math_dollars+fenced_code_blocks+pipe_tables",
@@ -985,6 +1030,39 @@ def path_to_file_uri(path: Path):
     return "file:///" + quote(str(path).replace("\\", "/"))
 
 
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def build_cache_key(input_text: str, variant: str, input_path: Path) -> str:
+    payload = {
+        "input_sha256": sha256_text(input_text),
+        "variant": variant,
+        "script": "build_exam_paper.py",
+        "script_mtime_ns": Path(__file__).stat().st_mtime_ns,
+        "input": str(input_path),
+    }
+    serialized = json.dumps(payload, ensure_ascii=False, sort_keys=True)
+    return sha256_text(serialized)
+
+
+def load_cache_manifest(path: Path):
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(load_text(path))
+    except Exception:
+        return {}
+
+
+def save_cache_manifest(path: Path, data):
+    dump_text(path, json.dumps(data, ensure_ascii=False, indent=2))
+
+
+def write_perf_report(path: Path, report):
+    dump_text(path, json.dumps(report, ensure_ascii=False, indent=2))
+
+
 def output_stem_name(input_path: Path, data):
     title = str(data.get("exam", {}).get("title", "")).strip()
     if not title:
@@ -1023,49 +1101,179 @@ def print_html_to_pdf(html_path: Path, pdf_path: Path, chrome_exe: Path = None, 
     raise RuntimeError("Unable to export PDF. Chrome/Edge headless and wkhtmltopdf both failed or were unavailable.")
 
 
+def export_pdf_job(html_path: Path, pdf_path: Path, chrome_exe: Path = None, wkhtmltopdf_exe: Path = None):
+    start = time.perf_counter()
+    print_html_to_pdf(html_path, pdf_path, chrome_exe, wkhtmltopdf_exe)
+    return pdf_path, (time.perf_counter() - start)
+
+
 def main():
     args = parse_args()
     input_path = Path(args.input).resolve()
     if not input_path.exists():
         raise FileNotFoundError(f"Input file not found: {input_path}")
 
+    if args.fast:
+        args.html_only = True
+
+    if args.variant and args.variants:
+        raise ValueError("--variant and --variants cannot be used together")
+
+    variants = parse_variants_arg(args.variants)
+    jobs = resolve_jobs(args.jobs)
+
     output_dir = Path(args.output_dir).resolve() if args.output_dir else input_path.parent / "build"
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    data = load_exam_spec(input_path)
-    if args.variant:
-        data["exam"]["variant"] = args.variant
-        data["render"] = copy.deepcopy(DEFAULT_RENDER_BY_VARIANT[args.variant])
+    perf = {
+        "input": str(input_path),
+        "output_dir": str(output_dir),
+        "timings_ms": {},
+        "cache": {
+            "enabled": not args.no_cache,
+            "hit": False,
+            "key": None,
+        },
+    }
 
+    t0 = time.perf_counter()
+    input_text = load_text(input_path)
+    perf["timings_ms"]["read_input"] = round((time.perf_counter() - t0) * 1000, 2)
+
+    variant_for_key = args.variant if args.variant else (",".join(variants) if variants else "from-input")
+    cache_key = build_cache_key(input_text, variant_for_key, input_path)
+    perf["cache"]["key"] = cache_key
+
+    stem_fallback = input_path.stem
+    cache_manifest_path = output_dir / ".build_cache.json"
+
+    if not args.no_cache:
+        cache_manifest = load_cache_manifest(cache_manifest_path)
+        entry = cache_manifest.get(cache_key, {})
+        can_hit = (
+            entry.get("json_path")
+            and entry.get("html_path")
+            and Path(entry["json_path"]).exists()
+            and Path(entry["html_path"]).exists()
+            and (args.html_only or args.json_only or (entry.get("pdf_path") and Path(entry["pdf_path"]).exists()))
+        )
+        if can_hit:
+            perf["cache"]["hit"] = True
+            if args.json_only:
+                print(entry["json_path"])
+            elif args.html_only:
+                print(entry["html_path"])
+            else:
+                print(entry["json_path"])
+                print(entry["html_path"])
+                print(entry["pdf_path"])
+            if args.perf_report:
+                perf["timings_ms"]["total"] = round((time.perf_counter() - t0) * 1000, 2)
+                write_perf_report(output_dir / f"{stem_fallback}.perf-report.json", perf)
+            return
+
+    t1 = time.perf_counter()
+    data = load_exam_spec(input_path)
+    perf["timings_ms"]["parse_and_normalize"] = round((time.perf_counter() - t1) * 1000, 2)
+
+    selected_variants = []
+    if args.variant:
+        selected_variants = [args.variant]
+    elif variants:
+        selected_variants = variants
+    else:
+        selected_variants = [data["exam"].get("variant", "official")]
+
+    t2 = time.perf_counter()
     pandoc_exe = pandoc_path(args.pandoc_path)
-    if not pandoc_exe:
+    perf["timings_ms"]["resolve_pandoc"] = round((time.perf_counter() - t2) * 1000, 2)
+    needs_pandoc = not args.fast and not args.html_only and not args.json_only
+    if not pandoc_exe and needs_pandoc:
         raise RuntimeError("Pandoc was not found. Install pandoc or pass --pandoc-path.")
 
     stem_name = output_stem_name(input_path, data)
     json_path = output_dir / f"{stem_name}.normalized.json"
-    html_path = output_dir / f"{stem_name}.{data['exam']['variant']}.html"
-    pdf_path = output_dir / f"{stem_name}.{data['exam']['variant']}.pdf"
 
+    t3 = time.perf_counter()
     dump_text(json_path, json.dumps(data, ensure_ascii=False, indent=2))
+    perf["timings_ms"]["write_json"] = round((time.perf_counter() - t3) * 1000, 2)
     if args.json_only:
         print(json_path)
+        if args.perf_report:
+            perf["timings_ms"]["total"] = round((time.perf_counter() - t0) * 1000, 2)
+            write_perf_report(output_dir / f"{stem_name}.perf-report.json", perf)
         return
 
-    html_content = render_html_document(data, pandoc_exe)
-    dump_text(html_path, html_content)
-    if args.html_only:
-        print(html_path)
-        return
+    html_paths = []
+    pdf_tasks = []
+    pdf_paths = []
 
-    chrome_exe = chrome_like_path(args.chrome_path)
-    wkhtml_exe = wkhtmltopdf_path(args.wkhtmltopdf_path)
-    print_html_to_pdf(html_path, pdf_path, chrome_exe, wkhtml_exe)
+    render_html_total = 0.0
+    render_pdf_total = 0.0
+    chrome_exe = None
+    wkhtml_exe = None
+
+    for variant in selected_variants:
+        variant_data = copy.deepcopy(data)
+        variant_data["exam"]["variant"] = variant
+        variant_data["render"] = copy.deepcopy(DEFAULT_RENDER_BY_VARIANT[variant])
+        html_path = output_dir / f"{stem_name}.{variant}.html"
+        pdf_path = output_dir / f"{stem_name}.{variant}.pdf"
+
+        ts_html = time.perf_counter()
+        html_content = render_html_document(variant_data, pandoc_exe)
+        dump_text(html_path, html_content)
+        render_html_total += time.perf_counter() - ts_html
+        html_paths.append(html_path)
+
+        if not args.html_only:
+            pdf_tasks.append((html_path, pdf_path))
+
+    perf["timings_ms"]["render_html"] = round(render_html_total * 1000, 2)
+    if not args.html_only:
+        if chrome_exe is None and wkhtml_exe is None:
+            chrome_exe = chrome_like_path(args.chrome_path)
+            wkhtml_exe = wkhtmltopdf_path(args.wkhtmltopdf_path)
+
+        if jobs <= 1 or len(pdf_tasks) <= 1:
+            for html_path, pdf_path in pdf_tasks:
+                exported_pdf_path, elapsed = export_pdf_job(html_path, pdf_path, chrome_exe, wkhtml_exe)
+                render_pdf_total += elapsed
+                pdf_paths.append(exported_pdf_path)
+        else:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as executor:
+                futures = [
+                    executor.submit(export_pdf_job, html_path, pdf_path, chrome_exe, wkhtml_exe)
+                    for html_path, pdf_path in pdf_tasks
+                ]
+                for future in concurrent.futures.as_completed(futures):
+                    exported_pdf_path, elapsed = future.result()
+                    render_pdf_total += elapsed
+                    pdf_paths.append(exported_pdf_path)
+
+            pdf_paths.sort(key=lambda p: str(p))
+
+        perf["timings_ms"]["render_pdf"] = round(render_pdf_total * 1000, 2)
+
+    if not args.no_cache:
+        cache_manifest = load_cache_manifest(cache_manifest_path)
+        cache_manifest[cache_key] = {
+            "json_path": str(json_path),
+            "html_path": str(html_paths[0]) if html_paths else None,
+            "pdf_path": str(pdf_paths[0]) if pdf_paths else None,
+        }
+        save_cache_manifest(cache_manifest_path, cache_manifest)
+
+    perf["timings_ms"]["total"] = round((time.perf_counter() - t0) * 1000, 2)
+    if args.perf_report:
+        write_perf_report(output_dir / f"{stem_name}.perf-report.json", perf)
+
     print(json_path)
-    print(html_path)
-    print(pdf_path)
+    for item in html_paths:
+        print(item)
+    for item in pdf_paths:
+        print(item)
 
 
 if __name__ == "__main__":
     main()
-
-

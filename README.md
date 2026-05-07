@@ -218,11 +218,38 @@ python scripts/build_exam_paper.py \
 - `--input`
 - `--output-dir`
 - `--variant`
+- `--variants`
+- `--jobs`
 - `--pandoc-path`
 - `--chrome-path`
 - `--wkhtmltopdf-path`
 - `--html-only`
 - `--json-only`
+- `--fast`
+- `--no-cache`
+- `--perf-report`
+
+新增提速参数说明：
+
+- `--fast`
+  - 快速模式，等价于优先生成 HTML 预览并跳过 PDF 导出
+  - 适合高频迭代场景
+
+- `--no-cache`
+  - 关闭构建缓存，强制全量重建
+  - 适合排查缓存相关问题
+
+- `--perf-report`
+  - 输出构建阶段耗时报告 `*.perf-report.json`
+  - 用于识别瓶颈阶段（解析、HTML 渲染、PDF 导出）
+
+- `--variants`
+  - 逗号分隔批量构建多个版本，例如 `official,teacher,teacher-redline`
+  - 会复用一次解析与规范化结果，减少重复开销
+
+- `--jobs`
+  - 控制 PDF 导出的并行度，默认 `1`
+  - 当需要同时导出多个 variant 的 PDF 时可设置为 `2` 或 `4` 提升总吞吐
 
 ### `scripts/build_exam_paper.ps1`
 
@@ -240,6 +267,7 @@ python scripts/build_exam_paper.py \
 
 - 该包装脚本 **不会透传** Python 脚本的全部参数
 - 如果你需要 `--html-only`、`--json-only`、自定义 Pandoc 路径、自定义浏览器路径等高级能力，请直接调用 `build_exam_paper.py`
+- 如果你需要 `--fast`、`--no-cache`、`--perf-report`、`--html-only`、`--json-only`、自定义 Pandoc 路径、自定义浏览器路径等高级能力，请直接调用 `build_exam_paper.py`
 - 包装脚本中的默认 `PythonPath` 是机器相关路径，换环境时可能需要手动指定 `-PythonPath`
 
 ## 输入格式说明
@@ -345,6 +373,8 @@ D. SD 卡
 ### 1. 找不到 Pandoc
 
 请先安装 Pandoc，或在命令中显式传入 `--pandoc-path`。
+
+补充：在 `--fast` 或 `--html-only` 场景下，脚本会使用降级渲染策略以保证流程可继续，建议最终交付前仍安装 Pandoc 以获得更完整的 Markdown 与公式渲染效果。
 
 ### 2. 无法导出 PDF
 

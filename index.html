@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>卷灵通 · 江苏专转本计算机智能出卷平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=JetBrains+Mono:wght@400;500;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f1ebde;
+  --paper-deep:#e6dec9;
+  --paper-edge:#d6cbb1;
+  --ink:#1a1410;
+  --ink-soft:#3b322a;
+  --ink-mute:#6b5d4b;
+  --seal:#b91c1c;
+  --seal-deep:#7f1313;
+  --correction:#1d4ed8;
+  --gold:#a17a2c;
+  --gold-deep:#7a561a;
+  --stem:#1e3a8a;
+  --stem-soft:#c7d2fe;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:"Noto Serif SC",serif;font-weight:400;-webkit-font-smoothing:antialiased}
+body{
+  background:
+    radial-gradient(ellipse at 20% 10%,rgba(161,122,44,.08),transparent 50%),
+    radial-gradient(ellipse at 80% 80%,rgba(185,28,28,.05),transparent 50%),
+    var(--paper);
+  min-height:100vh;
+  position:relative;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background-image:
+    repeating-linear-gradient(0deg,transparent 0,transparent 23px,rgba(26,20,16,.025) 23px,rgba(26,20,16,.025) 24px),
+    repeating-linear-gradient(90deg,transparent 0,transparent 23px,rgba(26,20,16,.025) 23px,rgba(26,20,16,.025) 24px);
+  mix-blend-mode:multiply;
+  opacity:.5;
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0 0.04 0 0 0 .18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity:.55;mix-blend-mode:multiply;
+}
+
+.wrap{position:relative;z-index:10;max-width:1320px;margin:0 auto;padding:48px 56px 96px}
+
+/* ============== TOP STRIP ============== */
+.topstrip{
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.18em;
+  color:var(--ink-mute);text-transform:uppercase;
+  border-bottom:1px solid var(--ink);padding-bottom:14px;margin-bottom:48px;
+}
+.topstrip .l{display:flex;gap:18px;align-items:center}
+.topstrip .l .dot{width:7px;height:7px;background:var(--seal);display:inline-block}
+.topstrip .r{display:flex;gap:24px;align-items:center}
+.topstrip .seal-strip{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1.5px solid var(--seal);color:var(--seal);padding:5px 11px;
+  font-weight:700;letter-spacing:.32em;
+}
+
+/* ============== HERO ============== */
+.hero{position:relative;padding:64px 0 56px}
+.hero .confidential{
+  display:inline-block;font-family:"Noto Serif SC",serif;font-weight:700;
+  border:1.5px solid var(--seal);color:var(--seal);
+  padding:6px 14px;letter-spacing:.4em;font-size:12px;
+  margin-bottom:32px;
+}
+.hero h1{
+  font-family:"Fraunces",serif;font-weight:900;
+  font-size:clamp(72px,13vw,200px);
+  line-height:.88;letter-spacing:-.04em;
+  color:var(--ink);
+  font-style:italic;
+}
+.hero h1 .cn{
+  font-family:"Noto Serif SC",serif;font-style:normal;font-weight:900;
+  letter-spacing:-.02em;display:block;
+  font-size:clamp(56px,9vw,140px);
+  line-height:1;margin-top:8px;
+}
+.hero h1 .accent{color:var(--seal);font-style:italic}
+.hero .sub-cn{
+  font-family:"Noto Serif SC",serif;font-weight:500;
+  font-size:clamp(18px,2vw,26px);
+  color:var(--ink-soft);
+  margin-top:36px;max-width:780px;line-height:1.7;
+  letter-spacing:.02em;
+}
+.hero .sub-cn em{font-style:normal;color:var(--seal);font-weight:700;border-bottom:2px solid var(--seal);padding-bottom:1px}
+.hero .meta-row{
+  display:flex;gap:48px;margin-top:56px;flex-wrap:wrap;
+  font-family:"JetBrains Mono",monospace;font-size:12px;
+  color:var(--ink-soft);letter-spacing:.1em;
+  border-top:1px solid var(--ink);padding-top:24px;
+}
+.hero .meta-row div span{display:block;color:var(--ink-mute);font-size:10px;letter-spacing:.2em;margin-bottom:6px;text-transform:uppercase}
+.hero .meta-row div b{font-family:"Fraunces",serif;font-weight:700;font-size:22px;color:var(--ink);letter-spacing:0}
+
+/* corner decorations */
+.hero-corner{
+  position:absolute;top:0;right:0;width:200px;height:200px;
+  border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;
+  font-family:"Fraunces",serif;font-style:italic;font-weight:800;
+  font-size:11px;letter-spacing:.3em;line-height:1.4;text-align:center;
+  color:var(--ink);
+}
+.hero-corner span{display:block}
+.hero-corner .big{font-size:48px;line-height:1;font-style:normal;font-weight:900;color:var(--seal);font-family:"Noto Serif SC",serif}
+
+/* red round seal */
+.seal-round{
+  position:absolute;width:160px;height:160px;border:3px solid var(--seal);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  transform:rotate(-12deg);
+  font-family:"Noto Serif SC",serif;color:var(--seal);
+}
+.seal-round::before,.seal-round::after{content:"";position:absolute;inset:6px;border:1.5px solid var(--seal);border-radius:50%}
+.seal-round .seal-text{
+  position:absolute;font-weight:900;font-size:18px;letter-spacing:.3em;line-height:1.1;text-align:center;
+}
+.seal-round .seal-text.t{top:18px;left:50%;transform:translateX(-50%)}
+.seal-round .seal-text.b{bottom:18px;left:50%;transform:translateX(-50%)}
+.seal-round .seal-text.l{left:14px;top:50%;transform:translateY(-50%) rotate(-90deg);transform-origin:center}
+.seal-round .seal-text.r{right:14px;top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:center}
+.seal-round .seal-center{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:34px;color:var(--seal)}
+
+/* ============== SECTIONS ============== */
+.section{margin-top:120px;position:relative}
+.section-head{display:grid;grid-template-columns:80px 1fr auto;gap:32px;align-items:end;border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:48px}
+.section-head .num{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:96px;line-height:.85;color:var(--seal);letter-spacing:-.04em}
+.section-head .title{font-family:"Noto Serif SC",serif;font-weight:900;font-size:34px;letter-spacing:.04em;color:var(--ink)}
+.section-head .title em{font-style:normal;color:var(--seal);font-family:"Fraunces",serif;font-style:italic}
+.section-head .meta{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-mute);text-align:right;letter-spacing:.18em;text-transform:uppercase}
+.section-head .meta b{color:var(--ink);font-weight:700}
+
+/* ============== FEATURES GRID ============== */
+.features{display:grid;grid-template-columns:repeat(12,1fr);gap:32px}
+.fcard{
+  background:rgba(255,253,247,.5);
+  border:1px solid var(--ink);
+  padding:32px 28px 28px;position:relative;
+  transition:all .4s cubic-bezier(.2,.7,.2,1);
+  backdrop-filter:blur(2px);
+}
+.fcard::before{
+  content:"";position:absolute;inset:6px;border:1px dashed rgba(26,20,16,.18);pointer-events:none;
+}
+.fcard:hover{background:rgba(255,253,247,.85);transform:translateY(-4px);box-shadow:8px 8px 0 var(--ink)}
+.fcard .q{
+  font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;
+  color:var(--seal);font-weight:700;margin-bottom:14px;
+}
+.fcard h3{font-family:"Noto Serif SC",serif;font-weight:900;font-size:22px;letter-spacing:.04em;margin-bottom:14px;color:var(--ink)}
+.fcard h3 em{font-family:"Fraunces",serif;font-style:italic;color:var(--seal);font-weight:900}
+.fcard p{font-size:14px;line-height:1.85;color:var(--ink-soft);font-weight:400}
+.fcard .icn{position:absolute;top:24px;right:24px;font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:48px;color:var(--ink);line-height:1;opacity:.12}
+
+.f1{grid-column:span 7}
+.f2{grid-column:span 5}
+.f3{grid-column:span 4}
+.f4{grid-column:span 4}
+.f5{grid-column:span 4}
+
+/* ============== PAIN / USERS ============== */
+.users-block{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.painlist{list-style:none}
+.painlist li{
+  display:grid;grid-template-columns:60px 1fr;gap:24px;align-items:start;
+  padding:24px 0;border-bottom:1px solid rgba(26,20,16,.18);
+}
+.painlist li:last-child{border-bottom:0}
+.painlist .n{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:36px;line-height:1;color:var(--seal)}
+.painlist .h{font-family:"Noto Serif SC",serif;font-weight:700;font-size:18px;color:var(--ink);margin-bottom:6px;letter-spacing:.03em}
+.painlist .t{font-size:14px;line-height:1.8;color:var(--ink-soft)}
+
+.userside .label{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--seal);letter-spacing:.3em;margin-bottom:18px;font-weight:700}
+.userside h3{font-family:"Noto Serif SC",serif;font-weight:900;font-size:28px;letter-spacing:.04em;margin-bottom:24px;line-height:1.4}
+.userside .tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.userside .tag{
+  font-family:"Noto Serif SC",serif;font-size:13px;padding:7px 14px;
+  border:1.5px solid var(--ink);color:var(--ink);background:transparent;letter-spacing:.08em;
+  transition:all .2s;
+}
+.userside .tag.hot{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.userside .tag.star{background:var(--seal);color:var(--paper);border-color:var(--seal)}
+.userside .tag:hover{background:var(--gold);color:var(--paper);border-color:var(--gold)}
+
+.userside .scene{
+  border:1.5px solid var(--ink);padding:24px;background:rgba(255,253,247,.4);
+  position:relative;margin-top:18px;
+}
+.userside .scene::before{
+  content:"SCENE";position:absolute;top:-10px;left:18px;background:var(--paper);padding:0 8px;
+  font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.3em;color:var(--seal);font-weight:700;
+}
+.userside .scene p{font-size:14px;line-height:1.9;color:var(--ink-soft);font-style:italic}
+.userside .scene p+p{margin-top:12px}
+
+/* ============== WORKFLOW ============== */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:8px}
+.flow .step{
+  padding:24px 22px 28px;border:1.5px solid var(--ink);position:relative;
+  background:rgba(255,253,247,.45);
+}
+.flow .step:not(:last-child){border-right:0}
+.flow .step .idx{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--seal);letter-spacing:.25em;margin-bottom:14px;font-weight:700}
+.flow .step h4{font-family:"Noto Serif SC",serif;font-weight:900;font-size:17px;letter-spacing:.04em;margin-bottom:10px}
+.flow .step p{font-size:12.5px;line-height:1.7;color:var(--ink-soft)}
+.flow .step .glyph{position:absolute;top:18px;right:18px;font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:32px;color:var(--ink);opacity:.18}
+.flow .step.in{background:var(--ink);color:var(--paper)}
+.flow .step.in h4,.flow .step.in p{color:var(--paper)}
+.flow .step.in .idx{color:#f4c2c2}
+.flow .step.in .glyph{color:var(--paper);opacity:.4}
+
+/* ============== TERMINAL DEMO ============== */
+.demo{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start;
+  margin-top:24px;
+}
+.terminal{
+  background:#161210;color:#e7dfd0;
+  border:1.5px solid var(--ink);
+  font-family:"JetBrains Mono",monospace;font-size:13px;line-height:1.7;
+  padding:0;position:relative;
+  box-shadow:14px 14px 0 var(--ink);
+}
+.terminal .bar{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#221c17;color:#9c8d75;padding:10px 16px;
+  border-bottom:1px solid #2a221c;
+  font-size:11px;letter-spacing:.18em;
+}
+.terminal .bar .dots{display:flex;gap:7px}
+.terminal .bar .dot{width:10px;height:10px;border-radius:50%}
+.terminal .bar .d1{background:#ff5f57}.terminal .bar .d2{background:#febc2e}.terminal .bar .d3{background:#28c840}
+.terminal .bar .name{font-weight:700}
+.terminal pre{padding:24px 22px;white-space:pre-wrap;overflow-x:auto}
+.terminal pre .c{color:#7e6f5c;font-style:italic}
+.terminal pre .k{color:#c47a3a}
+.terminal pre .s{color:#7a9b4d}
+.terminal pre .v{color:#d4b560}
+.terminal pre .r{color:#c8553d}
+.terminal pre .p{color:#7a9b4d}
+.terminal pre .b{font-weight:700;color:#e7dfd0}
+
+.demo-side h3{font-family:"Noto Serif SC",serif;font-weight:900;font-size:24px;letter-spacing:.04em;margin-bottom:14px;line-height:1.5}
+.demo-side h3 em{color:var(--seal);font-family:"Fraunces",serif;font-style:italic}
+.demo-side p{font-size:14px;line-height:1.85;color:var(--ink-soft);margin-bottom:18px}
+.demo-side .stack{
+  border-top:1.5px solid var(--ink);padding-top:18px;margin-top:18px;
+  display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;
+  font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;
+}
+.demo-side .stack div span{color:var(--ink-mute);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.2em;font-size:9px}
+.demo-side .stack div b{color:var(--ink);font-family:"Fraunces",serif;font-style:italic;font-weight:800;font-size:18px}
+
+/* ============== VARIANTS ============== */
+.variants{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink);background:rgba(255,253,247,.4)}
+.variant{padding:32px 26px 30px;border-right:1.5px solid var(--ink);position:relative;transition:all .35s}
+.variant:last-child{border-right:0}
+.variant:hover{background:var(--paper-deep)}
+.variant .key{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--seal);letter-spacing:.25em;font-weight:700;margin-bottom:18px}
+.variant h4{font-family:"Noto Serif SC",serif;font-weight:900;font-size:20px;letter-spacing:.04em;margin-bottom:10px}
+.variant h4 em{font-family:"Fraunces",serif;font-style:italic;font-weight:900;color:var(--seal)}
+.variant p{font-size:13px;line-height:1.75;color:var(--ink-soft);margin-bottom:18px;min-height:78px}
+.variant .preview{
+  border:1px dashed rgba(26,20,16,.4);padding:14px 12px;background:var(--paper);
+  font-family:"Noto Serif SC",serif;font-size:11.5px;line-height:1.55;color:var(--ink);
+  position:relative;min-height:118px;
+}
+.variant .preview .lbl{position:absolute;top:-8px;left:10px;background:var(--paper);padding:0 6px;font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--ink-mute);letter-spacing:.2em}
+.variant .preview .stem{color:var(--stem);font-weight:500}
+.variant .preview .opt{display:block;margin:3px 0 0 14px}
+.variant .preview .ans{color:var(--seal);font-weight:700}
+.variant .preview .red{color:var(--seal);font-weight:700}
+.variant .preview .note{color:var(--gold-deep);font-size:10.5px;display:block;margin-top:6px;font-style:italic}
+
+/* ============== VALUE / STATS ============== */
+.value-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1.5px solid var(--ink)}
+.vcell{padding:36px 30px;border-right:1.5px solid var(--ink);position:relative;background:rgba(255,253,247,.4)}
+.vcell:last-child{border-right:0}
+.vcell .k{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--seal);letter-spacing:.3em;font-weight:700;margin-bottom:20px}
+.vcell .big{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:96px;line-height:.9;color:var(--ink);letter-spacing:-.04em;margin-bottom:8px}
+.vcell .big sup{font-size:36px;color:var(--seal);vertical-align:super}
+.vcell .unit{font-family:"Noto Serif SC",serif;font-weight:700;font-size:14px;color:var(--ink-soft);letter-spacing:.1em;margin-bottom:18px}
+.vcell p{font-size:13.5px;line-height:1.8;color:var(--ink-soft)}
+.vcell.in{background:var(--ink);color:var(--paper)}
+.vcell.in .k{color:#f4c2c2}
+.vcell.in .big{color:var(--paper)}
+.vcell.in .unit,.vcell.in p{color:#c8bea8}
+
+/* ============== TIMELINE / ROADMAP ============== */
+.timeline{margin-top:24px;position:relative;padding-left:0}
+.tl-row{
+  display:grid;grid-template-columns:120px 1fr;gap:32px;align-items:start;
+  padding:28px 0;border-bottom:1px solid rgba(26,20,16,.18);
+}
+.tl-row:last-child{border-bottom:0}
+.tl-row .yr{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:38px;color:var(--seal);line-height:1;letter-spacing:-.02em}
+.tl-row .yr small{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;font-style:normal;font-weight:700;letter-spacing:.2em;color:var(--ink-mute);margin-top:6px;text-transform:uppercase}
+.tl-row h4{font-family:"Noto Serif SC",serif;font-weight:900;font-size:19px;letter-spacing:.04em;margin-bottom:8px}
+.tl-row p{font-size:14px;line-height:1.85;color:var(--ink-soft);max-width:740px}
+.tl-row .tag-pill{
+  display:inline-block;margin-top:12px;font-family:"JetBrains Mono",monospace;
+  font-size:10px;letter-spacing:.2em;color:var(--seal);font-weight:700;
+  border:1px solid var(--seal);padding:3px 9px;
+}
+
+/* ============== FOOTER ============== */
+.footer{margin-top:140px;border-top:2px solid var(--ink);padding-top:48px;position:relative}
+.footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px}
+.footer h5{font-family:"Noto Serif SC",serif;font-weight:900;font-size:14px;letter-spacing:.16em;margin-bottom:18px;color:var(--ink)}
+.footer ul{list-style:none}
+.footer li{font-size:13.5px;color:var(--ink-soft);padding:5px 0;line-height:1.7}
+.footer li a{color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.footer li a:hover{color:var(--seal)}
+.footer .brand{font-family:"Fraunces",serif;font-style:italic;font-weight:900;font-size:64px;line-height:.9;color:var(--ink);letter-spacing:-.03em}
+.footer .brand .cn{display:block;font-family:"Noto Serif SC",serif;font-style:normal;font-weight:900;font-size:42px;color:var(--seal);margin-top:10px;letter-spacing:.04em}
+.footer .tag{font-size:13px;color:var(--ink-soft);margin-top:18px;line-height:1.7;max-width:340px}
+.footer .bottom{
+  margin-top:64px;padding-top:24px;border-top:1px solid var(--ink);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.16em;
+}
+
+/* responsive */
+@media (max-width:1080px){
+  .wrap{padding:32px 28px 64px}
+  .features{grid-template-columns:1fr 1fr}
+  .f1,.f2,.f3,.f4,.f5{grid-column:span 1}
+  .users-block{grid-template-columns:1fr;gap:48px}
+  .flow{grid-template-columns:1fr 1fr}
+  .flow .step:nth-child(2n){border-right:1.5px solid var(--ink)}
+  .flow .step:nth-child(-n+2){border-bottom:0}
+  .demo{grid-template-columns:1fr}
+  .variants{grid-template-columns:1fr 1fr}
+  .variant{border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+  .value-row{grid-template-columns:1fr}
+  .vcell{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .footer .grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:640px){
+  .features,.variants,.flow,.value-row,.footer .grid{grid-template-columns:1fr}
+  .variants .variant,.vcell,.flow .step{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .section-head{grid-template-columns:1fr;gap:14px}
+  .hero-corner,.seal-round{display:none}
+  .tl-row{grid-template-columns:1fr;gap:14px}
+}
+
+/* ============== ANIMATIONS ============== */
+@keyframes inkIn{from{opacity:0;transform:translateY(8px);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
+@keyframes stampPress{0%{transform:rotate(-12deg) scale(2.2);opacity:0}60%{transform:rotate(-12deg) scale(.95);opacity:1}100%{transform:rotate(-12deg) scale(1);opacity:1}}
+@keyframes flicker{0%,100%{opacity:1}50%{opacity:.94}}
+.reveal{opacity:0;animation:inkIn 1s cubic-bezier(.2,.7,.2,1) forwards}
+.reveal.d1{animation-delay:.1s}
+.reveal.d2{animation-delay:.2s}
+.reveal.d3{animation-delay:.35s}
+.reveal.d4{animation-delay:.5s}
+.reveal.d5{animation-delay:.7s}
+.seal-round{animation:stampPress 1.4s cubic-bezier(.2,.7,.2,1) .3s both}
+.caret{animation:flicker 1s steps(2) infinite}
+
+/* selection */
+::selection{background:var(--ink);color:var(--paper)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ TOP STRIP ============ -->
+  <div class="topstrip reveal d1">
+    <div class="l">
+      <span class="dot"></span>
+      <span>VOL.001 / 2026 / JIANGSU ZHUANZHEN COMPUTER SERIES</span>
+    </div>
+    <div class="r">
+      <span>EXAM · PAPER · TOOLKIT</span>
+      <span class="seal-strip">机密 ★ 启用前</span>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-corner reveal d2">
+      <div>
+        <span>江苏专转本</span>
+        <span>计算机类</span>
+        <span class="big">204</span>
+        <span>EXAM NO.</span>
+      </div>
+    </div>
+    <div class="seal-round" aria-hidden="true">
+      <span class="seal-text t">卷灵通</span>
+      <span class="seal-text b">出品</span>
+      <span class="seal-text l">江苏</span>
+      <span class="seal-text r">专转本</span>
+      <span class="seal-center">Q</span>
+    </div>
+
+    <span class="confidential reveal d2">机 密 ★ 启 用 前</span>
+    <h1 class="reveal d3">
+      <span>Juan</span>
+      <span class="cn">卷 · 通 <span class="accent">灵</span></span>
+    </h1>
+    <p class="sub-cn reveal d4">
+      一份写在 <em>命令行</em> 里的出卷流水线。把考纲、题稿、Markdown 草稿，
+      规范化成统一 JSON，渲染为江苏专转本样式的 HTML，再交给无头浏览器
+      导出可直接交付的 A4 PDF——四套版本，<em>一条命令</em>。
+    </p>
+    <div class="meta-row reveal d5">
+      <div><span>DURATION</span><b>120 min</b></div>
+      <div><span>TOTAL SCORE</span><b>150 pts</b></div>
+      <div><span>QUESTION TYPES</span><b>9 类</b></div>
+      <div><span>OUTPUT VARIANTS</span><b>4 套</b></div>
+      <div><span>PDF ENGINE</span><b>Chrome · Edge</b></div>
+      <div><span>STACK</span><b>Python · Pandoc</b></div>
+    </div>
+  </section>
+
+  <!-- ============ 一 / 创意介绍 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">01</div>
+      <div class="title">一、<em>创意介绍</em> · 关于本产品</div>
+      <div class="meta">PART <b>ONE</b><br/>INTRODUCTION</div>
+    </div>
+
+    <div class="features">
+      <div class="fcard f1 reveal">
+        <div class="icn">A</div>
+        <div class="q">Q · WHAT WE BUILT</div>
+        <h3>一份<em>本地跑得动</em>的智能出卷流水线</h3>
+        <p>
+          老师或助教写一份 Markdown 试卷草稿（YAML frontmatter + 分节 + 题号 + @元数据），
+          <b>卷灵通</b>自动解析为规范化 JSON、渲染为江苏专转本样式的 HTML，
+          再通过 Chrome / Edge headless 一键导出 A4 PDF。整套流程无需打开 Word，无需排版经验，
+          一条命令，几分钟，从草稿到可印刷成品。
+        </p>
+      </div>
+
+      <div class="fcard f2 reveal">
+        <div class="icn">B</div>
+        <div class="q">Q · WHY NOW</div>
+        <h3>专转本出卷，<em>长期缺工具</em></h3>
+        <p>
+          江苏专转本计算机类每年数万人参考，但市面上几乎找不到
+          专门为这种固定考试样式（试卷排版、题型分节、A4 打印、公式渲染）打造的出卷工具。
+          Word 手画格式、公式乱码、跨页断行、红批答案叠加，
+          这些痛点被一线老师默默忍受了很多年。
+        </p>
+      </div>
+
+      <div class="fcard f3 reveal">
+        <div class="icn">C</div>
+        <div class="q">Q · FORM</div>
+        <h3>命令行 + <em>可复用的 skill</em></h3>
+        <p>
+          一款本地工具：Python 脚本 + PowerShell 包装 + Pandoc 渲染 + Chrome 导出。
+          既是给老师用的现成命令，也是给 AI Agent 复用的 skill——
+          配套 schema、排版规则、workflow 文档齐全。
+        </p>
+      </div>
+
+      <div class="fcard f4 reveal">
+        <div class="icn">D</div>
+        <div class="q">Q · INPUT</div>
+        <h3>Markdown / JSON / YAML <em>三路输入</em></h3>
+        <p>
+          老师爱写的 Markdown 优先；同时支持结构化 JSON、YAML 接入已有题库系统。
+          解析器刻意只覆盖稳定子集，避免 anchors、aliases 等容易出错的 YAML 特性。
+        </p>
+      </div>
+
+      <div class="fcard f5 reveal">
+        <div class="icn">E</div>
+        <div class="q">Q · OUTPUT</div>
+        <h3>四套版本 <em>一次全出</em></h3>
+        <p>
+          同一份题目数据，按场景切换四套 PDF：学生正式卷 / 教师卷 /
+          教师红批版（正确选项自动描红）/ 复习讲评版（完整元数据可见）。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 二 / 目标用户 & 痛点 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">02</div>
+      <div class="title">二、<em>目标用户 & 痛点</em></div>
+      <div class="meta">PART <b>TWO</b><br/>USERS &amp; PAIN</div>
+    </div>
+
+    <div class="users-block">
+      <div class="userside">
+        <div class="label">// TARGET USERS</div>
+        <h3>谁在用 <em>卷灵通</em>？</h3>
+        <div class="tags">
+          <span class="tag hot">辅导机构教师</span>
+          <span class="tag hot">教研编辑</span>
+          <span class="tag">本科校内出题老师</span>
+          <span class="tag">AI Agent / 自动化脚本</span>
+          <span class="tag star">备赛学生</span>
+          <span class="tag star">培训助教</span>
+          <span class="tag">个体辅导老师</span>
+        </div>
+
+        <div class="scene">
+          <p>「每个学期要出 4 套强化卷、2 套模拟卷、1 套红批讲评卷——
+          Word 排版花掉我一半时间。用了卷灵通后，我只需要写 Markdown，
+          一条命令四套 PDF 同时到手。」</p>
+          <p>—— 某专转本计算机辅导机构 教研主管</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="label" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--seal);letter-spacing:.3em;margin-bottom:18px;font-weight:700">// PAIN POINTS</div>
+        <ul class="painlist">
+          <li>
+            <div class="n">01</div>
+            <div>
+              <div class="h">Word 排版地狱</div>
+              <div class="t">标题区、注意事项、分节、题号、填空横线、答题卡格子——
+              每一处都得手画，且换电脑/换人就格式全乱。</div>
+            </div>
+          </li>
+          <li>
+            <div class="n">02</div>
+            <div>
+              <div class="h">公式与代码的渲染陷阱</div>
+              <div class="t">MathType 公式跨平台错位、Python 代码块缩进丢失、PDF 中文乱码，
+              老师每次都靠"试三次导出碰运气"。</div>
+            </div>
+          </li>
+          <li>
+            <div class="n">03</div>
+            <div>
+              <div class="h">多版本维护成本</div>
+              <div class="t">同一份题，要再出学生版、教师版、红批版，Word 里复制粘贴易错位、
+              易漏改，临近考前一晚批量返工是常态。</div>
+            </div>
+          </li>
+          <li>
+            <div class="n">04</div>
+            <div>
+              <div class="h">学生自助组卷门槛高</div>
+              <div class="t">AI 给的题目格式各异，无法直接打印；想自己组套卷，
+              往往卡在"格式合规"上，而不是"题目质量"上。</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 三 / 工作流 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">03</div>
+      <div class="title">三、<em>核心工作流</em> · 五步成卷</div>
+      <div class="meta">PART <b>THREE</b><br/>WORKFLOW</div>
+    </div>
+
+    <div class="flow">
+      <div class="step">
+        <div class="glyph">01</div>
+        <div class="idx">STEP · 01</div>
+        <h4>读 入</h4>
+        <p>Markdown / JSON / YAML 任选其一，前置 frontmatter 描述元信息。</p>
+      </div>
+      <div class="step">
+        <div class="glyph">02</div>
+        <div class="idx">STEP · 02</div>
+        <h4>规 范 化</h4>
+        <p>解析为统一 JSON 数据结构，便于检查、追踪、复用。</p>
+      </div>
+      <div class="step in">
+        <div class="glyph">03</div>
+        <div class="idx">STEP · 03</div>
+        <h4>HTML 渲 染</h4>
+        <p>套用江苏专转本样式 CSS，公式转 MathML，分节与题号规范化。</p>
+      </div>
+      <div class="step">
+        <div class="glyph">04</div>
+        <div class="idx">STEP · 04</div>
+        <h4>PDF 导 出</h4>
+        <p>Chrome / Edge headless 打印；wkhtmltopdf 作为兜底。</p>
+      </div>
+      <div class="step">
+        <div class="glyph">05</div>
+        <div class="idx">STEP · 05</div>
+        <h4>验 收 交 付</h4>
+        <p>检查分页、公式、代码缩进、版本差异，签收交付。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 四 / 实操演示 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">04</div>
+      <div class="title">四、<em>实操演示</em> · 一行命令出卷</div>
+      <div class="meta">PART <b>FOUR</b><br/>DEMO</div>
+    </div>
+
+    <div class="demo">
+      <div class="terminal">
+        <div class="bar">
+          <div class="dots"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span></div>
+          <div class="name">~/zhuanshuo · bash</div>
+          <div style="font-size:10px">UTF-8</div>
+        </div>
+<pre><span class="c"># 1. 准备一份 Markdown 试卷草稿</span>
+<span class="k">$</span> cat assets/example_exam.md
+---
+<span class="k">exam:</span>
+  <span class="v">title</span>: 江苏省普通高校"专转本"选拔考试
+  <span class="v">subtitle</span>: 科目代码: 204
+  <span class="v">duration_minutes</span>: <span class="s">120</span>
+  <span class="v">total_score</span>: <span class="s">150</span>
+  <span class="v">variant</span>: <span class="s">teacher-redline</span>
+---
+
+<span class="b"># 单项选择题</span>
+<span class="k">@type:</span> single_choice
+<span class="k">@score_per_question:</span> <span class="s">2</span>
+
+<span class="b">## 1</span>
+<span class="k">@answer:</span> <span class="r">C</span>
+以下属于内存储器的是（ ）
+  A. 移动硬盘   B. U 盘   <span class="r">C. SRAM</span>   D. SD 卡
+
+<span class="c"># 2. 一条命令 → 规范化 + HTML + PDF</span>
+<span class="k">$</span> python scripts/build_exam_paper.py \
+    --input  assets/example_exam.md \
+    --output-dir build \
+    --variant teacher-redline
+
+<span class="p">[1/4]</span> 读取 Markdown 草稿............ <span class="r">✓</span>
+<span class="p">[2/4]</span> 规范化 JSON 结构........... <span class="r">✓</span>
+<span class="p">[3/4]</span> 渲染 HTML 中间产物........ <span class="r">✓</span>
+<span class="p">[4/4]</span> Chrome headless 导出 PDF.. <span class="r">✓</span>
+
+<span class="c"># 3. 交付物一览</span>
+<span class="k">$</span> ls build/
+<span class="s">example_exam.normalized.json</span>
+<span class="s">example_exam.teacher-redline.html</span>
+<span class="s">example_exam.teacher-redline.pdf</span><span class="caret">▌</span></pre>
+      </div>
+
+      <div class="demo-side">
+        <h3>把 <em>出卷</em> 重新写一次</h3>
+        <p>
+          过去：Word 手画两小时 → 公式转图三遍 → PDF 导出再半小时 → 红批版单独再做一份。
+        </p>
+        <p>
+          <b>卷灵通</b>：写完 Markdown，一条命令出四套 PDF。
+          老师的时间，重新花在选题、磨题、点评上。
+        </p>
+        <div class="stack">
+          <div><span>RUNTIME</span><b>~ 3 min</b></div>
+          <div><span>INPUT</span><b>Markdown</b></div>
+          <div><span>PIPELINE</span><b>5 steps</b></div>
+          <div><span>OUTPUT</span><b>JSON + HTML + PDF</b></div>
+          <div><span>ENGINE</span><b>Chrome / Edge</b></div>
+          <div><span>LICENSE</span><b>Open · Local</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 五 / 四版本对比 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">05</div>
+      <div class="title">五、<em>四个版本</em> · 同一份题，四种用法</div>
+      <div class="meta">PART <b>FIVE</b><br/>VARIANTS</div>
+    </div>
+
+    <div class="variants">
+      <div class="variant">
+        <div class="key">VARIANT · 01</div>
+        <h4><em>official</em><br/>正式学生卷</h4>
+        <p>隐藏答案、关键词、来源、教师备注；不出现任何红色标注。最干净的考场版本。</p>
+        <div class="preview">
+          <span class="lbl">PREVIEW</span>
+          <span class="stem">以下属于内存储器的是（ ）</span>
+          <span class="opt">A. 移动硬盘</span>
+          <span class="opt">B. U 盘</span>
+          <span class="opt">C. SRAM</span>
+          <span class="opt">D. SD 卡</span>
+        </div>
+      </div>
+      <div class="variant">
+        <div class="key">VARIANT · 02</div>
+        <h4><em>teacher</em><br/>教师卷</h4>
+        <p>显示答案、关键词、来源、教师备注、解析；不主动描红，保持阅读舒适度。</p>
+        <div class="preview">
+          <span class="lbl">PREVIEW</span>
+          <span class="stem">以下属于内存储器的是（ ）</span>
+          <span class="opt">A. 移动硬盘</span>
+          <span class="opt">B. U 盘</span>
+          <span class="opt ans">C. SRAM [答案]</span>
+          <span class="opt">D. SD 卡</span>
+          <span class="note">keywords: 内存储器 · SRAM</span>
+        </div>
+      </div>
+      <div class="variant">
+        <div class="key">VARIANT · 03</div>
+        <h4><em>teacher-redline</em><br/>教师红批版</h4>
+        <p>教师版基础上，客观题正确选项自动描红——讲评课、组卷校对、一眼可见。</p>
+        <div class="preview">
+          <span class="lbl">PREVIEW</span>
+          <span class="stem">以下属于内存储器的是（ ）</span>
+          <span class="opt">A. 移动硬盘</span>
+          <span class="opt">B. U 盘</span>
+          <span class="opt red">C. SRAM</span>
+          <span class="opt">D. SD 卡</span>
+          <span class="note">正确答案以红色高亮</span>
+        </div>
+      </div>
+      <div class="variant">
+        <div class="key">VARIANT · 04</div>
+        <h4><em>review</em><br/>复习讲评版</h4>
+        <p>最完整元数据可见：答案、关键词、来源、备注、解析。用于课后复习、教研归档。</p>
+        <div class="preview">
+          <span class="lbl">PREVIEW</span>
+          <span class="stem">以下属于内存储器的是（ ）</span>
+          <span class="opt ans">C. SRAM [答案]</span>
+          <span class="note">source: 计算机应用基础 P11</span>
+          <span class="note">analysis: 主存核心芯片</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 六 / 价值与意义 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">06</div>
+      <div class="title">六、<em>价值与意义</em> · 三个角度</div>
+      <div class="meta">PART <b>SIX</b><br/>VALUE</div>
+    </div>
+
+    <div class="value-row">
+      <div class="vcell">
+        <div class="k">EFFICIENCY</div>
+        <div class="big">2<sup>h</sup></div>
+        <div class="unit">→ 3 MIN</div>
+        <p>把过去 2–3 小时的手工排版、公式处理、PDF 导出压缩到一条命令几分钟完成。
+        同一份题一键切换四个版本，老师出卷效率成倍提升。</p>
+      </div>
+      <div class="vcell in">
+        <div class="k">SOCIAL VALUE</div>
+        <div class="big">∞</div>
+        <div class="unit">REPLICABLE</div>
+        <p>降低专转本备考资源生产门槛——
+        中小城市机构、个体老师甚至考生本人，
+        也能低门槛产出与省级选拔考试同等规范的试卷与讲义。</p>
+      </div>
+      <div class="vcell">
+        <div class="k">ECOSYSTEM</div>
+        <div class="big">9</div>
+        <div class="unit">QUESTION TYPES</div>
+        <p>支持单选 / 多选 / 判断 / 填空 / 简答 / 计算 / 证明 / 编程 / 综合——
+        覆盖江苏专转本计算机类全部主流题型，可持续扩展。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 七 / 路线图 ============ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="num">07</div>
+      <div class="title">七、<em>发展路线</em> · 已经做 & 接下来做</div>
+      <div class="meta">PART <b>SEVEN</b><br/>ROADMAP</div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="yr">2025 <small>DONE</small></div>
+        <div>
+          <h4>v1.0 · Markdown → PDF 全链路打通</h4>
+          <p>实现 Markdown / JSON / YAML → 规范化 JSON → HTML → PDF 的完整出卷流水线。
+          支持四种版本输出、九种题型，配套 schema、排版规则、workflow 文档与可复用 skill。</p>
+          <span class="tag-pill">SHIPPED · v1.0</span>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">2026 <small>NOW</small></div>
+        <div>
+          <h4>v1.1 · 题库与 Web UI</h4>
+          <p>在本地脚本之上，提供轻量 Web 控制台：上传 Markdown、可视化预览四套版本、
+          一键打包下载。同时沉淀可共享的真题题库，机构老师可直接调取并再编辑。</p>
+          <span class="tag-pill">IN PROGRESS</span>
+        </div>
+      </div>
+      <div class="tl-row">
+        <div class="yr">2026+ <small>NEXT</small></div>
+        <div>
+          <h4>v2.0 · 多科目与智能出题</h4>
+          <p>扩展至英语、高数、语文等专转本其他科目；接入 LLM，根据考纲与错题数据
+          辅助生成候选题目与难度评估；面向机构提供"题库 + 出题 + 组卷"一体化服务。</p>
+          <span class="tag-pill">PLANNED</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="grid">
+      <div>
+        <div class="brand">JuanLing<span class="cn">卷 通 灵</span></div>
+        <p class="tag">江苏专转本计算机类 · 智能出卷平台。把排版的时间还给老师，把出卷的门槛降到一条命令。</p>
+      </div>
+      <div>
+        <h5>PRODUCT</h5>
+        <ul>
+          <li><a href="#">Markdown 出卷</a></li>
+          <li><a href="#">四版本输出</a></li>
+          <li><a href="#">题型覆盖</a></li>
+          <li><a href="#">排版样式</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>RESOURCES</h5>
+        <ul>
+          <li><a href="#">输入规范</a></li>
+          <li><a href="#">排版规则</a></li>
+          <li><a href="#">工作流文档</a></li>
+          <li><a href="#">Agent Skill</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>CONTACT</h5>
+        <ul>
+          <li>GitHub · jiangsu-exam</li>
+          <li>Docs · docs.juanling.dev</li>
+          <li>Email · hi@juanling.dev</li>
+          <li>Nanjing · Jiangsu · CN</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 JUANLING · JIANGSU ZHUANZHEN COMPUTER SERIES</span>
+      <span>PRINTED ON RECYCLED PIXELS</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
